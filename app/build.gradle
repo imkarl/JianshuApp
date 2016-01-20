@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.alafighting.copy.jianshuapp"
+        applicationId "com.copy.jianshuapp"
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
