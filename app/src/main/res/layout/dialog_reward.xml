@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?shape_rect_ff_3a" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:layout_marginTop="27.0dip" android:layout_marginRight="60.0dip" android:src="@drawable/img_guide_pop_reward" />
+    <LinearLayout android:orientation="vertical" android:background="?shape_rect_fc_2f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="21.0dip" android:layout_marginRight="16.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingTop="1.0dip" android:paddingRight="16.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/money_colon" />
+            <EditText android:textSize="14.0sp" android:textColor="#fff69a48" android:gravity="center_vertical" android:id="@id/input_money" android:background="@null" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="" android:inputType="numberDecimal" />
+        </LinearLayout>
+        <View android:background="?divider_d5_2f" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingTop="1.0dip" android:paddingRight="16.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/leave_message_colon" />
+            <EditText android:textSize="14.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:id="@id/input_leave_message" android:background="@null" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="?color_2f_b1" android:layout_gravity="center" android:id="@id/tv_pay_method" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pay_with_alipay" />
+        <TextView android:textColor="#ff3e94c7" android:id="@id/tv_change_pay_method" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change" />
+    </LinearLayout>
+    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginTop="20.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/theme_color" android:gravity="center" android:id="@id/tv_cancel_reward" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/cancel_reward" android:layout_weight="1.0" />
+        <View android:background="?listview_divider" android:layout_width="0.39999998dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/theme_color" android:gravity="center" android:id="@id/tv_confirm_pay" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/confirm_pay" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

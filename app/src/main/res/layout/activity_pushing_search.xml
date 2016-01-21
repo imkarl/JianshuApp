@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="33.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="6.0dip">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/titlebar_navigation" android:background="?press_selector" android:layout_width="@dimen/titlebar_height" android:layout_height="fill_parent" android:src="@drawable/zw_icon_back" android:onClick="back" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="?shape_rect_frame" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="16.0dip" android:layout_weight="1.0">
+            <AutoCompleteTextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:textColorHint="?color_99_88" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/edit_search_content" android:background="@android:color/transparent" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/sou_suo" android:singleLine="true" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionSearch" android:imeActionLabel="@string/sou_suo" />
+            <View android:layout_gravity="center_vertical" android:background="?listview_divider" android:layout_width="0.30000007dip" android:layout_height="19.0dip" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/img_search" android:background="?press_selector" android:layout_width="40.0dip" android:layout_height="@dimen/titlebar_height" android:src="@drawable/search_icon" android:scaleType="center" android:onClick="startSearch" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+    <com.baiji.jianshu.widget.ListViewLisOnBottom android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?press_selector" android:divider="@null" android:dividerHeight="0.0dip" />
+</LinearLayout>

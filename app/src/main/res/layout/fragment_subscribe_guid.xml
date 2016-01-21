@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dy_image_duyd" android:scaleType="fitCenter" />
+    <TextView android:textSize="14.0sp" android:textColor="?text_color_1" android:gravity="center_horizontal" android:id="@id/text_subscribe_promot1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guid_promot" />
+    <RelativeLayout android:id="@id/container1" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="6.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="?text_color_2" android:id="@id/text_subscribe_promot2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/subscribe_intresting_colleciton" android:layout_centerVertical="true" />
+        <Button android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/btn_subscribe_all" android:background="@drawable/selector_btn_blue" android:layout_width="78.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" android:text="@string/wan_cheng_guan_zhu" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onMyClick" />
+    </RelativeLayout>
+    <View android:id="@id/separate_line1" android:background="?separate_line_color" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/container2" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baiji.jianshu.widget.VerticalScrollBar android:id="@id/v_scrollbar_guid" android:scrollbars="none" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:id="@id/separate_line2" android:background="?separate_line_color" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+        <com.baiji.jianshu.widget.ListViewLisOnBottom android:scrollbarStyle="outsideOverlay" android:id="@id/list_guid_collections" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?press_selector" android:divider="@color/lightgray" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+</LinearLayout>

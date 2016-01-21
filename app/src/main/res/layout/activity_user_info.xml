@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.NestedScrollLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nested_linear"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/linear_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?color_fc_3a"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.copy.jianshuapp.uilayer.views.RoundedImageView
+            android:id="@id/img_user_avatar"
+            android:layout_width="67.0dip"
+            android:layout_height="67.0dip"
+            android:layout_marginTop="22.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tx_image_1"
+            app:border_color="@drawable/selector_color_theme_tran"
+            app:border_width="0.0dip"
+            app:oval="true" />
+
+        <TextView
+            android:id="@id/tv_signed_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.0dip"
+            android:background="@drawable/shape_oval_h22_theme"
+            android:drawableLeft="@drawable/img_profile_jianshu_writer"
+            android:drawablePadding="3.0dip"
+            android:gravity="center"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip"
+            android:text="@string/jian_signed_author"
+            android:textColor="@color/theme_color"
+            android:textSize="11.0sp"
+            android:visibility="gone" />
+
+        <com.baiji.jianshu.widget.TextViewDetectEllipsize
+            android:id="@id/text_user_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginTop="13.0dip"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="2.0dip"
+            android:maxLines="3"
+            android:text="ABC   "
+            android:textColor="?color_2f_b1"
+            android:textColorLink="@color/text_blue"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/text_expand"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:background="?press_selector"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip"
+            android:textColor="@color/text_blue"
+            android:textSize="12.0sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@id/text_user_word_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:layout_marginTop="13.0dip"
+            android:gravity="center"
+            android:textColor="?color_99_88"
+            android:textSize="12.0sp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28.0dip"
+            android:layout_marginTop="16.0dip">
+
+            <LinearLayout
+                android:id="@id/linear_button_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <include
+                    android:id="@id/btn_follow"
+                    layout="@layout/include_follow_button_simple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5.0dip" />
+
+                <TextView
+                    android:id="@id/text_send_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/selector_btn_green_frame"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/grzy_icon_message"
+                    android:drawablePadding="4.0dip"
+                    android:gravity="center"
+                    android:onClick="onMyClick"
+                    android:paddingBottom="4.0dip"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:paddingTop="4.0dip"
+                    android:singleLine="true"
+                    android:text="@string/jian_xin"
+                    android:textColor="@color/green_common"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/text_edit_user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_btn_green_frame"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onMyClick"
+                android:paddingBottom="5.0dip"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingTop="5.0dip"
+                android:singleLine="true"
+                android:text="@string/edit_account_info"
+                android:textColor="@color/green_common"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:background="?separate_line_color" />
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@id/tablayout_user"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:tag="anchor"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/theme_color"
+        app:tabIndicatorHeight="2.0dip"
+        app:tabMaxWidth="0.0dip"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="20.0dip"
+        app:tabPaddingStart="20.0dip"
+        app:tabSelectedTextColor="@color/theme_color"
+        app:tabTextAppearance="@style/TabTextApprearance2"
+        app:tabTextColor="?text_color_2" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:background="?separate_line_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/viewpager_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:tag="scroll" />
+</com.baiji.jianshu.widget.NestedScrollLinearLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.NoteListView android:scrollbarStyle="outsideOverlay" android:id="@id/nested_listview" android:layout_width="fill_parent" android:layout_height="50.0dip" android:listSelector="?press_selector" android:divider="?listview_divider" android:dividerHeight="0.5dip" android:headerDividersEnabled="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

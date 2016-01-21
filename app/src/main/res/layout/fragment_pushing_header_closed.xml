@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootView" android:background="?color_fc_3a" android:paddingBottom="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/tx_image_3" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
+    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:singleLine="true" android:maxLength="17" android:layout_toRightOf="@id/avatar" android:layout_alignTop="@id/avatar" />
+    <TextView android:textSize="12.0sp" android:textColor="?color_b1_71" android:textColorLink="#ff3e94c7" android:ellipsize="end" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:singleLine="true" android:layout_below="@id/tv_name" android:layout_alignLeft="@id/tv_name" />
+    <FrameLayout android:id="@id/action_tougao" android:background="@drawable/shap_rect_green_frame" android:visibility="visible" android:layout_width="68.0dip" android:layout_height="25.0dip" android:layout_marginTop="11.0dip" android:layout_below="@id/tv_desc" android:layout_alignLeft="@id/tv_desc">
+        <TextView android:textSize="12.0sp" android:textColor="@color/green_common" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tou_gao" android:drawableLeft="@drawable/new_icon_tougao" android:drawablePadding="4.0dip" />
+    </FrameLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginRight="14.0dip" android:src="@drawable/icon_arrow_open" android:layout_alignParentRight="true" />
+</RelativeLayout>

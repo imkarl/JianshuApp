@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/topbar_ic_more" android:id="@id/action_option" android:visible="true" android:title="@string/geng_dou" app:showAsAction="always">
+        <menu>
+            <item android:id="@id/action_open_in_browser" android:visible="true" android:title="@string/open_in_browser" />
+            <item android:id="@id/action_copy_url" android:visible="true" android:title="@string/copy_url" />
+        </menu>
+    </item>
+</menu>

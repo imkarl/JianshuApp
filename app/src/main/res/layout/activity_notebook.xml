@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipe_notebook" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baiji.jianshu.widget.ListViewLisOnBottom android:scrollbarStyle="outsideOverlay" android:id="@id/list_notebook_articles" android:listSelector="?press_selector" android:divider="@color/lightgray" android:dividerHeight="0.0dip" android:headerDividersEnabled="true" style="@style/dimen_mm" />
+</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

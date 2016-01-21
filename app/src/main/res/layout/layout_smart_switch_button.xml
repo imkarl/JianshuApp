@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="38.0dip" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/butten_line_open" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/img_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_switch_open" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</merge>

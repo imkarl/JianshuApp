@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/linear_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:id="@id/text_article_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250.0dip" android:text="titlesfasdfdfsdfdfsdfsdfsdfsldkfjlsdfjlksjfklsjdlkfjkljlj" android:singleLine="true" />
+        <TextView android:textSize="8.0sp" android:textColor="?text_color_4" android:gravity="center" android:id="@id/text_tag_publiz" android:background="@drawable/shap_oval_h20_gray" android:visibility="visible" android:layout_width="24.0dip" android:layout_height="14.0dip" android:layout_marginLeft="4.0dip" android:text="@string/si_mi" android:layout_toRightOf="@id/text_article_title" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="?text_color_2" android:id="@id/text_article_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:layout_below="@id/linear_title_container" />
+    <TextView android:textSize="12.0sp" android:textColor="?text_color_2" android:id="@id/text_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:singleLine="true" android:layout_below="@id/text_article_content" />
+</RelativeLayout>

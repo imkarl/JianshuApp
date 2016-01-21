@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="140.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.baiji.jianshu.widget.CropImageView android:id="@id/img_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/img_bg" android:scaleType="fitCenter" />
+    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/fdrawer_header" android:layout_width="55.0dip" android:layout_height="55.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/tx_image_1" android:scaleType="centerCrop" android:layout_centerHorizontal="true" app:oval="true" />
+    <View android:background="@drawable/tx_image_yuanhuan" android:visibility="gone" android:layout_width="55.0dip" android:layout_height="55.0dip" android:layout_marginTop="30.0dip" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/fdrawer_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="taotao" android:singleLine="true" android:layout_below="@id/fdrawer_header" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/fdrawer_social_icons" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/fdrawer_name" android:layout_centerHorizontal="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wen_zhang2" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/fdrawer_wen_zhang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 0" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/zi_shu2" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/fdrawer_zi_shu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 0" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/fdrawer_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:maxLines="4" android:singleLine="true" android:layout_below="@id/fdrawer_social_icons" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/refresher" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dslv="http://schemas.android.com/apk/res-auto">
+    <com.mobeta.android.dslv.DragSortListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="fill_parent" dslv:collapsed_height="2.0dip" dslv:drag_scroll_start="0.33" dslv:max_drag_scroll_speed="0.5" dslv:remove_mode="flingRemove" dslv:track_drag_sort="false" dslv:float_alpha="0.6" dslv:slide_shuffle_speed="0.3" dslv:drag_enabled="true" dslv:sort_enabled="true" dslv:remove_enabled="true" dslv:drag_start_mode="onMove" dslv:use_default_controller="true" />
+</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

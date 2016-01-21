@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText android:textSize="18.0sp" android:textColor="?text_color_1" android:textColorHint="?text_color_2" android:layout_gravity="center|left" android:id="@id/dialog_input" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/nickname_hint" android:inputType="textMultiLine" android:imeOptions="actionDone"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="design_snackbar_text_max_lines">2</integer>
+    <integer name="back_slide_in_duration">200</integer>
+    <integer name="back_slide_out_duration">400</integer>
+    <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="cpb_default_max_sweep_angle">300</integer>
+    <integer name="cpb_default_min_sweep_angle">20</integer>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="default_title_indicator_footer_indicator_style">2</integer>
+    <integer name="default_title_indicator_line_position">0</integer>
+    <integer name="default_underline_indicator_fade_delay">300</integer>
+    <integer name="default_underline_indicator_fade_length">400</integer>
+    <integer name="slide_in_duration">200</integer>
+    <integer name="slide_out_duration">400</integer>
+    <integer name="stack_duration">300</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+</resources>

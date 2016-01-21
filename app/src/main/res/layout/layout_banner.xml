@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baiji.jianshu.widget.LoopViewpager.LoopViewPager android:id="@id/viewpager_banner" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.viewpagerindicator.CirclePageIndicator android:layout_gravity="bottom|center" android:id="@id/indicator_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
+</FrameLayout>

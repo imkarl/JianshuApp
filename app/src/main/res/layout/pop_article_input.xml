@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/frame_rootview" android:background="@color/half_transaction" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="onMyClick"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baiji.jianshu.widget.DispatchKeyEventPreImeLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/linear_input" android:background="?common_bg_white_black" android:padding="14.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="onMyClick">
+        <EditText android:textSize="15.0sp" android:textColor="?color_2f_b1" android:gravity="left" android:id="@id/edit_comment" android:background="?shape_rect_search_bg" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <TextView android:id="@id/at" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:drawableLeft="@drawable/icon_at" android:onClick="onMyClick" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff49be38" android:gravity="center" android:id="@id/text_comment_send" android:background="@drawable/shap_rect_green_frame" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="28.0dip" android:text="@string/publish_comment" android:layout_alignParentRight="true" android:onClick="onMyClick" />
+        </RelativeLayout>
+    </com.baiji.jianshu.widget.DispatchKeyEventPreImeLayout>
+</FrameLayout>

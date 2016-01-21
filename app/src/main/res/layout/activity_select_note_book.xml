@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?press_selector" android:cacheColorHint="#00000000" android:divider="?listview_divider" android:dividerHeight="0.5dip" />
+</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

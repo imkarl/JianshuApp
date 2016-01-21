@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="74.0dip">
+        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/img_collect_icon" android:layout_width="33.0dip" android:layout_height="33.0dip" android:layout_marginLeft="18.0dip" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:ellipsize="end" android:id="@id/text_collection_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:singleLine="true" />
+            <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:ellipsize="end" android:id="@id/text_collection_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="info" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_collection_opration" android:background="@drawable/selector_guan_zhu_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:text="@string/guan_zhu" />
+    </LinearLayout>
+    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+</LinearLayout>

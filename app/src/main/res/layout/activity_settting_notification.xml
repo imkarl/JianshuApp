@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_bother" />
+                <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/no_bother_tips" android:maxLines="2" />
+            </LinearLayout>
+            <com.baiji.jianshu.widget.SmartSwitchButton android:gravity="center_vertical" android:id="@id/switch_no_bother" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/rl_start_time" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/start_time" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:gravity="center" android:id="@id/tv_start_time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/am" />
+        </LinearLayout>
+        <View android:id="@id/line_start_time" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/rl_end_time" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/end_time" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:gravity="center" android:id="@id/tv_end_time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/am" />
+        </LinearLayout>
+        <View android:id="@id/line_end_time" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:background="?color_f4_3a" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/remind_mode" />
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/remind_by_voice" android:layout_weight="1.0" />
+            <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/remind_by_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/remind_by_shake" android:layout_weight="1.0" />
+            <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/remind_by_shake" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:background="?color_f4_3a" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/push_items" />
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?common_line_divider" android:showDividers="middle">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pl_row" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ping_lun" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/comment_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/xh_row" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xi_huan" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/likes_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_like" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/gz_row" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guan_zhu" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_follow" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/tg_row" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tou_gao_qing_qiu" android:singleLine="true" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_request" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/daily_row" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jing_xuan" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/daily_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_recommend" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/message_row" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jian_xin" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/other_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_chat" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/reward_row" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reward" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/other_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_reward" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/other_row" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="56.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qi_ta" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/other_tips" />
+                </LinearLayout>
+                <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_other" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/row_pushing_setting" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow_pushing_setting" android:singleLine="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/your_followed_has_update" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gywm_icon_tiaozhuan" />
+            </FrameLayout>
+        </LinearLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+    </LinearLayout>
+</ScrollView>

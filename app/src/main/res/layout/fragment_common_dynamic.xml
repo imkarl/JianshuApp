@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_timeline" android:background="?separate_line_color" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="38.0dip" />
+    <com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout_dynamic" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baiji.jianshu.widget.ListViewLisOnBottom android:scrollbarStyle="outsideOverlay" android:id="@id/listview_dynamic" android:listSelector="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" style="@style/dimen_mm" />
+    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+</FrameLayout>

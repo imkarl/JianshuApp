@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="260.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingRight="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/submit_to_collection" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/linear_progress" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/progress_load_notes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="14.0dip" layout="@layout/progressbar_normal" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="?text_color_2" android:gravity="center_horizontal" android:id="@id/text_prompt" android:paddingLeft="20.0dip" android:paddingTop="30.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.baiji.jianshu.widget.ListViewLisOnBottom android:id="@id/list_submit_notes" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?press_selector" android:divider="?listview_divider" android:dividerHeight="0.39999998dip" />
+</LinearLayout>

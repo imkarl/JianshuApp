@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/note_list_header" android:paddingLeft="18.0dip" android:paddingTop="20.0dip" android:paddingRight="18.0dip" android:paddingBottom="4.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:id="@id/text_note_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/x_pian_wen_zhang" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+            <Spinner android:id="@id/spinner_note_order_by" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:popupBackground="?card_corner_frame" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:spinnerMode="dropdown" style="@android:style/Widget.Holo.Spinner" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/spinner_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:src="?icon_spinner_arrow" />
+        </LinearLayout>
+        <include android:id="@id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_centerInParent="true" layout="@layout/progressbar_small" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/frame_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

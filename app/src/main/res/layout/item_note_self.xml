@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/recycler_item_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="110.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_centerInParent="true">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="10.0sp" android:textColor="?text_color_2" android:ellipsize="end" android:id="@id/last_compiled_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200.0dip" android:text="author" android:singleLine="true" />
+            <TextView android:textSize="16.0sp" android:textColor="?note_read_state_color" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="title \n title" android:maxLines="2" android:layout_below="@id/last_compiled_time" android:lineSpacingExtra="2.0dip" />
+            <TextView android:textSize="10.0sp" android:textColor="?color_b1_71" android:id="@id/extra_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="info" android:singleLine="true" android:layout_below="@id/title" />
+        </RelativeLayout>
+        <ImageView android:id="@id/image" android:visibility="visible" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/image_list" android:scaleType="centerCrop" />
+    </LinearLayout>
+</RelativeLayout>

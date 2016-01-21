@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/green_common" android:gravity="center" android:id="@id/item_save_to_private_note" android:background="?press_selector" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save_to_prviate_note" />
+    <View android:id="@id/line_save_to_private_note" android:background="?separate_line_color" android:layout_width="fill_parent" android:layout_height="0.6dip" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/theme_color" android:gravity="center" android:id="@id/item_give_up_editor" android:background="?press_selector" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/give_up_editor" />
+    <View android:background="?separate_line_color" android:layout_width="fill_parent" android:layout_height="0.6dip" />
+    <TextView android:textSize="18.0sp" android:textColor="?text_color_1" android:gravity="center" android:id="@id/item_cancel" android:background="?press_selector" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/qu_xiao" />
+</LinearLayout>

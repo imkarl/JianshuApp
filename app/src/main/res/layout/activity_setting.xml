@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/root" android:background="?common_bg_white_black" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/linear_list_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:gravity="center_vertical" android:background="?color_fc_3a" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_setting" />
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+        <RelativeLayout android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:id="@id/tv_cache_when_disconnect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cache_when_disconnect" />
+                <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:gravity="center" android:id="@id/tv_cache_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/cache_tips" />
+            </LinearLayout>
+            <com.baiji.jianshu.widget.SmartSwitchButton android:id="@id/enable_cache_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <RelativeLayout android:id="@id/item_show_like_dialog" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true">
+                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:id="@id/tv_show_dialog_after_liked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_show_dialog_after_liked_article" />
+                <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:gravity="center" android:id="@id/tv_show_dialog_after_liked_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/setting_show_dialog_after_like_article_tips" />
+            </LinearLayout>
+            <com.baiji.jianshu.widget.SmartSwitchButton android:id="@id/enable_show_like_dialog_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:id="@id/line_1" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:id="@id/tv_net_load_img" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/mobile_net_load_img" android:singleLine="true" android:layout_weight="1.0" />
+            <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/enable_load_image_with3g_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/item_writing_mode" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/default_editor" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_default_editor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:text="dfd" />
+        </LinearLayout>
+        <View android:id="@id/line_2" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/item_notification" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/tui_song_tong_zhi" android:singleLine="true" android:drawableRight="?gywm_icon_tiaozhuan" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:id="@id/line_below_notification" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/item_reward_setting" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:id="@id/tv_reward_setting" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/reward_setting" android:singleLine="true" android:drawableRight="?gywm_icon_tiaozhuan" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:id="@id/line_3" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/item_black_list_setting" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/blacklist_setting" android:singleLine="true" android:drawableRight="?gywm_icon_tiaozhuan" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:gravity="center_vertical" android:background="?color_fc_3a" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_info" />
+        <View android:background="?listview_divider" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/item_clear_cache" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:id="@id/tv_clear_cache" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/qing_cu_huan_cun" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:gravity="center_vertical" android:id="@id/text_cache_size" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="99M" android:singleLine="true" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_update_release" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:id="@id/tv_check_update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ban_ben_gen_xin" android:singleLine="true" />
+                <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:gravity="center_vertical" android:id="@id/tv_version_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="dd" android:singleLine="true" />
+            </LinearLayout>
+            <include android:layout_gravity="center_vertical" android:id="@id/progress_updat_release" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" layout="@layout/progressbar_small" />
+            <ImageView android:id="@id/img_red" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/image_tixing" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/item_about_us" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:onClick="onMyClick">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:id="@id/tv_about_us" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/guan_yu_wo_men" android:singleLine="true" android:drawableRight="?gywm_icon_tiaozhuan" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/theme_color" android:gravity="center" android:id="@id/tv_logout" android:background="@drawable/shape_rect_frame_theme" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:layout_marginBottom="26.0dip" android:text="@string/logout_current_account" android:onClick="onMyClick" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linear_api_switch" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioGroup android:orientation="horizontal" android:id="@id/radio_group_api" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/radio_api" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="online" />
+                <RadioButton android:id="@id/radio_api_test" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="test" />
+            </RadioGroup>
+            <EditText android:id="@id/edit_ip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Button android:id="@id/btn_set_api" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="set" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

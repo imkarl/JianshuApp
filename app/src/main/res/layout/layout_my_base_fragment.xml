@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipe_refresh" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="46.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center|left" android:id="@id/left" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:drawablePadding="5.0dip" />
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center" android:id="@id/middle" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawablePadding="5.0dip" />
+            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center|right" android:id="@id/right" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:drawablePadding="5.0dip" />
+            <View android:layout_gravity="bottom" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_blank_page_with_merge" />
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_retry_page_with_merge" />
+        </FrameLayout>
+    </LinearLayout>
+</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

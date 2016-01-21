@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/load_more" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar android:layout_gravity="center" android:id="@id/progressBar3" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_margin="2.0dip" android:indeterminate="true" app:cpb_color="@color/theme_color" app:cpb_stroke_width="2.0dip" app:cpb_min_sweep_angle="10" app:cpb_max_sweep_angle="300" app:cpb_sweep_speed="1.0" app:cpb_rotation_speed="1.0" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_load_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/jia_zai_gen_duo" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="?text_color_2" android:gravity="center" android:id="@id/tv_end_flag" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="-- end --" />
+</FrameLayout>
