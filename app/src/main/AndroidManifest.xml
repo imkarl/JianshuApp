@@ -31,9 +31,9 @@
         android:supportsRtl="true"
         android:icon="@drawable/icon_jianshu"
         android:label="@string/app_name"
-        android:theme="@style/theme_day"
+        android:theme="@style/AppTheme"
         android:name=".uilayer.JSApplication">
-        <activity android:name=".uilayer.activitys.SplashActivity">
+        <activity android:name=".uilayer.activitys.SplashActivity" android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

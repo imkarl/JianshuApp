@@ -3,6 +3,22 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar" />
     <style name="AppTheme" parent="@style/AppBaseTheme" />
 
+    <style name="AppTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="android:colorBackgroundCacheHint">@color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/AnimationFade</item>
+    </style>
+
+    <style name="AnimationFade">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+
+
     <style name="CustomCirclePageIndicator">
         <item name="centered">true</item>
         <item name="strokeWidth">2.0dip</item>
