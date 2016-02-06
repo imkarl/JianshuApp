@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_lightest"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <View
+        android:id="@id/separate_line_main"
+        android:layout_width="fill_parent"
+        android:layout_height="0.6dip"
+        android:layout_alignTop="@id/navigation_bar"
+        android:layout_gravity="bottom"
+        android:background="?separate_line_color_2" />
+
+    <LinearLayout
+        android:id="@id/navigation_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@id/tab_main_page"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="?press_selector"
+            android:paddingTop="3.0dip">
+
+            <TextView
+                android:id="@id/tv_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="2.0dip"
+                android:drawableTop="@drawable/selector_cb_icon_discover"
+                android:gravity="center"
+                android:text="@string/tab_discover"
+                android:textColor="@color/selector_color_theme_88"
+                android:textSize="9.0sp" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@id/tab_discover"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="?press_selector">
+
+            <TextView
+                android:id="@id/tv_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="2.0dip"
+                android:drawableTop="@drawable/selector_cb_icon_guanzhu"
+                android:gravity="center"
+                android:text="@string/guan_zhu"
+                android:textColor="@color/selector_color_theme_88"
+                android:textSize="9.0sp" />
+
+            <ImageView
+                android:id="@id/img_guanzhu_unread"
+                android:layout_width="8.0dip"
+                android:layout_height="8.0dip"
+                android:layout_alignTop="@id/tv_guanzhu"
+                android:layout_marginLeft="-6.0dip"
+                android:layout_marginTop="-5.0dip"
+                android:layout_toRightOf="@id/tv_guanzhu"
+                android:src="?tips_bg"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@id/tab_writting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="7.0dip"
+            android:layout_marginRight="7.0dip">
+
+            <TextView
+                android:id="@id/tv_writting_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?image_xiezuo_bg"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@id/tab_dynamic"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="?press_selector">
+
+            <TextView
+                android:id="@id/tv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="3.0dip"
+                android:drawablePadding="2.0dip"
+                android:drawableTop="@drawable/selector_cb_icon_jianyouquan"
+                android:gravity="center"
+                android:text="@string/tab_dynamic"
+                android:textColor="@color/selector_color_theme_88"
+                android:textSize="9.0sp" />
+
+            <TextView
+                android:id="@id/text_notify_sum_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_msg"
+                android:layout_alignTop="@id/tv_msg"
+                android:layout_marginLeft="18.0dip"
+                android:layout_marginTop="-6.0dip"
+                android:background="?tips_bg"
+                android:gravity="center"
+                android:maxLength="5"
+                android:minWidth="13.0dip"
+                android:paddingLeft="3.0dip"
+                android:paddingRight="3.0dip"
+                android:singleLine="true"
+                android:text="\ 199"
+                android:textColor="@color/white"
+                android:textSize="9.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@id/tab_more"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="?press_selector"
+            android:paddingTop="3.0dip">
+
+            <TextView
+                android:id="@id/tv_more_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="2.0dip"
+                android:drawableTop="@drawable/selector_cb_icon_more"
+                android:gravity="center"
+                android:text="@string/wo_de"
+                android:textColor="@color/selector_color_theme_88"
+                android:textSize="9.0sp" />
+
+            <View
+                android:id="@id/menu_anchor"
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                android:layout_gravity="center|right|top"
+                android:layout_marginRight="6.0dip"
+                android:background="@android:color/transparent" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
