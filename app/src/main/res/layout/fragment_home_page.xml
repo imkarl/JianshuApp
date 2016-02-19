@@ -1,15 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:orientation="horizontal" android:id="@id/linear_top_bar" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height">
-        <com.viewpagerindicator.TabPageIndicator android:id="@id/indicator_homepage" android:layout_width="wrap_content" android:layout_height="@dimen/titlebar_height" android:layout_centerHorizontal="true" />
-        <ImageView android:layout_gravity="center" android:id="@id/btn_search" android:background="?press_selector" android:layout_width="@dimen/titlebar_height" android:layout_height="@dimen/titlebar_height" android:src="@drawable/search_icon" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-        <FrameLayout android:layout_width="10.0dip" android:layout_height="fill_parent" />
-        <View android:id="@id/line_divider_top" android:background="?separate_line_color" android:layout_width="0.6dip" android:layout_height="20.0dip" android:layout_centerInParent="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/linear_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="?common_bg_white_black"
+        android:orientation="horizontal">
+
+        <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/indicator_homepage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="?press_selector"
+            android:scaleType="center"
+            android:src="@drawable/search_icon" />
+
+        <FrameLayout
+            android:layout_width="10.0dip"
+            android:layout_height="fill_parent" />
+
+        <View
+            android:id="@+id/line_divider_top"
+            android:layout_width="0.6dip"
+            android:layout_height="20.0dip"
+            android:layout_centerInParent="true"
+            android:background="?separate_line_color" />
     </RelativeLayout>
-    <com.baiji.jianshu.widget.LazyViewPager android:id="@id/hpage_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/linear_top_bar" />
-    <LinearLayout android:orientation="horizontal" android:id="@id/relative_editor_exception" android:background="@color/theme_color_half2" android:padding="11.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/linear_top_bar">
-        <TextView android:textColor="@color/white" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/prompt_editor_exception" android:drawableLeft="@drawable/img_write_crash" android:drawablePadding="10.0dip" android:layout_weight="1.0" />
-        <ImageView android:layout_gravity="center_vertical" android:id="@id/img_dismiss" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:src="@drawable/button_close_white" />
+
+    <com.copy.jianshuapp.uilayer.views.LazyViewPager
+        android:id="@+id/hpage_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/linear_top_bar" />
+
+    <LinearLayout
+        android:id="@+id/relative_editor_exception"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_top_bar"
+        android:background="@color/theme_color_half2"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="11.0dip"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableLeft="@drawable/img_write_crash"
+            android:drawablePadding="10.0dip"
+            android:text="@string/prompt_editor_exception"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@id/img_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11.0dip"
+            android:clickable="true"
+            android:src="@drawable/button_close_white" />
     </LinearLayout>
 </RelativeLayout>

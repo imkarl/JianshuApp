@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:id="@id/container"
+        android:id="@+id/fragment_container"
         android:layout_width="fill_parent"
         android:layout_height="0.0dip"
         android:layout_weight="1.0" />
@@ -27,7 +27,7 @@
         android:orientation="horizontal">
 
         <FrameLayout
-            android:id="@id/tab_main_page"
+            android:id="@+id/tab_main_page"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
@@ -35,7 +35,7 @@
             android:paddingTop="3.0dip">
 
             <TextView
-                android:id="@id/tv_discover"
+                android:id="@+id/tv_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -48,14 +48,14 @@
         </FrameLayout>
 
         <RelativeLayout
-            android:id="@id/tab_discover"
+            android:id="@+id/tab_discover"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:background="?press_selector">
 
             <TextView
-                android:id="@id/tv_guanzhu"
+                android:id="@+id/tv_discover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -70,10 +70,10 @@
                 android:id="@id/img_guanzhu_unread"
                 android:layout_width="8.0dip"
                 android:layout_height="8.0dip"
-                android:layout_alignTop="@id/tv_guanzhu"
+                android:layout_alignTop="@id/tv_discover"
                 android:layout_marginLeft="-6.0dip"
                 android:layout_marginTop="-5.0dip"
-                android:layout_toRightOf="@id/tv_guanzhu"
+                android:layout_toRightOf="@id/tv_discover"
                 android:src="?tips_bg"
                 android:visibility="gone" />
         </RelativeLayout>
@@ -87,7 +87,7 @@
             android:layout_marginRight="7.0dip">
 
             <TextView
-                android:id="@id/tv_writting_bg"
+                android:id="@+id/tv_writting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -96,14 +96,14 @@
         </FrameLayout>
 
         <RelativeLayout
-            android:id="@id/tab_dynamic"
+            android:id="@+id/tab_dynamic"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:background="?press_selector">
 
             <TextView
-                android:id="@id/tv_msg"
+                android:id="@+id/tv_dynamic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -119,8 +119,8 @@
                 android:id="@id/text_notify_sum_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/tv_msg"
-                android:layout_alignTop="@id/tv_msg"
+                android:layout_alignLeft="@id/tv_dynamic"
+                android:layout_alignTop="@id/tv_dynamic"
                 android:layout_marginLeft="18.0dip"
                 android:layout_marginTop="-6.0dip"
                 android:background="?tips_bg"
@@ -145,7 +145,7 @@
             android:paddingTop="3.0dip">
 
             <TextView
-                android:id="@id/tv_more_menu"
+                android:id="@+id/tv_more"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
