@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="lineWidth" format="dimension" />
-    <attr name="selectedBold" format="boolean" />
-    <attr name="fades" format="boolean" />
-    <attr name="fadeDelay" format="integer" />
-    <attr name="fadeLength" format="integer" />
     <attr name="edge_size" format="dimension" />
     <attr name="edge_flag">
         <enum name="bottom" value="2" />
@@ -190,11 +185,6 @@
         <flag name="snap" value="0x00000010" />
     </attr>
     <attr name="layout_scrollInterpolator" format="reference" />
-    <attr name="fillColor" format="color" />
-    <attr name="pageColor" format="color" />
-    <attr name="radius" format="dimension" />
-    <attr name="snap" format="boolean" />
-    <attr name="strokeColor" format="color" />
     <attr name="cpbStyle" format="reference" />
     <attr name="cpb_color" format="color" />
     <attr name="cpb_colors" format="reference" />
@@ -323,24 +313,4 @@
     <attr name="counterTextAppearance" format="reference" />
     <attr name="counterOverflowTextAppearance" format="reference" />
     <attr name="hintAnimationEnabled" format="boolean" />
-    <attr name="footerColor" format="color" />
-    <attr name="footerLineHeight" format="dimension" />
-    <attr name="footerIndicatorStyle">
-        <enum name="none" value="0" />
-        <enum name="triangle" value="1" />
-        <enum name="underline" value="2" />
-    </attr>
-    <attr name="footerIndicatorHeight" format="dimension" />
-    <attr name="footerIndicatorUnderlinePadding" format="dimension" />
-    <attr name="footerPadding" format="dimension" />
-    <attr name="linePosition">
-        <enum name="bottom" value="0" />
-        <enum name="top" value="1" />
-    </attr>
-    <attr name="vpiCirclePageIndicatorStyle" format="reference" />
-    <attr name="vpiIconPageIndicatorStyle" format="reference" />
-    <attr name="vpiLinePageIndicatorStyle" format="reference" />
-    <attr name="vpiTitlePageIndicatorStyle" format="reference" />
-    <attr name="vpiTabPageIndicatorStyle" format="reference" />
-    <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
 </resources>
