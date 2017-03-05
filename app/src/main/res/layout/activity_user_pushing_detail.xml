@@ -1,15 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.NestedScrollLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:background="?color_fc_3a" android:paddingBottom="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="jumpToUserCenter">
-        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-        <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:singleLine="true" android:maxLength="17" android:layout_toRightOf="@id/avatar" android:layout_alignTop="@id/avatar" />
-        <TextView android:textSize="12.0sp" android:textColor="?color_b1_71" android:ellipsize="end" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:singleLine="true" android:layout_below="@id/tv_name" android:layout_alignLeft="@id/tv_name" />
-        <TextView android:textSize="12.0sp" android:textColor="@color/green_common" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_action" android:background="@drawable/selector_btn_green_frame" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/jian_xin" android:drawableLeft="@drawable/grzy_icon_message" android:drawablePadding="4.0dip" android:layout_below="@id/tv_desc" android:layout_alignLeft="@id/tv_desc" android:onClick="jumpToChat" />
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginRight="14.0dip" android:src="@drawable/zt_icon_tjbj" android:layout_alignParentRight="true" />
-    </RelativeLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <android.support.design.widget.TabLayout android:id="@id/tb_user" android:tag="anchor" android:layout_width="fill_parent" android:layout_height="48.0dip" app:tabIndicatorColor="@color/theme_color" app:tabIndicatorHeight="2.0dip" app:tabMode="fixed" app:tabGravity="center" app:tabMaxWidth="0.0dip" app:tabTextAppearance="@style/TabTextApprearance2" app:tabTextColor="?text_color_2" app:tabSelectedTextColor="@color/theme_color" app:tabPaddingStart="20.0dip" app:tabPaddingEnd="20.0dip" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <android.support.v4.view.ViewPager android:id="@id/vp" android:tag="scroll" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</com.baiji.jianshu.widget.NestedScrollLinearLayout>
+<com.baiji.jianshu.widget.NestedScrollLayout android:id="@id/nested_linear"
+                                             android:background="?common_bg_white_black"
+                                             android:layout_width="fill_parent"
+                                             android:layout_height="fill_parent"
+                                             xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="?color_fc_3a"
+            android:paddingBottom="20.0dip"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="jumpToUserCenter">
+
+            <FrameLayout
+                android:id="@id/fl_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="20.0dip">
+
+                <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    android:id="@id/avatar"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:scaleType="centerCrop"
+                    app:border_width="0.30000007dip"
+                    app:border_color="?gray300"
+                    app:oval="true"/>
+
+                <ImageView
+                    android:id="@id/avatar_gif"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:scaleType="centerCrop"/>
+            </FrameLayout>
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="?color_2f_b1"
+                android:id="@id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11.0dip"
+                android:singleLine="true"
+                android:maxLength="17"
+                android:layout_toRightOf="@id/fl_avatar"
+                android:layout_alignTop="@id/fl_avatar"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?color_b1_71"
+                android:ellipsize="end"
+                android:id="@id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dip"
+                android:singleLine="true"
+                android:layout_below="@id/tv_name"
+                android:layout_alignLeft="@id/tv_name"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/green_common"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/tv_action"
+                android:background="@drawable/selector_btn_green_frame"
+                android:paddingLeft="8.0dip"
+                android:paddingTop="4.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingBottom="4.0dip"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.0dip"
+                android:text="@string/jian_xin"
+                android:drawableLeft="@drawable/grzy_icon_message"
+                android:drawablePadding="4.0dip"
+                android:layout_below="@id/tv_desc"
+                android:layout_alignLeft="@id/tv_desc"
+                android:onClick="jumpToChat"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28.0dip"
+                android:layout_marginRight="14.0dip"
+                android:src="@drawable/zt_icon_tjbj"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <View
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@id/tb_user"
+            android:tag="anchor"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            app:tabIndicatorColor="@color/theme_color"
+            app:tabIndicatorHeight="2.0dip"
+            app:tabMode="fixed"
+            app:tabGravity="center"
+            app:tabMaxWidth="0.0dip"
+            app:tabTextAppearance="@style/TabTextAppearance2"
+            app:tabTextColor="?text_color_2"
+            app:tabSelectedTextColor="@color/theme_color"
+            app:tabPaddingStart="20.0dip"
+            app:tabPaddingEnd="20.0dip"/>
+
+        <View
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@id/vp"
+            android:tag="scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</com.baiji.jianshu.widget.NestedScrollLayout>

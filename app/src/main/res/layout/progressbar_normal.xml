@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <fr.castorflex.android.circularprogressbar.CircularProgressBar android:layout_gravity="center" android:id="@id/progressBar3" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" app:cpb_color="@color/theme_color" app:cpb_stroke_width="4.0dip" app:cpb_min_sweep_angle="10" app:cpb_max_sweep_angle="300" app:cpb_sweep_speed="1.0" app:cpb_rotation_speed="1.0" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<FrameLayout android:focusable="true"
+             android:clickable="true"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar android:layout_gravity="center"
+                                                                   android:id="@id/progressBar3"
+                                                                   android:layout_width="40.0dip"
+                                                                   android:layout_height="40.0dip"
+                                                                   android:indeterminate="true"
+                                                                   app:cpb_color="@color/theme_color"
+                                                                   app:cpb_stroke_width="4.0dip"
+                                                                   app:cpb_min_sweep_angle="10"
+                                                                   app:cpb_max_sweep_angle="300"
+                                                                   app:cpb_sweep_speed="1.0"
+                                                                   app:cpb_rotation_speed="1.0"
+                                                                   xmlns:app="http://schemas.android.com/apk/res-auto"/>
 </FrameLayout>

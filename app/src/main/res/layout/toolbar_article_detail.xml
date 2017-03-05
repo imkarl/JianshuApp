@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:id="@id/app_bar"
+                                            android:background="?common_bg_white_black"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            app:elevation="0.0dip"
+                                            xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:gravity="center"
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:minHeight="@dimen/titlebar_height"
+        app:layout_scrollFlags="enterAlways|scroll"
+        app:navigationIcon="@drawable/zw_icon_back">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:id="@id/ll_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                android:id="@id/iv_toolbar_avatar"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"
+                app:border_width="0.30000007dip"
+                app:border_color="?gray300"
+                app:oval="true"/>
+
+            <ImageView
+                android:id="@id/iv_toolbar_avatar_gif"
+                android:visibility="gone"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:textColor="@color/text_color_b1_dark"
+                android:layout_gravity="center_vertical"
+                android:id="@id/tv_toolbar_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@id/titlebar_separate_line"
+        android:background="?separate_line_color_1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/separate_line_height"
+        android:layout_alignParentBottom="true"/>
+</android.support.design.widget.AppBarLayout>

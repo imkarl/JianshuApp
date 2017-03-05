@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipe_layout" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?listview_divider" android:dividerHeight="0.39999998dip" android:headerDividersEnabled="false" />
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipe_layout"
+                                               android:background="?common_bg_white_black"
+                                               android:layout_width="fill_parent"
+                                               android:layout_height="fill_parent"
+                                               xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListView
+        android:scrollbarStyle="outsideOverlay"
+        android:id="@id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="?listview_divider"
+        android:dividerHeight="0.39999998dip"
+        android:headerDividersEnabled="false"/>
 </com.baiji.jianshu.widget.JSSwipeRefreshLayout>

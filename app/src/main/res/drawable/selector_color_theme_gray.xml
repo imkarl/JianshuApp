@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:color="@color/theme_color" />
-    <item android:state_checked="true" android:color="@color/theme_color" />
-    <item android:state_selected="true" android:color="@color/theme_color" />
-    <item android:color="@color/theme_color" android:state_activated="true" />
-    <item android:color="@color/text_gray" />
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/theme_color" android:state_pressed="true"/>
+    <item android:color="@color/theme_color" android:state_checked="true"/>
+    <item android:color="@color/theme_color" android:state_selected="true"/>
+    <item android:color="@color/theme_color" android:state_activated="true"/>
+    <item android:color="@color/text_gray"/>
 </selector>

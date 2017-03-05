@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout_userlist" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.baiji.jianshu.widget.ListViewLisOnBottom android:scrollbarStyle="outsideOverlay" android:id="@id/listview_userlist" android:listSelector="?press_selector" android:divider="?listview_divider" android:dividerHeight="0.5dip" style="@style/dimen_mm" />
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout_userlist"
+                                               android:background="?common_bg_light"
+                                               android:layout_width="fill_parent"
+                                               android:layout_height="fill_parent"
+                                               xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.baiji.jianshu.widget.ListViewLisOnBottom
+        android:scrollbarStyle="outsideOverlay"
+        android:id="@id/listview_userlist"
+        android:listSelector="?press_selector"
+        android:divider="?listview_divider"
+        android:dividerHeight="0.5dip"
+        style="@style/dimen_mm"/>
 </com.baiji.jianshu.widget.JSSwipeRefreshLayout>

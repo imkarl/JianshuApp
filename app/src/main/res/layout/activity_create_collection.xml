@@ -1,23 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:layout_gravity="center_horizontal" android:id="@id/img_collection" android:layout_width="67.0dip" android:layout_height="67.0dip" android:layout_marginTop="45.0dip" android:src="?collection_default_image" android:scaleType="centerCrop" app:oval="true" />
-    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:layout_gravity="center_horizontal" android:id="@id/tv_image_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/create_collection_tip" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginTop="35.0dip" />
-    <EditText android:textSize="16.0sp" android:textColor="?color_2f_b1" android:textColorHint="?color_99_88" android:layout_gravity="center|left" android:id="@id/edit_name" android:background="#00000000" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="55.0dip" android:hint="@string/name_for_collection" android:maxLength="50" android:inputType="text" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <EditText android:textSize="16.0sp" android:textColor="?color_2f_b1" android:textColorHint="?color_99_88" android:gravity="top" android:id="@id/edit_desc" android:background="#00000000" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:hint="@string/set_desc_for_collection" android:layout_weight="1.0" android:inputType="textMultiLine" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <FrameLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/action_tougao_setting" android:background="?frame_d5_2f" android:layout_width="156.0dip" android:layout_height="28.0dip">
-                <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contribution_need_check" android:drawableLeft="@drawable/zt_icon_tgsh" android:drawablePadding="6.0dip" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black"
+    android:orientation="vertical">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/img_collection"
+        android:layout_width="67.0dip"
+        android:layout_height="67.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45.0dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_zt_titu"
+        app:corner_radius="3.0dip"
+        app:oval="false"/>
+
+    <TextView
+        android:id="@id/tv_image_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="9.0dip"
+        android:text="@string/create_collection_tip"
+        android:textColor="?color_99_88"
+        android:textSize="12.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginTop="35.0dip"
+        android:background="?listview_divider"/>
+
+    <EditText
+        android:id="@id/edit_name"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:layout_gravity="center|left"
+        android:background="#00000000"
+        android:hint="@string/name_for_collection"
+        android:inputType="text"
+        android:maxLength="50"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:textColor="?color_2f_b1"
+        android:textColorHint="?color_99_88"
+        android:textSize="16.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:background="?listview_divider"/>
+
+    <EditText
+        android:id="@id/edit_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="#00000000"
+        android:gravity="top"
+        android:hint="@string/set_desc_for_collection"
+        android:inputType="textMultiLine"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:paddingTop="18.0dip"
+        android:textColor="?color_2f_b1"
+        android:textColorHint="?color_99_88"
+        android:textSize="16.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:background="?listview_divider"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@id/action_tougao_setting"
+                android:layout_width="156.0dip"
+                android:layout_height="28.0dip"
+                android:background="?frame_d5_2f"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/tv_tougao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/zt_icon_tgsh"
+                    android:drawablePadding="6.0dip"
+                    android:gravity="center"
+                    android:text="@string/contribution_need_check"
+                    android:textColor="#ff999999"
+                    android:textSize="12.0sp"/>
             </LinearLayout>
-            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/action_add_editors" android:background="?frame_d5_2f" android:layout_width="77.0dip" android:layout_height="28.0dip" android:layout_marginLeft="10.0dip">
-                <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_editor" android:drawableRight="@drawable/zt_icon_tjbj" android:drawablePadding="1.0dip" />
+
+            <LinearLayout
+                android:id="@id/action_add_editors"
+                android:layout_width="77.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="?frame_d5_2f"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="1.0dip"
+                    android:drawableRight="@drawable/zt_icon_tjbj"
+                    android:gravity="center"
+                    android:text="@string/add_editor"
+                    android:textColor="?color_99_88"
+                    android:textSize="12.0sp"/>
             </LinearLayout>
-            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/action_add_label" android:background="?frame_d5_2f" android:layout_width="77.0dip" android:layout_height="28.0dip" android:layout_marginLeft="10.0dip">
-                <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_label" android:drawableRight="@drawable/zt_icon_tjbj" android:drawablePadding="1.0dip" />
+
+            <LinearLayout
+                android:id="@id/action_add_label"
+                android:layout_width="77.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="?frame_d5_2f"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="1.0dip"
+                    android:drawableRight="@drawable/zt_icon_tjbj"
+                    android:gravity="center"
+                    android:text="@string/add_label"
+                    android:textColor="?color_99_88"
+                    android:textSize="12.0sp"/>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

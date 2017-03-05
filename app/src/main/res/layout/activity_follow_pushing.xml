@@ -1,37 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="?color_f4_3a" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:background="?common_bg_white_black" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-        <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_pushing_setting" />
-        <com.baiji.jianshu.widget.SmartSwitchButton android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/main_pushing_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+<LinearLayout android:orientation="vertical"
+              android:background="?color_f4_3a"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:background="?common_bg_white_black"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_pushing_setting"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:gravity="center_vertical"
+            android:layout_gravity="center|right"
+            android:id="@id/main_pushing_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"/>
     </FrameLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <LinearLayout android:orientation="vertical" android:id="@id/sub_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginTop="18.0dip" />
-        <FrameLayout android:background="?common_bg_white_black" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_pushing_setting_default" />
-            <com.baiji.jianshu.widget.SmartSwitchButton android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/default_open_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/sub_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <View
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginTop="18.0dip"/>
+
+        <FrameLayout
+            android:background="?common_bg_white_black"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip">
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="?color_2f_b1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_pushing_setting_default"/>
+
+            <com.baiji.jianshu.widget.SmartSwitchButton
+                android:gravity="center_vertical"
+                android:layout_gravity="center|right"
+                android:id="@id/default_open_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"/>
         </FrameLayout>
-        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-        <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="20.0dip" android:text="@string/manage_pushing_obj" />
-        <TextView android:textSize="12.0sp" android:textColor="?color_b1_71" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="18.0dip" android:text="@string/manage_pushing_obj_tips" />
-        <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginTop="5.0dip" />
-        <LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <FrameLayout android:id="@id/row_followed_user" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/followed_user" />
-                <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gywm_icon_tiaozhuan" />
-                <View android:layout_gravity="bottom" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+
+        <View
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"/>
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/theme_color"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/manage_pushing_obj"/>
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="?color_b1_71"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="18.0dip"
+            android:text="@string/manage_pushing_obj_tips"/>
+
+        <View
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginTop="5.0dip"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="?common_bg_white_black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@id/row_followed_user"
+                android:background="?press_selector"
+                android:paddingLeft="18.0dip"
+                android:paddingRight="18.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?color_2f_b1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followed_user"/>
+
+                <View
+                    android:layout_gravity="bottom"
+                    android:background="?listview_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.39999998dip"/>
             </FrameLayout>
-            <FrameLayout android:id="@id/row_followed_collection" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/followed_collection" />
-                <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gywm_icon_tiaozhuan" />
-                <View android:layout_gravity="bottom" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+
+            <FrameLayout
+                android:id="@id/row_followed_collection"
+                android:background="?press_selector"
+                android:paddingLeft="18.0dip"
+                android:paddingRight="18.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?color_2f_b1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followed_collection"/>
+
+                <View
+                    android:layout_gravity="bottom"
+                    android:background="?listview_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.39999998dip"/>
             </FrameLayout>
-            <FrameLayout android:id="@id/row_followed_notebook" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-                <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/followed_notebook" />
-                <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gywm_icon_tiaozhuan" />
+
+            <FrameLayout
+                android:id="@id/row_followed_notebook"
+                android:background="?press_selector"
+                android:paddingLeft="18.0dip"
+                android:paddingRight="18.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?color_2f_b1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followed_notebook"/>
             </FrameLayout>
-            <View android:layout_gravity="bottom" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+
+            <View
+                android:layout_gravity="bottom"
+                android:background="?listview_divider"
+                android:layout_width="fill_parent"
+                android:layout_height="0.39999998dip"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:id="@id/add_label" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="55.0dip">
-        <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_label_tips" android:drawableLeft="@drawable/zw_icon_zhuanti_green" android:drawablePadding="10.0dip" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/add_label"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:background="?press_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/zw_icon_zhuanti_green"
+            android:drawablePadding="10.0dip"
+            android:text="@string/add_label_tips"
+            android:textColor="?color_99_88"
+            android:textSize="16.0sp"/>
     </LinearLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <ListView android:id="@id/label_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:background="?listview_divider"/>
+
+    <ListView
+        android:id="@id/label_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"/>
 </LinearLayout>

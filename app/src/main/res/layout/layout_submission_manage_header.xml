@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:background="?common_bg_lightest"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/linear_submission_collections"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="?shap_line"
+        android:showDividers="middle"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <View
+        android:background="?common_bg_lightest"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+</LinearLayout>

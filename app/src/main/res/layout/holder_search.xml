@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/search_root"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:gravity="center"
+        android:id="@id/frame"
+        android:background="?shape_rect_fc_2f"
+        android:layout_width="fill_parent"
+        android:layout_height="34.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="15.0dip">
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColorHint="?color_b1_71"
+            android:layout_gravity="center"
+            android:id="@id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_search_home"
+            android:drawableLeft="?search_bg"
+            android:drawablePadding="8.0dip"/>
+    </FrameLayout>
+</LinearLayout>

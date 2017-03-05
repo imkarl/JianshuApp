@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -7,9 +8,9 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:divider="?shap_line_rect"
+        android:divider="?shap_line"
         android:orientation="vertical"
-        android:showDividers="end|middle">
+        android:showDividers="middle">
 
         <TextView
             android:layout_width="fill_parent"
@@ -20,137 +21,158 @@
             android:paddingTop="20.0dip"
             android:text="@string/chang_gui_she_zi"
             android:textColor="@color/theme_color"
-            android:textSize="12.0sp" />
+            android:textSize="12.0sp"/>
 
         <LinearLayout
-            android:id="@id/item_modify_avatar"
             android:layout_width="fill_parent"
-            android:layout_height="60.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+            android:layout_height="wrap_content"
+            android:divider="?shap_line"
+            android:dividerPadding="14.0dip"
+            android:orientation="vertical"
+            android:showDividers="middle">
 
-            <TextView
-                android:id="@id/tv_avatar"
-                android:layout_width="0.0dip"
+            <LinearLayout
+                android:id="@id/item_modify_avatar"
+                android:layout_width="fill_parent"
                 android:layout_height="60.0dip"
-                android:layout_weight="1.0"
+                android:background="?press_selector"
+                android:divider="?shap_line"
                 android:gravity="center_vertical"
-                android:singleLine="true"
-                android:text="@string/tou_xiang_she_zhi"
-                android:textColor="?text_color_1"
-                android:textSize="16.0sp" />
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:showDividers="middle">
 
-            <com.copy.jianshuapp.uilayer.views.RoundedImageView
-                android:id="@id/img_user_avatar"
-                android:layout_width="30.0dip"
-                android:layout_height="30.0dip"
-                android:scaleType="centerCrop"
-                android:src="@drawable/tx_image_2"
-                app:oval="true" />
-        </LinearLayout>
+                <TextView
+                    android:id="@id/tv_avatar"
+                    android:layout_width="0.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/tou_xiang_she_zhi"
+                    android:textColor="?text_color_1"
+                    android:textSize="16.0sp"/>
 
-        <LinearLayout
-            android:id="@id/item_modify_nickname"
-            android:layout_width="fill_parent"
-            android:layout_height="60.0dip"
-            android:background="?press_selector"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+                <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    android:id="@id/img_user_avatar"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tx_image"
+                    app:oval="true"/>
 
-            <TextView
-                android:id="@id/tv_change_nickname"
-                android:layout_width="0.0dip"
+                <ImageView
+                    android:id="@id/img_avatar_gif"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tx_image"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/item_modify_nickname"
+                android:layout_width="fill_parent"
                 android:layout_height="60.0dip"
-                android:layout_weight="1.0"
-                android:gravity="center_vertical"
-                android:singleLine="true"
-                android:text="@string/ni_cheng_she_zhi"
-                android:textColor="?text_color_1"
-                android:textSize="16.0sp" />
+                android:background="?press_selector"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-            <TextView
-                android:id="@id/text_nick_name"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@id/tv_change_nickname"
+                    android:layout_width="0.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/ni_cheng_she_zhi"
+                    android:textColor="?text_color_1"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:id="@id/text_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="?describe_text_color"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/item_modify_homepage"
+                android:layout_width="fill_parent"
                 android:layout_height="60.0dip"
-                android:layout_marginLeft="10.0dip"
-                android:gravity="center_vertical"
-                android:singleLine="true"
-                android:text=""
-                android:textColor="?describe_text_color"
-                android:textSize="16.0sp" />
-        </LinearLayout>
+                android:background="?press_selector"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-        <LinearLayout
-            android:id="@id/item_modify_homepage"
-            android:layout_width="fill_parent"
-            android:layout_height="60.0dip"
-            android:background="?press_selector"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+                <TextView
+                    android:id="@id/tv_change_homepage"
+                    android:layout_width="0.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/modify_homepage"
+                    android:textColor="?text_color_1"
+                    android:textSize="16.0sp"/>
 
-            <TextView
-                android:id="@id/tv_change_homepage"
-                android:layout_width="0.0dip"
-                android:layout_height="60.0dip"
-                android:layout_weight="1.0"
-                android:gravity="center_vertical"
-                android:singleLine="true"
-                android:text="@string/modify_homepage"
-                android:textColor="?text_color_1"
-                android:textSize="16.0sp" />
+                <TextView
+                    android:id="@id/text_homepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="?describe_text_color"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
 
-            <TextView
-                android:id="@id/text_homepage"
-                android:layout_width="wrap_content"
-                android:layout_height="60.0dip"
-                android:layout_marginLeft="10.0dip"
-                android:gravity="center_vertical"
-                android:singleLine="true"
-                android:textColor="?describe_text_color"
-                android:textSize="16.0sp" />
-        </LinearLayout>
+            <RelativeLayout
+                android:id="@id/item_modify_user_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-        <LinearLayout
-            android:id="@id/item_modify_user_profile"
-            android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+                <TextView
+                    android:id="@id/tv_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="4.0dip"
+                    android:singleLine="true"
+                    android:text="@string/edit_user_profile"
+                    android:textColor="?text_color_1"
+                    android:textSize="16.0sp"/>
 
-            <TextView
-                android:id="@id/tv_profile"
-                android:layout_width="0.0dip"
-                android:layout_height="60.0dip"
-                android:layout_weight="1.0"
-                android:gravity="center_vertical"
-                android:paddingBottom="4.0dip"
-                android:singleLine="true"
-                android:text="@string/jian_jie_she_zhi"
-                android:textColor="?text_color_1"
-                android:textSize="16.0sp" />
-
-            <TextView
-                android:id="@id/text_user_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="60.0dip"
-                android:ellipsize="none"
-                android:gravity="center_vertical"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:paddingBottom="4.0dip"
-                android:textColor="?describe_text_color"
-                android:textSize="16.0sp" />
+                <TextView
+                    android:id="@id/text_user_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/tv_profile"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxEms="15"
+                    android:maxLines="1"
+                    android:paddingBottom="4.0dip"
+                    android:textColor="?describe_text_color"
+                    android:textSize="16.0sp"/>
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -167,7 +189,7 @@
                 android:paddingTop="20.0dip"
                 android:text="@string/bind_social_account"
                 android:textColor="@color/theme_color"
-                android:textSize="12.0sp" />
+                android:textSize="12.0sp"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -177,247 +199,214 @@
                 android:paddingLeft="20.0dip"
                 android:text="@string/bind_social_account_tip"
                 android:textColor="?text_color_2"
-                android:textSize="12.0sp" />
+                android:textSize="12.0sp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@id/item_phone"
             android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+            android:layout_height="wrap_content"
+            android:divider="?shap_line"
+            android:dividerPadding="14.0dip"
+            android:orientation="vertical"
+            android:showDividers="middle">
 
-            <com.copy.jianshuapp.uilayer.views.TintableImageView
-                android:id="@id/img_icon_phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_sns_phone"
-                app:tint="@color/selector_color_enable_state" />
+            <LinearLayout
+                android:id="@id/item_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:gravity="center_vertical"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-            <TextView
-                android:id="@id/text_state_phone"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:ellipsize="none"
-                android:gravity="center"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="8.0dip"
-                android:text="@string/wei_bang_ding"
-                android:textColor="?text_color_2"
-                android:textSize="16.0sp" />
+                <com.baiji.jianshu.widget.TintableImageView
+                    android:id="@id/img_icon_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sns_phone"
+                    app:tint="@color/selector_color_enable_state"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
-        </LinearLayout>
+                <TextView
+                    android:id="@id/text_state_phone"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="none"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/wei_bang_ding"
+                    android:textColor="?text_color_2"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
 
-        <LinearLayout
-            android:id="@id/item_social_weibo"
-            android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+            <LinearLayout
+                android:id="@id/item_social_weibo"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:gravity="center_vertical"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-            <com.copy.jianshuapp.uilayer.views.TintableImageView
-                android:id="@id/img_icon_weibo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_sns_weibo"
-                app:tint="@color/selector_color_enable_state" />
+                <com.baiji.jianshu.widget.TintableImageView
+                    android:id="@id/img_icon_weibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sns_weibo"
+                    app:tint="@color/selector_color_enable_state"/>
 
-            <TextView
-                android:id="@id/text_state_weibo"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:ellipsize="none"
-                android:gravity="center"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="8.0dip"
-                android:text="@string/wei_bang_ding"
-                android:textColor="?text_color_2"
-                android:textSize="16.0sp" />
+                <TextView
+                    android:id="@id/text_state_weibo"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="none"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/wei_bang_ding"
+                    android:textColor="?text_color_2"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
-        </LinearLayout>
+            <LinearLayout
+                android:id="@id/item_social_wechat"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:gravity="center_vertical"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-        <LinearLayout
-            android:id="@id/item_social_wechat"
-            android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+                <com.baiji.jianshu.widget.TintableImageView
+                    android:id="@id/img_icon_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sns_weixin"
+                    app:tint="@color/selector_color_enable_state"/>
 
-            <com.copy.jianshuapp.uilayer.views.TintableImageView
-                android:id="@id/img_icon_wechat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_sns_weixin"
-                app:tint="@color/selector_color_enable_state" />
+                <TextView
+                    android:id="@id/text_state_wechat"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="none"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/wei_bang_ding"
+                    android:textColor="?text_color_2"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
 
-            <TextView
-                android:id="@id/text_state_wechat"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:ellipsize="none"
-                android:gravity="center"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="8.0dip"
-                android:text="@string/wei_bang_ding"
-                android:textColor="?text_color_2"
-                android:textSize="16.0sp" />
+            <LinearLayout
+                android:id="@id/item_social_qq"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:gravity="center_vertical"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
-        </LinearLayout>
+                <com.baiji.jianshu.widget.TintableImageView
+                    android:id="@id/img_icon_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sns_qq"
+                    app:tint="@color/selector_color_enable_state"/>
 
-        <LinearLayout
-            android:id="@id/item_social_qq"
-            android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+                <TextView
+                    android:id="@id/text_state_qq"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="none"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/wei_bang_ding"
+                    android:textColor="?text_color_2"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
 
-            <com.copy.jianshuapp.uilayer.views.TintableImageView
-                android:id="@id/img_icon_qq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_sns_qq"
-                app:tint="@color/selector_color_enable_state" />
+            <LinearLayout
+                android:id="@id/item_social_douban"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:gravity="center_vertical"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-            <TextView
-                android:id="@id/text_state_qq"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:ellipsize="none"
-                android:gravity="center"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="8.0dip"
-                android:text="@string/wei_bang_ding"
-                android:textColor="?text_color_2"
-                android:textSize="16.0sp" />
+                <com.baiji.jianshu.widget.TintableImageView
+                    android:id="@id/img_icon_douban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sns_douban"
+                    app:tint="@color/selector_color_enable_state"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
-        </LinearLayout>
+                <TextView
+                    android:id="@id/text_state_douban"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="none"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/wei_bang_ding"
+                    android:textColor="?text_color_2"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
 
-        <LinearLayout
-            android:id="@id/item_social_douban"
-            android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
+            <LinearLayout
+                android:id="@id/item_social_google_plus"
+                android:layout_width="fill_parent"
+                android:layout_height="64.0dip"
+                android:background="?press_selector"
+                android:gravity="center_vertical"
+                android:onClick="onMyClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip">
 
-            <com.copy.jianshuapp.uilayer.views.TintableImageView
-                android:id="@id/img_icon_douban"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_sns_douban"
-                app:tint="@color/selector_color_enable_state" />
+                <com.baiji.jianshu.widget.TintableImageView
+                    android:id="@id/img_icon_google_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sns_google"
+                    app:tint="@color/selector_color_enable_state"/>
 
-            <TextView
-                android:id="@id/text_state_douban"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:ellipsize="none"
-                android:gravity="center"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="8.0dip"
-                android:text="@string/wei_bang_ding"
-                android:textColor="?text_color_2"
-                android:textSize="16.0sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@id/item_social_google_plus"
-            android:layout_width="fill_parent"
-            android:layout_height="64.0dip"
-            android:background="?press_selector"
-            android:gravity="center_vertical"
-            android:onClick="onMyClick"
-            android:orientation="horizontal"
-            android:paddingLeft="20.0dip"
-            android:paddingRight="20.0dip">
-
-            <com.copy.jianshuapp.uilayer.views.TintableImageView
-                android:id="@id/img_icon_google_plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_sns_google"
-                app:tint="@color/selector_color_enable_state" />
-
-            <TextView
-                android:id="@id/text_state_google_plus"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:ellipsize="none"
-                android:gravity="center"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:padding="8.0dip"
-                android:text="@string/wei_bang_ding"
-                android:textColor="?text_color_2"
-                android:textSize="16.0sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
+                <TextView
+                    android:id="@id/text_state_google_plus"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="none"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/wei_bang_ding"
+                    android:textColor="?text_color_2"
+                    android:textSize="16.0sp"/>
+            </LinearLayout>
         </LinearLayout>
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
-            android:background="?common_bg_lightest" />
+            android:background="?common_bg_lightest"/>
 
         <LinearLayout
             android:id="@id/item_social_is_show"
@@ -440,19 +429,13 @@
                 android:padding="8.0dip"
                 android:text="@string/is_show_social_account"
                 android:textColor="?text_color_1"
-                android:textSize="16.0sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
+                android:textSize="16.0sp"/>
         </LinearLayout>
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
-            android:background="?common_bg_lightest" />
+            android:background="?common_bg_lightest"/>
 
         <LinearLayout
             android:id="@id/item_reset_password"
@@ -475,13 +458,7 @@
                 android:padding="8.0dip"
                 android:text="@string/reset_password"
                 android:textColor="?text_color_1"
-                android:textSize="16.0sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/gywm_icon_tiaozhuan" />
+                android:textSize="16.0sp"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

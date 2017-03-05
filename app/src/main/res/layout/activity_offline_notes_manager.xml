@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:divider="?shap_line"
+              android:showDividers="end|middle"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jin_ri_re_men"
+            android:layout_centerVertical="true"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:id="@id/switch_offline_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guan_zhu_wen_zhang"
+            android:layout_centerVertical="true"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:id="@id/switch_offline_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:id="@id/tv_cache_when_disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shou_chang_wen_zhang"
+            android:layout_centerVertical="true"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:id="@id/switch_offline_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

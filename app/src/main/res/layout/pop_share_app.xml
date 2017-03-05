@@ -1,18 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TableLayout android:orientation="horizontal" style="@style/dimen_mw">
+<LinearLayout android:orientation="vertical"
+              android:paddingTop="20.0dip"
+              android:paddingBottom="20.0dip"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout style="@style/dimen_mw">
+
         <TableRow>
-            <TextView android:layout_gravity="center" android:id="@id/text_wechat" android:text="@string/wechat" android:drawableTop="@drawable/icon_share_wechat" style="@style/share_item" />
-            <TextView android:layout_gravity="center" android:id="@id/text_wechat_moments" android:text="@string/wechatmoments" android:drawableTop="@drawable/icon_share_wechat_moment" style="@style/share_item" />
-            <TextView android:layout_gravity="center" android:id="@id/text_sina_weibo" android:text="@string/sinaweibo" android:drawableTop="@drawable/icon_share_sina" style="@style/share_item" />
-            <TextView android:layout_gravity="center" android:id="@id/text_qzone" android:text="@string/qzone" android:drawableTop="@drawable/icon_share_qzone" style="@style/share_item" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_wechat"
+                android:text="@string/wechat"
+                android:drawableTop="?icon_share_wechat"
+                style="@style/share_item"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_wechat_moments"
+                android:text="@string/wechatmoments"
+                android:drawableTop="?icon_share_wechat_moment"
+                style="@style/share_item"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_sina_weibo"
+                android:text="@string/sinaweibo"
+                android:drawableTop="?icon_share_sina"
+                style="@style/share_item"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_qzone"
+                android:text="@string/qzone"
+                android:drawableTop="?icon_share_qzone"
+                style="@style/share_item"/>
         </TableRow>
+
         <TableRow android:layout_marginTop="10.0dip">
-            <TextView android:layout_gravity="center" android:id="@id/text_qq" android:text="@string/qq" android:drawableTop="@drawable/icon_share_tencent_qq" style="@style/share_item" />
-            <TextView android:layout_gravity="center" android:id="@id/text_dou_ban" android:text="@string/dou_ban" android:drawableTop="@drawable/icon_share_douban" style="@style/share_item" />
-            <TextView android:layout_gravity="center" android:id="@id/text_copy_link" android:text="@string/copy_url" android:drawableTop="@drawable/icon_share_link" style="@style/share_item" />
-            <TextView android:layout_gravity="center" android:id="@id/text_more" android:text="@string/geng_dou" android:drawableTop="@drawable/icon_share_more" style="@style/share_item" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_qq"
+                android:text="@string/qq"
+                android:drawableTop="?icon_share_qq"
+                style="@style/share_item"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_copy_link"
+                android:text="@string/copy_url"
+                android:drawableTop="?icon_share_lianjie"
+                style="@style/share_item"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/text_more"
+                android:text="@string/geng_dou"
+                android:drawableTop="?icon_share_more"
+                style="@style/share_item"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:text=""
+                style="@style/share_item"/>
         </TableRow>
     </TableLayout>
 </LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:background="?common_bg_white_black"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textColor="?color_99_88"
+        android:id="@id/tv_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:theme="@style/checkBoxComponent"
+        android:textColor="@color/color_99"
+        android:id="@id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/bu_zai_ti_xing"/>
+</LinearLayout>

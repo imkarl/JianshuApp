@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:background="#ffeceff1"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/emojis_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+
+        <ImageButton
+            android:id="@id/emojis_tab_0_recent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_recent"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_recent"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_1_people"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_people"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_people"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_2_nature"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_nature"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_nature"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_3_food"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_food"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_food"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_4_sport"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_sport"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_sport"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_5_cars"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_cars"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_cars"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_6_electronics"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_electronics"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_electronics"/>
+
+        <ImageButton
+            android:id="@id/emojis_tab_7_symbols"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_symbols"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_symbols"/>
+
+        <ImageButton
+            android:id="@id/emojis_backspace"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/emoji_backspace_back_normal"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/emoji_backspace"/>
+    </LinearLayout>
+
+    <View
+        android:background="#ff626e76"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/emojis_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

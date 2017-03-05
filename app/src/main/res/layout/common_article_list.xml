@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout_common_notes" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.baiji.jianshu.widget.ListViewLisOnBottom android:scrollbarStyle="outsideOverlay" android:id="@id/list_common_notes" android:listSelector="?press_selector" android:divider="?listview_divider" android:dividerHeight="0.6dip" android:headerDividersEnabled="false" android:footerDividersEnabled="false" style="@style/dimen_mm" />
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout_common_notes"
+                                               android:background="?common_bg_white_black"
+                                               android:layout_width="fill_parent"
+                                               android:layout_height="fill_parent"
+                                               xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.baiji.jianshu.widget.ListViewLisOnBottom
+        android:scrollbarStyle="outsideOverlay"
+        android:id="@id/list_common_notes"
+        android:listSelector="?press_selector"
+        android:divider="@null"
+        android:dividerHeight="0.0dip"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        style="@style/dimen_mm"/>
 </com.baiji.jianshu.widget.JSSwipeRefreshLayout>

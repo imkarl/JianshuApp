@@ -1,6 +1,6 @@
 package com.copy.jianshuapp.exception;
 
-import com.copy.jianshuapp.utils.log.JSLog;
+import com.copy.jianshuapp.common.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,12 +59,7 @@ public class CrashHandlerHelper {
             synchronized (CrashHandlerHelper.class) {
                 if (mCrashHandler == null) {
                     mCrashHandler = new CrashHandlerHelper();
-                    ExceptionHandler.regist(new OnExceptionHandler() {
-                        @Override
-                        public void handlerException(Throwable exception) {
-                            mCrashHandler.handlerException(exception);
-                        }
-                    });
+                    ExceptionHandler.regist(exception -> mCrashHandler.handlerException(exception));
                 }
             }
         }
@@ -87,7 +82,6 @@ public class CrashHandlerHelper {
 
     /**
      * 自定义异常处理:收集错误信息&发送错误报告
-     * @param exception
      */
     private void handlerException(Throwable exception) {
         if (!mHandlers.isEmpty()) {
@@ -96,20 +90,18 @@ public class CrashHandlerHelper {
             }
         } else {
             // 打印APP崩溃异常
-            JSLog.e(exception);
+            LogUtils.e(exception);
         }
     }
 
     /**
      * 添加异常处理器
-     * @param handler
      */
     public void addHandler(OnExceptionHandler handler) {
         this.mHandlers.add(handler);
     }
     /**
      * 删除异常处理器
-     * @param handler
      */
     public void removeHandler(OnExceptionHandler handler) {
         this.mHandlers.remove(handler);

@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<x />
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="ring"
+       android:thickness="1.0dip"
+       android:useLevel="false">
+    <gradient
+        android:endColor="@color/theme_color"
+        android:startColor="@color/theme_color"
+        android:useLevel="false"/>
+    <size
+        android:width="50.0dip"
+        android:height="50.0dip"/>
+</shape>

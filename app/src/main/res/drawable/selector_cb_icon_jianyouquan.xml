@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="true" android:drawable="@drawable/cb_icon_jianyouquan_selected" />
-    <item android:drawable="@drawable/cb_icon_jianyouquan_normal" />
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/cb_icon_jianyouquan_selected" android:state_selected="true"/>
+    <item android:drawable="@drawable/cb_icon_jianyouquan_normal"/>
 </selector>

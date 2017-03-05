@@ -1,13 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/rootView" android:background="?card_corner_no_frame" android:layout_width="280.0dip" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="@color/theme_color" android:id="@id/tv_title" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
-    <FrameLayout android:id="@id/frame_content" android:paddingLeft="20.0dip" android:paddingTop="24.0dip" android:paddingRight="20.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <TextView android:textColor="@color/theme_color" android:gravity="center" android:id="@id/tv_error" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nickname_hint" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?shap_line_v" android:showDividers="middle">
-        <TextView android:textColor="?text_color_1" android:gravity="center" android:id="@id/tv_negative" android:background="?press_selector" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/qu_xiao" android:layout_weight="1.0" />
-        <TextView android:textColor="?text_color_1" android:gravity="center" android:id="@id/tv_middle" android:background="?press_selector" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/que_ding" android:layout_weight="1.0" />
-        <TextView android:textColor="?text_color_1" android:gravity="center" android:id="@id/tv_positive" android:background="?press_selector" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/que_ding" android:layout_weight="1.0" />
+<LinearLayout android:orientation="vertical"
+              android:id="@id/rootView"
+              android:background="?card_corner_no_frame"
+              android:layout_width="280.0dip"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textColor="@color/theme_color"
+        android:id="@id/tv_title"
+        android:paddingLeft="20.0dip"
+        android:paddingTop="20.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ti_shi"/>
+
+    <FrameLayout
+        android:id="@id/frame_content"
+        android:paddingLeft="20.0dip"
+        android:paddingTop="24.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingBottom="24.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/theme_color"
+        android:gravity="center"
+        android:id="@id/tv_error"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingBottom="10.0dip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nickname_hint"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="?shap_line_v"
+        android:showDividers="middle">
+
+        <TextView
+            android:textColor="?text_color_1"
+            android:gravity="center"
+            android:id="@id/tv_negative"
+            android:background="?press_selector"
+            android:paddingTop="16.0dip"
+            android:paddingBottom="16.0dip"
+            android:visibility="visible"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/qu_xiao"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:textColor="?text_color_1"
+            android:gravity="center"
+            android:id="@id/tv_middle"
+            android:background="?press_selector"
+            android:paddingTop="16.0dip"
+            android:paddingBottom="16.0dip"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/que_ding"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:textColor="?text_color_1"
+            android:gravity="center"
+            android:id="@id/tv_positive"
+            android:background="?press_selector"
+            android:paddingTop="16.0dip"
+            android:paddingBottom="16.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/que_ding"
+            android:layout_weight="1.0"/>
     </LinearLayout>
 </LinearLayout>

@@ -1,24 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
-            <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reward_function" />
-            <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:id="@id/tv_enable_rewarding_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enable_rewarding_tips" android:maxLines="2" />
+<LinearLayout android:orientation="vertical"
+              android:background="?common_bg_white_black"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="?color_2f_b1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reward_function"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?color_99_88"
+                android:id="@id/tv_enable_rewarding_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enable_rewarding_tips"
+                android:maxLines="2"/>
         </LinearLayout>
-        <com.baiji.jianshu.widget.SmartSwitchButton android:gravity="center_vertical" android:id="@id/switch_enable_rewarding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:gravity="center_vertical"
+            android:id="@id/switch_enable_rewarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:gravity="center_vertical" android:background="?color_f4_3a" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/reward_setting" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <LinearLayout android:orientation="horizontal" android:id="@id/linear_change_default_money" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-        <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/change_default_reward_amount" android:layout_weight="1.0" />
-        <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:gravity="center_vertical" android:id="@id/tv_default_money" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="" android:singleLine="true" />
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/theme_color"
+        android:gravity="center_vertical"
+        android:background="?color_f4_3a"
+        android:paddingLeft="18.0dip"
+        android:paddingTop="18.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reward_setting"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/linear_change_default_money"
+        android:background="?press_selector"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:gravity="center_vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/change_default_reward_amount"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_99_88"
+            android:gravity="center_vertical"
+            android:id="@id/tv_default_money"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:singleLine="true"/>
     </LinearLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
-    <LinearLayout android:orientation="horizontal" android:id="@id/linear_change_default_desc" android:background="?press_selector" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
-        <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/change_default_reward_desc" android:layout_weight="1.0" android:layout_centerVertical="true" />
-        <TextView android:textSize="16.0sp" android:textColor="?color_99_88" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_default_desc" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:maxLength="14" />
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginRight="18.0dip"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/linear_change_default_desc"
+        android:background="?press_selector"
+        android:paddingLeft="18.0dip"
+        android:paddingRight="18.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:gravity="center_vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/change_default_reward_desc"
+            android:layout_weight="1.0"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_99_88"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/tv_default_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:singleLine="true"
+            android:maxLength="14"/>
     </LinearLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
 </LinearLayout>

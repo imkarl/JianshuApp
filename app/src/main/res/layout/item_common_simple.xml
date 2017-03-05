@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/common_root"
+             android:background="?press_selector"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="72.0dip">
+
+        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/avatar"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:scaleType="centerCrop"
+            app:border_width="0.30000007dip"
+            app:border_color="?gray300"
+            app:oval="true"/>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="?color_2f_b1"
+                android:ellipsize="end"
+                android:id="@id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:singleLine="true"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?color_b1_71"
+                android:ellipsize="end"
+                android:id="@id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dip"
+                android:text="desc"
+                android:singleLine="true"
+                android:maxLength="20"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_gravity="bottom"
+        android:id="@id/item_divider"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="15.0dip"/>
+</FrameLayout>

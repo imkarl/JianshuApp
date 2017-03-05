@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:id="@id/tv_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="14.0dip" android:text="@string/zuo_zhe" />
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="26.0dip" android:layout_marginBottom="26.0dip" android:src="@drawable/tx_image_1" android:scaleType="centerCrop" android:layout_below="@id/tv_author" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="name" android:singleLine="true" android:layout_toRightOf="@id/avatar" android:layout_alignTop="@id/avatar" />
-    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="desc" android:singleLine="true" android:layout_below="@id/tv_name" android:layout_alignLeft="@id/tv_name" />
+<RelativeLayout android:background="?press_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?color_99_88"
+        android:id="@id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginTop="14.0dip"
+        android:text="@string/zuo_zhe"/>
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/avatar"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="26.0dip"
+        android:layout_marginBottom="26.0dip"
+        android:src="@drawable/tx_image"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/tv_author"
+        app:border_width="0.0dip"
+        app:border_color="@drawable/selector_color_theme_tran"
+        app:oval="true"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?color_2f_b1"
+        android:id="@id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11.0dip"
+        android:text="name"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/avatar"
+        android:layout_alignTop="@id/avatar"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?color_99_88"
+        android:id="@id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="desc"
+        android:singleLine="true"
+        android:layout_below="@id/tv_name"
+        android:layout_alignLeft="@id/tv_name"/>
 </RelativeLayout>

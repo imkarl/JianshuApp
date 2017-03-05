@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="horizontal"
+              android:id="@id/linear_social"
+              android:paddingLeft="20.0dip"
+              android:paddingRight="20.0dip"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:layout_gravity="center"
+        android:id="@id/iv_wechat"
+        android:clickable="true"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginRight="20.0dip"
+        android:src="@drawable/icon_wechat"
+        android:scaleType="fitXY"
+        app:border_width="0.0dip"
+        app:oval="true"/>
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:layout_gravity="center"
+        android:id="@id/iv_qq"
+        android:clickable="true"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginRight="20.0dip"
+        android:src="@drawable/icon_qq"
+        android:scaleType="centerCrop"
+        app:border_width="0.0dip"
+        app:border_color="@drawable/selector_color_theme_tran"
+        app:oval="true"/>
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/iv_weibo"
+        android:clickable="true"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:src="@drawable/icon_weibo"
+        app:corner_radius="20.0dip"
+        app:border_width="0.0dip"
+        app:oval="true"/>
+
+    <TextView
+        android:textSize="10.0dip"
+        android:gravity="center"
+        android:id="@id/tv_others"
+        android:background="?shape_login_icon_circle"
+        android:padding="10.0dip"
+        android:visibility="visible"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:text="@string/other"/>
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:layout_gravity="center"
+        android:id="@id/iv_douban"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:src="@drawable/icon_douban"
+        app:border_width="0.0dip"
+        app:oval="true"/>
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:layout_gravity="center"
+        android:id="@id/iv_google"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:src="@drawable/icon_google"
+        app:border_width="0.0dip"
+        app:oval="true"/>
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/coll_user_root"
+              android:paddingLeft="15.0dip"
+              android:paddingTop="12.0dip"
+              android:paddingRight="15.0dip"
+              android:paddingBottom="22.0dip"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:textColor="?gray500"
+        android:id="@id/txt_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="相关用户"
+        android:drawableRight="@drawable/gywm_icon_tiaozhuan"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22.0dip">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@id/col_1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                android:id="@id/img_1"
+                android:layout_width="33.0dip"
+                android:layout_height="33.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"
+                android:layout_column="0"
+                android:layout_row="0"
+                app:border_width="0.30000007dip"
+                app:border_color="?gray300"
+                app:oval="true"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?gray900"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:id="@id/txt_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:text="hahah"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@id/col_2"
+            android:visibility="invisible"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                android:id="@id/img_2"
+                android:layout_width="33.0dip"
+                android:layout_height="33.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"
+                android:layout_column="0"
+                android:layout_row="0"
+                app:border_width="0.30000007dip"
+                app:border_color="?gray300"
+                app:oval="true"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?gray900"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:id="@id/txt_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:text="hahah"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@id/col_3"
+            android:visibility="invisible"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                android:id="@id/img_3"
+                android:layout_width="33.0dip"
+                android:layout_height="33.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"
+                android:layout_column="0"
+                android:layout_row="0"
+                app:border_width="0.30000007dip"
+                app:border_color="?gray300"
+                app:oval="true"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?gray900"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:id="@id/txt_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:text="hahah"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@id/col_4"
+            android:visibility="invisible"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                android:id="@id/img_4"
+                android:layout_width="33.0dip"
+                android:layout_height="33.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"
+                android:layout_column="0"
+                android:layout_row="0"
+                app:border_width="0.30000007dip"
+                app:border_color="?gray300"
+                app:oval="true"/>
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?gray900"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:id="@id/txt_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:text="hahah"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

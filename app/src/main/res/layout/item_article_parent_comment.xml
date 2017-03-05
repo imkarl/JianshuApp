@@ -1,17 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="16.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="horizontal" android:id="@id/row_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
-        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:layout_gravity="center" android:id="@id/img_avatar" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/tx_image_3" android:scaleType="centerCrop" app:oval="true" />
-        <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
-            <TextView android:textSize="14.0sp" android:textColor="@color/text_color_b1_dark" android:gravity="center" android:id="@id/text_comment_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="作者名称" android:maxLength="15" />
-            <TextView android:textSize="8.0sp" android:textColor="?text_color_4" android:gravity="center" android:id="@id/text_tag_author" android:background="@drawable/shap_oval_h20_gray" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="14.0dip" android:layout_marginLeft="4.0dip" android:text="@string/zuo_zhe" android:layout_toRightOf="@id/text_comment_name" />
-            <TextView android:textSize="10.0sp" android:textColor="?text_color_2" android:id="@id/text_comment_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="00:00" android:singleLine="true" android:layout_below="@id/text_comment_name" android:layout_alignLeft="@id/text_comment_name" />
+<RelativeLayout android:paddingTop="24.0dip"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/row_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip">
+
+        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            android:layout_gravity="center"
+            android:id="@id/img_avatar"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:src="@drawable/tx_image"
+            android:scaleType="centerCrop"
+            app:border_width="0.30000007dip"
+            app:border_color="?gray300"
+            app:oval="true"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/img_avatar_gif"
+            android:visibility="gone"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:src="@drawable/tx_image"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip">
+
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/text_color_b1_dark"
+                android:gravity="center"
+                android:id="@id/text_comment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作者名称"
+                android:maxLength="15"/>
+
+            <TextView
+                android:textSize="8.0sp"
+                android:textColor="?text_color_4"
+                android:gravity="center"
+                android:id="@id/text_tag_author"
+                android:background="@drawable/shap_oval_h20_gray"
+                android:visibility="gone"
+                android:layout_width="24.0dip"
+                android:layout_height="14.0dip"
+                android:layout_marginLeft="4.0dip"
+                android:text="@string/zuo_zhe"
+                android:layout_toRightOf="@id/text_comment_name"/>
+
+            <TextView
+                android:textSize="10.0sp"
+                android:textColor="?text_color_2"
+                android:id="@id/text_comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:text="00:00"
+                android:singleLine="true"
+                android:layout_below="@id/text_comment_name"
+                android:layout_alignLeft="@id/text_comment_name"/>
         </RelativeLayout>
-        <View android:id="@id/assist_line" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
-        <TextView android:textColor="?text_color_2" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/text_like_action" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawableLeft="?icon_like_selector" android:drawablePadding="4.0dip" />
+
+        <View
+            android:id="@id/assist_line"
+            android:visibility="invisible"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@id/visit_source"
+            android:padding="3.0dip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.0dip"
+            android:drawableLeft="@drawable/icon_comment_view_small"/>
+
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:id="@id/reply_container"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.0dip">
+
+            <TextView
+                android:id="@id/reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_comment_reply_small"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:id="@id/like_container"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="?text_color_2"
+                android:gravity="center"
+                android:id="@id/text_like_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/selector_praise_action_bg"
+                android:drawablePadding="4.0dip"/>
+        </FrameLayout>
     </LinearLayout>
-    <com.baiji.jianshu.widget.TextViewFixTouchConsume android:textSize="16.0sp" android:textColor="?text_color_1" android:textColorLink="@color/text_blue" android:id="@id/text_comment_content" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="16.0dip" android:text="content" android:layout_below="@id/row_1" android:layout_alignLeft="@id/row_1" android:lineSpacingExtra="2.0dip" />
-    <View android:id="@id/solid" android:background="?listview_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_alignParentBottom="true" />
-    <View android:id="@id/dash" android:background="?dash_line" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentBottom="true" android:layerType="software" />
+
+    <com.baiji.jianshu.widget.TextViewFixTouchConsume
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:textColorLink="@color/text_blue"
+        android:gravity="center_vertical"
+        android:id="@id/text_comment_content"
+        android:paddingBottom="16.0dip"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="16.0dip"
+        android:text="content"
+        android:layout_below="@id/row_1"
+        android:layout_alignLeft="@id/row_1"
+        android:lineSpacingExtra="2.0dip"/>
+
+    <View
+        android:id="@id/solid"
+        android:background="?listview_divider"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_below="@id/text_comment_content"/>
+
+    <View
+        android:id="@id/dash"
+        android:background="?dash_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_below="@id/text_comment_content"
+        android:layerType="software"/>
 </RelativeLayout>

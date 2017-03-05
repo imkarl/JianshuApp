@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/mySwipe" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ListView android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?press_selector" android:cacheColorHint="#00000000" android:divider="@null" />
-    </LinearLayout>
-</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

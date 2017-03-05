@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom"
+              android:orientation="horizontal"
+              android:id="@id/navigation_bar_sign"
+              android:background="?bg_theme_black"
+              android:visibility="gone"
+              android:layout_width="fill_parent"
+              android:layout_height="@dimen/bottom_navigation_height"
+              android:showDividers="middle"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@id/tab_login"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?text_color_white_theme"
+            android:layout_gravity="center"
+            android:id="@id/text_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deng_lu"
+            android:drawableLeft="?home_icon_login"
+            android:drawablePadding="8.0dip"/>
+    </FrameLayout>
+
+    <View
+        android:id="@id/divider_line"
+        android:background="?text_color_white_theme"
+        android:layout_width="0.39999998dip"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginBottom="12.0dip"/>
+
+    <FrameLayout
+        android:id="@id/tab_register"
+        android:clickable="true"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?text_color_white_theme"
+            android:layout_gravity="center"
+            android:id="@id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zhu_ce"
+            android:drawableLeft="?home_icon_signup"
+            android:drawablePadding="8.0dip"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/toolbar_article_detail"/>
+
+    <include layout="@layout/article_detail_main"/>
+
+    <include layout="@layout/article_detail_bottom"/>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="true" android:drawable="@drawable/image_jiacu_selected" />
-    <item android:drawable="@drawable/image_jiacu" />
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/image_jiacu_selected" android:state_selected="true"/>
+    <item android:drawable="@drawable/image_jiacu"/>
 </selector>

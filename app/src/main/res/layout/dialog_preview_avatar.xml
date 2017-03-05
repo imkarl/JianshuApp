@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_preview_avatar"
+             android:background="@color/gray1000"
+             android:clickable="true"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@id/photo_avatar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+</FrameLayout>

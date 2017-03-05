@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="fill_parent" android:layout_height="300.0dip" android:src="@drawable/weichat_banner" android:scaleType="fitCenter" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/text_black_light" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/jianshu_weichat_subscibe" />
+<LinearLayout android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="300.0dip"
+        android:src="@drawable/weichat_banner"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/text_black_light"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20.0dip"
+        android:text="@string/jianshu_weichat_subscibe"/>
 </LinearLayout>

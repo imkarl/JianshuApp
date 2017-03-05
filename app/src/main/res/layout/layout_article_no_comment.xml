@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="18.0sp" android:textColor="?text_color_2" android:gravity="center" android:id="@id/layout_article_no_comment" android:background="?common_bg_white_black" android:paddingTop="10.0dip" android:paddingBottom="40.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/article_no_comment"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/img_icon_action" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/remind_icon_like" android:scaleType="centerCrop" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:textColorLink="@color/text_blue" android:id="@id/text_notify_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" android:layout_marginRight="20.0dip" android:text="content" android:maxLines="5" android:layout_toRightOf="@id/img_icon_action" android:layout_alignTop="@id/img_icon_action" />
-    <TextView android:textSize="12.0sp" android:textColor="?text_color_2" android:id="@id/text_notify_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="20.0dip" android:text="00:00" android:singleLine="true" android:layout_below="@id/text_notify_content" android:layout_alignLeft="@id/text_notify_content" />
+<RelativeLayout android:paddingTop="20.0dip"
+                android:paddingBottom="20.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/img_icon_action"
+        android:layout_width="18.0dip"
+        android:layout_height="18.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="12.0dip"
+        android:src="@drawable/remind_icon_like"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:textColorLink="@color/text_blue"
+        android:id="@id/text_notify_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2.0dip"
+        android:layout_marginRight="20.0dip"
+        android:text="content"
+        android:maxLines="5"
+        android:layout_toRightOf="@id/img_icon_action"
+        android:layout_alignTop="@id/img_icon_action"
+        android:lineSpacingExtra="4.0dip"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?text_color_2"
+        android:id="@id/text_notify_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="20.0dip"
+        android:text="00:00"
+        android:singleLine="true"
+        android:layout_below="@id/text_notify_content"
+        android:layout_alignLeft="@id/text_notify_content"/>
 </RelativeLayout>

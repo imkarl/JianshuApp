@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+              android:background="?gray100"
+              android:layout_width="fill_parent"
+              android:layout_height="48.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/img_insert_image_on_richtext"
+        android:background="?press_selector"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="@drawable/image_xiezuo_photo"
+        android:scaleType="center"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:id="@id/img_font_on_richtext"
+        android:background="?press_selector"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="@drawable/selector_icon_font_style"
+        android:scaleType="center"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:id="@id/img_add_on_richtext"
+        android:background="?press_selector"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="@drawable/image_editor_menu_insert"
+        android:scaleType="center"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:id="@id/img_undo_on_richtext"
+        android:background="?press_selector"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="@drawable/image_editor_undo"
+        android:scaleType="center"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:id="@id/img_redo_on_richtext"
+        android:background="?press_selector"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="@drawable/image_editor_redo"
+        android:scaleType="center"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/img_more_on_richtext"
+        android:background="?press_selector"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:src="@drawable/image_editor_menu_more"
+        android:scaleType="center"
+        android:layout_weight="1.0"/>
+</LinearLayout>

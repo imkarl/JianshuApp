@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay"
+                                        android:id="@id/recycler_view"
+                                        android:background="?card_corner_no_frame"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:divider="?listview_divider"
+                                        android:dividerHeight="1.0dip"
+                                        xmlns:android="http://schemas.android.com/apk/res/android"/>

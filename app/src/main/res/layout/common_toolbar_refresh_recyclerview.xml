@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:background="?common_bg_white_black"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/universal_toolbar"/>
+
+    <com.baiji.jianshu.widget.refreshview.CustomSwipeRefreshLayout
+        android:id="@id/refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </com.baiji.jianshu.widget.refreshview.CustomSwipeRefreshLayout>
+</LinearLayout>

@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/img_collect_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" app:border_width="1.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:id="@id/text_collection_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="title" android:singleLine="true" android:layout_toRightOf="@id/img_collect_icon" android:layout_alignTop="@id/img_collect_icon" />
-    <TextView android:textSize="12.0sp" android:textColor="?text_color_2" android:id="@id/text_collection_subscribe_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:singleLine="true" android:layout_toRightOf="@id/img_collect_icon" android:layout_alignBottom="@id/img_collect_icon" />
-    <ImageView android:id="@id/btn_collection_opration" android:background="@drawable/selector_shap_oval_theme_white" android:padding="8.0dip" android:clickable="true" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_margin="14.0dip" android:src="@drawable/selector_icon_subscribe2" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/img_collect_icon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_margin="10.0dip"
+        android:scaleType="centerCrop"
+        app:border_width="1.0dip"
+        app:border_color="@drawable/selector_color_theme_tran"
+        app:oval="true"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:id="@id/text_collection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50.0dip"
+        android:text="title"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/img_collect_icon"
+        android:layout_alignTop="@id/img_collect_icon"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?text_color_2"
+        android:id="@id/text_collection_subscribe_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/img_collect_icon"
+        android:layout_alignBottom="@id/img_collect_icon"/>
+
+    <ImageView
+        android:id="@id/btn_collection_opration"
+        android:background="@drawable/selector_shap_oval_theme_white"
+        android:padding="8.0dip"
+        android:clickable="true"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_margin="14.0dip"
+        android:src="@drawable/selector_icon_subscribe2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
 </RelativeLayout>

@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="14.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/collection_accept_contribution" />
-        <com.baiji.jianshu.widget.SmartSwitchButton android:id="@id/accept_contribution_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+<LinearLayout android:orientation="vertical"
+              android:background="?common_bg_white_black"
+              android:paddingLeft="18.0dip"
+              android:paddingRight="18.0dip"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:paddingTop="10.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="?color_2f_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection_accept_contribution"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:id="@id/accept_contribution_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="14.0sp" android:textColor="?color_2f_b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contribution_need_editor_check" />
-        <com.baiji.jianshu.widget.SmartSwitchButton android:id="@id/need_check_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <RelativeLayout
+        android:paddingTop="10.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="?color_2f_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contribution_need_editor_check"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:id="@id/need_check_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/theme_color" android:gravity="center" android:id="@id/action_cancel" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/qu_xiao" />
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/theme_color"
+        android:gravity="center"
+        android:id="@id/action_cancel"
+        android:paddingTop="10.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/qu_xiao"/>
 </LinearLayout>

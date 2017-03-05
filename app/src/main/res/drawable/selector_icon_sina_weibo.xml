@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false">
-        <bitmap android:src="@drawable/grzy_zh_sina_yes" android:tint="@color/gray" />
+        <bitmap android:src="@drawable/grzy_zh_sina_yes" android:tint="@color/gray"/>
     </item>
-    <item android:drawable="@drawable/grzy_zh_sina_yes" />
+    <item android:drawable="@drawable/grzy_zh_sina_yes"/>
 </selector>

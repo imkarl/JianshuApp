@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="72.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:id="@id/avatar_groups" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_centerVertical="true">
-        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar_1" android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/find_search" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar_2" android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginLeft="2.0dip" android:src="@drawable/find_search" android:scaleType="centerCrop" android:layout_toRightOf="@id/avatar_1" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar_3" android:visibility="gone" android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/find_search" android:scaleType="centerCrop" android:layout_below="@id/avatar_1" android:layout_alignLeft="@id/avatar_1" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-        <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar_4" android:visibility="gone" android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/find_search" android:scaleType="centerCrop" android:layout_below="@id/avatar_2" android:layout_alignRight="@id/avatar_2" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    </RelativeLayout>
-    <TextView android:textSize="16.0sp" android:textColor="@color/theme_color" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="@string/view_all_pushing_via_one_key" android:layout_toRightOf="@id/avatar_groups" android:layout_centerVertical="true" />
-    <ImageView android:id="@id/tv_jump" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    <View android:id="@id/line3" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_alignParentBottom="true" />
+<RelativeLayout android:id="@id/view_all_root"
+                android:background="?press_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="72.0dip"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/img_all_new"
+        android:background="?shape_circle"
+        android:padding="8.0dip"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:src="@drawable/image_all_new"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?color_2f_b1"
+        android:id="@id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:text="@string/view_all_pushing_via_one_key"
+        android:layout_toRightOf="@id/img_all_new"
+        android:layout_centerVertical="true"/>
+
+    <View
+        android:id="@id/line3"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

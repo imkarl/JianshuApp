@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipe_submission_manage"
+                                               android:background="?common_bg_white_black"
+                                               android:layout_width="fill_parent"
+                                               android:layout_height="fill_parent"
+                                               xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.baiji.jianshu.widget.ListViewLisOnBottom
+        android:scrollbarStyle="outsideOverlay"
+        android:id="@id/list_submission_manage"
+        android:listSelector="@android:color/transparent"
+        android:divider="?listview_divider"
+        android:dividerHeight="0.39999998dip"
+        style="@style/dimen_mm"/>
+</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

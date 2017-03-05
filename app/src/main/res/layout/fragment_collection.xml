@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.viewpagerindicator.TabPageIndicator android:id="@id/indicator_collection" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <android.support.v4.view.ViewPager android:id="@id/collect_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</LinearLayout>

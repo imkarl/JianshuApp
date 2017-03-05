@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <uk.co.senab.photoview.PhotoView android:id="@id/photoview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <include android:layout_gravity="center|right|top" android:id="@id/progressBar_img_load" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" layout="@layout/progressbar_small" />
-    <TextView android:textColor="@color/gray" android:id="@id/text_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@id/photoview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <include
+        android:layout_gravity="center|right|top"
+        android:id="@id/progressBar_img_load"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="10.0dip"
+        layout="@layout/progressbar_small"/>
+
+    <TextView
+        android:textColor="@color/gray"
+        android:id="@id/text_progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </FrameLayout>

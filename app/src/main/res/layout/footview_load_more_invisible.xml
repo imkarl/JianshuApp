@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@id/container_load_more"
+        android:paddingTop="14.0dip"
+        android:paddingBottom="14.0dip"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@id/progressBar_loadmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:layout_centerVertical="true"
+            layout="@layout/progressbar_small"/>
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:id="@id/tv_load_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jia_zai_gen_duo"
+            android:layout_centerInParent="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?text_color_2"
+        android:gravity="center"
+        android:id="@id/text_end_tag"
+        android:paddingTop="20.0dip"
+        android:paddingBottom="20.0dip"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="-- end --"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?text_color_2"
+        android:gravity="center"
+        android:id="@id/text_reload"
+        android:paddingTop="20.0dip"
+        android:paddingBottom="20.0dip"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="加载失败，点击重新加载"/>
+
+    <FrameLayout
+        android:id="@id/unlogin_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="130.0dip">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?color_b1_71"
+                android:gravity="center"
+                android:id="@id/unlogin_text_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到底啦，登录简书还能看更多"/>
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@id/unlogin_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:src="?attr_home_img_readmore"/>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView android:id="@id/emoji_grid_view"
+          android:paddingLeft="5.0dip"
+          android:paddingTop="5.0dip"
+          android:scrollbars="vertical"
+          android:clipToPadding="false"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:horizontalSpacing="5.0dip"
+          android:verticalSpacing="5.0dip"
+          android:columnWidth="40.0dip"
+          android:numColumns="auto_fit"
+          xmlns:android="http://schemas.android.com/apk/res/android"/>

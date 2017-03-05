@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.ListViewLisOnBottom android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:listSelector="?press_selector" android:divider="?listview_divider" android:dividerHeight="0.39999998dip" style="@style/dimen_mm"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

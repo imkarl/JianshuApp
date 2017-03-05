@@ -1,67 +1,585 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/linear_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?shap_line" android:showDividers="middle"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center" android:id="@id/text_title_user" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height" android:text="@string/wo_de" android:layout_centerInParent="true" />
-    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <LinearLayout android:orientation="vertical" android:id="@id/linear_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="16.0dip" android:divider="?shap_line" android:showDividers="middle">
-            <FrameLayout android:id="@id/container_login" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <RelativeLayout android:id="@id/item_user" android:background="?press_selector" android:paddingLeft="20.0dip" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="onMyClick">
-                    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/img_user_avatar" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/tx_image_3" android:scaleType="centerCrop" app:oval="true" />
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/deng_lu_he_zhu_ce" android:singleLine="true" android:drawablePadding="10.0dip" android:layout_toRightOf="@id/img_user_avatar" android:layout_centerVertical="true" />
-                    <ImageView android:id="@id/img_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-            </FrameLayout>
-            <View android:id="@id/view_divider_1" android:layout_width="fill_parent" android:layout_height="16.0dip" />
-            <LinearLayout android:orientation="vertical" android:id="@id/linear_container_user" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?shap_line" android:showDividers="middle" android:dividerPadding="14.0dip">
-                <RelativeLayout android:id="@id/item_public_note" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_public_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/gong_kai_wen_zhang" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_article_public" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                    <TextView android:textSize="14.0sp" android:textColor="?text_color_2" android:gravity="center" android:id="@id/text_public_note_count" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginRight="40.0dip" android:text="\ 0" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_private_note" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_private_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/si_mi_wen_zhang" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_article_secret" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                    <TextView android:textSize="14.0sp" android:textColor="?text_color_2" android:gravity="center" android:id="@id/text_private_note_count" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginRight="40.0dip" android:text="\ 0" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_mark_note" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_mark_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/wo_de_shou_cang" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_mark" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                    <TextView android:textSize="14.0sp" android:textColor="?text_color_2" android:gravity="center" android:id="@id/text_mark_note_count" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginRight="40.0dip" android:text="\ 0" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_liked_note" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_like_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/xi_huan_de_wen_zhang" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_like_normal" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                    <TextView android:textSize="14.0sp" android:textColor="?text_color_2" android:gravity="center" android:id="@id/text_like_note_count" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:text="\ 0" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_wallet" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_wallet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/wo_de_qian_bao" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_wallet_normal" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/linear_root"
+              android:background="?bg_mine"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@id/view_status_height"
+        android:background="?view_status_bar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"/>
+
+    <RelativeLayout
+        android:id="@id/rl_title_bar"
+        android:background="?common_bg_white_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:id="@id/text_title_user"
+            android:background="?gray0"
+            android:paddingTop="5.0dip"
+            android:paddingRight="5.0dip"
+            android:paddingBottom="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:text="@string/wo_de"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@id/iv_setting"
+            android:padding="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.0dip"
+            android:src="?icon_setting"
+            android:layout_toLeftOf="@id/iv_search"
+            android:layout_centerVertical="true"
+            android:onClick="onMyClick"/>
+
+        <ImageView
+            android:id="@id/iv_search"
+            android:padding="5.0dip"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16.0dip"
+            android:src="?icon_search"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@id/top_line"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+        android:id="@id/refresh_user_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ScrollView
+            android:id="@id/scroll_user_content"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/linear_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16.0dip"
+                android:divider="?shap_line"
+                android:showDividers="middle">
+
+                <FrameLayout
+                    android:id="@id/container_login"
+                    android:background="?common_bg_white_black"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@id/item_user"
+                        android:background="?press_selector"
+                        android:paddingLeft="20.0dip"
+                        android:paddingTop="18.0dip"
+                        android:paddingBottom="18.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onMyClick">
+
+                        <FrameLayout
+                            android:id="@id/fl_avatar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                                android:id="@id/img_user_avatar"
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:layout_marginRight="10.0dip"
+                                android:src="@drawable/tx_image"
+                                android:scaleType="centerCrop"
+                                app:border_width="0.30000007dip"
+                                app:border_color="?gray300"
+                                app:oval="true"/>
+
+                            <ImageView
+                                android:id="@id/iv_avatar_gif"
+                                android:visibility="gone"
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:layout_marginRight="10.0dip"
+                                android:src="@drawable/tx_image"
+                                android:scaleType="centerCrop"/>
+                        </FrameLayout>
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginRight="6.0dip"
+                            android:text="@string/deng_lu_he_zhu_ce"
+                            android:maxLength="15"
+                            android:drawablePadding="10.0dip"
+                            android:layout_toRightOf="@id/fl_avatar"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@id/iv_edit_info"
+                            android:paddingTop="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:paddingBottom="10.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_edit_info"
+                            android:layout_toRightOf="@id/text_user_name"
+                            android:layout_centerVertical="true"
+                            android:onClick="onMyClick"/>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <View
+                    android:id="@id/view_divider_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/linear_container_user"
+                    android:background="?common_bg_white_black"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="?shap_line"
+                    android:showDividers="middle"
+                    android:dividerPadding="14.0dip">
+
+                    <RelativeLayout
+                        android:id="@id/item_public_note"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45.0dip"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_public_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/gong_kai_wen_zhang"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_article_public"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_article_public"/>
+
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?text_color_2"
+                            android:gravity="center"
+                            android:id="@id/text_public_note_count"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24.0dip"
+                            android:layout_marginRight="20.0dip"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_private_note"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_private_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/si_mi_wen_zhang"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_article_secret"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_article_secret"/>
+
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?text_color_2"
+                            android:gravity="center"
+                            android:id="@id/text_private_note_count"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24.0dip"
+                            android:layout_marginRight="20.0dip"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_mark_note"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_mark_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/bookmark_article"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_mark"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_mark"/>
+
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?text_color_2"
+                            android:gravity="center"
+                            android:id="@id/text_mark_note_count"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24.0dip"
+                            android:layout_marginRight="20.0dip"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_liked_note"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_like_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/xi_huan_de_wen_zhang"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_like_normal"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_like_normal"/>
+
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?text_color_2"
+                            android:gravity="center"
+                            android:id="@id/text_like_note_count"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20.0dip"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_topic"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/tv_topic_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/wo_de_zhuan_ti"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/icon_mine_topic_gray"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/icon_mine_topic_gray"/>
+
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?text_color_2"
+                            android:gravity="center"
+                            android:id="@id/tv_topic_count"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20.0dip"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_mine_book"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/tv_mine_book"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/mine_notebook"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/icon_mine_book_gray"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/icon_mine_book_gray"/>
+
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?text_color_2"
+                            android:gravity="center"
+                            android:id="@id/tv_mine_book_count"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20.0dip"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_wallet"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_wallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/wo_de_qian_bao"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_wallet_normal"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_wallet_normal"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@id/view_divider_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/linear_container_common"
+                    android:background="?common_bg_white_black"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="?shap_line"
+                    android:showDividers="middle"
+                    android:dividerPadding="14.0dip">
+
+                    <RelativeLayout
+                        android:id="@id/itme_theme"
+                        android:background="?press_selector"
+                        android:clickable="false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_theme_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/menu_night_theme"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_night"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_night"/>
+
+                        <com.baiji.jianshu.widget.SmartSwitchButton
+                            android:layout_gravity="center_vertical"
+                            android:id="@id/switch_theme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_history"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/history_record"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/icon_history"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/icon_history"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/ll_container_others"
+                    android:background="?common_bg_white_black"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="?shap_line"
+                    android:showDividers="middle"
+                    android:dividerPadding="14.0dip">
+
+                    <RelativeLayout
+                        android:id="@id/item_invitation"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_invitation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/share_jianshu"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/icon_share_app"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/icon_share_app"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_feedback"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/yi_jian_fan_kui"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_feedback"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_feedback"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/item_rate_star"
+                        android:background="?press_selector"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/user_item_height"
+                        android:onClick="onMyClick">
+
+                        <TextView
+                            android:textSize="16.0sp"
+                            android:textColor="?text_color_1"
+                            android:gravity="center_vertical"
+                            android:id="@id/text_rate_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:text="@string/rate_star_on_jianshu"
+                            android:singleLine="true"
+                            android:drawableLeft="@drawable/grzy_icon_rate"
+                            android:drawablePadding="10.0dip"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/grzy_icon_rate"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"/>
             </LinearLayout>
-            <View android:id="@id/view_divider_2" android:layout_width="fill_parent" android:layout_height="16.0dip" />
-            <LinearLayout android:orientation="vertical" android:id="@id/linear_container_common" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?shap_line" android:showDividers="middle" android:dividerPadding="14.0dip">
-                <RelativeLayout android:id="@id/itme_theme" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_theme_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/menu_night_theme" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_night" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center_vertical" android:id="@id/switch_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_common_set" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_common_set" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/common_setting" android:singleLine="true" android:drawableLeft="@drawable/cb_icon_shezhi_normal" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_invitation" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_invitation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/share_jianshu" android:singleLine="true" android:drawableLeft="@drawable/icon_share_app" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_feedback" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_feedback" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/yi_jian_fan_kui" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_feedback" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-                <RelativeLayout android:id="@id/item_rate_star" android:background="?press_selector" android:layout_width="fill_parent" android:layout_height="@dimen/sort_item_height" android:onClick="onMyClick">
-                    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:gravity="center_vertical" android:id="@id/text_rate_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="16.0dip" android:text="@string/rate_star_on_jianshu" android:singleLine="true" android:drawableLeft="@drawable/grzy_icon_rate" android:drawablePadding="10.0dip" android:layout_centerVertical="true" />
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/gywm_icon_tiaozhuan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                </RelativeLayout>
-            </LinearLayout>
-            <View android:layout_width="fill_parent" android:layout_height="16.0dip" />
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
 </LinearLayout>

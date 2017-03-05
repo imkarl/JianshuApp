@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@id/view_status_height"
+        android:background="?view_status_bar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/toolbar"
+        android:background="?common_bg_white_black"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:minHeight="@dimen/titlebar_height"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+
+        <TextView
+            android:textColor="?color_2f_b1"
+            android:gravity="center_vertical"
+            android:layout_gravity="left"
+            android:id="@id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/suggest_follow"/>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@id/view_line"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+        android:id="@id/refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <android.support.v7.widget.RecyclerView
+            android:scrollbarStyle="outsideOverlay"
+            android:id="@id/article_recycler"
+            android:background="?common_bg_white_black"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:dividerHeight="0.0dip"/>
+    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:id="@id/fl_bottom"
+        android:background="?gray0"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip">
+
+        <View
+            android:id="@id/view_line_bottom"
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"/>
+
+        <Button
+            android:textSize="17.0sp"
+            android:textColor="?gray0"
+            android:layout_gravity="center"
+            android:id="@id/btn_open_recommend"
+            android:background="@drawable/selector_register_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:text="@string/open_individual_recommend"
+            style="?android:attr/borderlessButtonStyle"/>
+    </FrameLayout>
+</LinearLayout>

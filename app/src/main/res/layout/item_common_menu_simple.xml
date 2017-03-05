@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="16.0dip" android:paddingRight="20.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/img_menu_indicate_icon" android:paddingRight="12.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_font" android:scaleType="center" android:layout_centerVertical="true" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:id="@id/text_menu_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="text" android:singleLine="true" android:layout_toRightOf="@id/img_menu_indicate_icon" android:layout_centerVertical="true" />
+<RelativeLayout android:padding="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/img_menu_indicate_icon"
+        android:paddingRight="8.0dip"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_font"
+        android:scaleType="center"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:id="@id/text_menu_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/img_menu_indicate_icon"
+        android:layout_centerVertical="true"/>
 </RelativeLayout>

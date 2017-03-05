@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="56.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="18.0dip" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="68.0dip">
-        <TextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/tv_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="dfdfd" android:layout_weight="1.0" />
-        <com.baiji.jianshu.widget.SmartSwitchButton android:layout_gravity="center|right" android:id="@id/switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" />
+<FrameLayout android:orientation="vertical"
+             android:background="?common_bg_white_black"
+             android:layout_width="fill_parent"
+             android:layout_height="56.0dip"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/avatar"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="18.0dip"
+        android:scaleType="centerCrop"
+        app:border_width="0.0dip"
+        app:border_color="@drawable/selector_color_theme_tran"
+        app:oval="true"/>
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="68.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="?color_2f_b1"
+            android:ellipsize="middle"
+            android:layout_gravity="center_vertical"
+            android:id="@id/tv_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="dfdfd"
+            android:layout_weight="1.0"/>
+
+        <com.baiji.jianshu.widget.SmartSwitchButton
+            android:layout_gravity="center|right"
+            android:id="@id/switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18.0dip"/>
     </LinearLayout>
-    <View android:layout_gravity="bottom" android:id="@id/line" android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" />
+
+    <View
+        android:layout_gravity="bottom"
+        android:id="@id/line"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginRight="18.0dip"/>
 </FrameLayout>

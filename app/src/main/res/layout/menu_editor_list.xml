@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="?card_corner_no_frame" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="280.0dip" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textColor="@color/theme_color" android:id="@id/text_title" android:paddingTop="16.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="title" />
-    <LinearLayout android:orientation="vertical" android:id="@id/linear_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?shap_line_rect" android:showDividers="middle" />
+<LinearLayout android:orientation="vertical"
+              android:id="@id/root_view"
+              android:background="?card_corner_no_frame"
+              android:paddingLeft="20.0dip"
+              android:paddingRight="20.0dip"
+              android:layout_width="280.0dip"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/theme_color"
+        android:id="@id/text_title"
+        android:paddingTop="16.0dip"
+        android:paddingBottom="10.0dip"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="title"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/linear_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="?shap_line_rect"
+        android:showDividers="middle"/>
 </LinearLayout>

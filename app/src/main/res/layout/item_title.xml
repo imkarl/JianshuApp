@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.view.rounded_imageview.RoundedImageView android:id="@id/iv_title_bg"
+                                                           android:background="?common_bg_white_black"
+                                                           android:layout_width="100.0dip"
+                                                           android:layout_height="40.0dip"
+                                                           android:scaleType="centerCrop"
+                                                           app:corner_radius="4.0dip"
+                                                           app:oval="false"
+                                                           xmlns:android="http://schemas.android.com/apk/res/android"
+                                                           xmlns:app="http://schemas.android.com/apk/res-auto"/>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?common_bg_white_black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/all"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?press_selector"
+        android:gravity="center"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip"
+        android:text="综合排序"
+        android:textColor="?color_2f_b1"
+        android:textSize="14.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="?listview_divider"/>
+
+    <TextView
+        android:id="@id/newst"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?press_selector"
+        android:gravity="center"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip"
+        android:text="按最新发布排序"
+        android:textColor="?color_2f_b1"
+        android:textSize="14.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="?listview_divider"/>
+
+    <TextView
+        android:id="@id/newst_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?press_selector"
+        android:gravity="center"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip"
+        android:text="按最新评论排序"
+        android:textColor="?color_2f_b1"
+        android:textSize="14.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="?listview_divider"/>
+
+    <TextView
+        android:id="@id/hot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?press_selector"
+        android:gravity="center"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip"
+        android:text="按热门文章排序"
+        android:textColor="?color_2f_b1"
+        android:textSize="14.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="?listview_divider"/>
+
+    <TextView
+        android:id="@id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?press_selector"
+        android:gravity="center"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip"
+        android:text="@string/qu_xiao"
+        android:textColor="@color/theme_color"
+        android:textSize="14.0sp"/>
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:background="?shape_rect_gray0"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_share"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/generate_picture_and_share"/>
+
+    <View
+        android:id="@id/v_line_reply"
+        android:background="?gray400"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_reply"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/hui_fu"/>
+
+    <View
+        android:id="@id/v_line_copy"
+        android:background="?gray400"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_copy"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/copy"/>
+
+    <View
+        android:id="@id/v_line_parise"
+        android:background="?gray400"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_parise"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/action_praise"/>
+
+    <View
+        android:id="@id/v_line_detail"
+        android:background="?gray400"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/cha_kan_xiang_qing"/>
+
+    <View
+        android:id="@id/v_line_report"
+        android:background="?gray400"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_report"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/ju_bao"/>
+
+    <View
+        android:id="@id/v_line_delete"
+        android:background="?gray400"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:layout_marginLeft="@dimen/popup_window_padding_left"
+        android:text="@string/shan_chu"/>
+</LinearLayout>

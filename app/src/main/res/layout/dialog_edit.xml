@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText android:theme="@style/EditTextTheme"
+          android:textColor="?text_color_1"
+          android:textColorHint="?describe_text_color"
+          android:id="@id/et_dialog"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android"/>

@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.NestedScrollLinearLayout android:orientation="vertical" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <android.support.design.widget.TabLayout android:id="@id/tb_user" android:tag="anchor" android:layout_width="fill_parent" android:layout_height="48.0dip" app:tabIndicatorColor="@color/theme_color" app:tabIndicatorHeight="2.0dip" app:tabMode="fixed" app:tabGravity="center" app:tabMaxWidth="0.0dip" app:tabTextAppearance="@style/TabTextApprearance2" app:tabTextColor="?text_color_2" app:tabSelectedTextColor="@color/theme_color" app:tabPaddingStart="20.0dip" app:tabPaddingEnd="20.0dip" />
-    <View android:background="?listview_divider" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
-    <android.support.v4.view.ViewPager android:id="@id/vp" android:tag="scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</com.baiji.jianshu.widget.NestedScrollLinearLayout>
+<com.baiji.jianshu.widget.NestedScrollLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nested_linear"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@id/header_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:background="?listview_divider"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@id/tb_user"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:layout_gravity="center"
+            android:tag="anchor"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/theme_color"
+            app:tabIndicatorHeight="2.0dip"
+            app:tabMaxWidth="0.0dip"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/theme_color"
+            app:tabTextAppearance="@style/TabTextAppearance2"
+            app:tabTextColor="?text_color_2"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:background="?listview_divider"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@id/vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:tag="scroll"/>
+    </LinearLayout>
+</com.baiji.jianshu.widget.NestedScrollLayout>

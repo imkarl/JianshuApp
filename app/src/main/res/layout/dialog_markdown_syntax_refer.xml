@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?card_corner_no_frame"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip"
+        android:text="Markdown语法参考"
+        android:textColor="?text_color_1"
+        android:textSize="16.0sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="?listview_divider"/>
+
+    <com.baiji.jianshu.widget.MaxHeightScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:scrollbars="none"
+        app:maxHeight="320.0dip">
+
+        <TextView
+            android:id="@id/tv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:text="dfdfdfdfdfdfdfdfd\n"
+            android:textColor="?color_99_88"
+            android:textSize="14.0sp"/>
+    </com.baiji.jianshu.widget.MaxHeightScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="?listview_divider"/>
+
+    <TextView
+        android:id="@id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="15.0dip"
+        android:text="@string/i_know"
+        android:textColor="@color/theme_color"
+        android:textSize="16.0sp"/>
+</LinearLayout>

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:id="@id/root_view_base" android:background="?common_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <fragment android:name="com.baiji.jianshu.widget.TitlebarFragment" android:id="@id/fragment_base_titlebar" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height" />
-    <FrameLayout android:id="@id/frame_root_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/titlebar_height" />
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root_view_base"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_light"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@id/fragment_base_titlebar"
+        android:name="com.baiji.jianshu.widget.TitlebarFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"/>
+
+    <FrameLayout
+        android:id="@id/frame_root_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/titlebar_height"/>
 </FrameLayout>

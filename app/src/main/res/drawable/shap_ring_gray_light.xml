@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="ring" android:useLevel="false" android:innerRadius="24.0dip" android:thickness="0.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:width="0.6dip" android:color="@color/text_gray_light" />
-    <size android:height="50.0dip" android:width="50.0dip" />
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:innerRadius="24.0dip"
+       android:shape="ring"
+       android:thickness="0.0dip"
+       android:useLevel="false">
+    <stroke
+        android:width="0.6dip"
+        android:color="@color/text_gray_light"/>
+    <size
+        android:width="50.0dip"
+        android:height="50.0dip"/>
 </shape>

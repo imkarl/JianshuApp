@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:background="@drawable/shap_rect_green_frame" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="10.0dip">
-        <TextView android:textSize="16.0sp" android:textColor="@color/green_common" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/create_collection" android:drawableLeft="@drawable/zt_icon_new" android:drawablePadding="6.0dip" />
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:background="@drawable/shap_rect_green_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_margin="10.0dip">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/green_common"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_collection"
+            android:drawableLeft="@drawable/zt_icon_new"
+            android:drawablePadding="6.0dip"/>
     </FrameLayout>
 </FrameLayout>

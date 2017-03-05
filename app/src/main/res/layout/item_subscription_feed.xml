@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/enter_of_dynamic"
+                android:background="?press_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="72.0dip"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/img_icon_feed"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:src="@drawable/icon_friend_circle"
+        android:layout_centerVertical="true"
+        app:border_width="0.0dip"
+        app:oval="true"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?color_2f_b1"
+        android:gravity="center_vertical"
+        android:id="@id/label_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.0dip"
+        android:text="@string/jian_you_dong_tai"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/img_icon_feed"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ffffffff"
+        android:gravity="center"
+        android:background="@drawable/shape_oval_16_frame_theme"
+        android:paddingLeft="4.0dip"
+        android:paddingRight="4.0dip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20.0dip"
+        android:text="NEW!"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@id/img_feed_unread"
+        android:visibility="gone"
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        android:layout_marginLeft="4.0dip"
+        android:src="?tips_bg"
+        android:layout_toRightOf="@id/label_dynamic"
+        android:layout_alignTop="@id/label_dynamic"/>
+
+    <View
+        android:id="@id/line"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

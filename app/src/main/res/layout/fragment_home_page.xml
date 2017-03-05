@@ -1,76 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<FrameLayout android:id="@id/frame_root"
+             android:background="?common_bg_white_black"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
-        android:id="@+id/linear_top_bar"
+    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+        android:id="@id/swipe_refresh_view"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/titlebar_height"
-        android:background="?common_bg_white_black"
-        android:orientation="horizontal">
+        android:layout_height="fill_parent">
 
-        <com.viewpagerindicator.TabPageIndicator
-            android:id="@+id/indicator_homepage"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/titlebar_height"
-            android:layout_centerHorizontal="true" />
-
-        <ImageView
-            android:id="@+id/btn_search"
-            android:layout_width="@dimen/titlebar_height"
-            android:layout_height="@dimen/titlebar_height"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:background="?press_selector"
-            android:scaleType="center"
-            android:src="@drawable/search_icon" />
-
-        <FrameLayout
-            android:layout_width="10.0dip"
-            android:layout_height="fill_parent" />
-
-        <View
-            android:id="@+id/line_divider_top"
-            android:layout_width="0.6dip"
-            android:layout_height="20.0dip"
-            android:layout_centerInParent="true"
-            android:background="?separate_line_color" />
-    </RelativeLayout>
-
-    <com.copy.jianshuapp.uilayer.views.LazyViewPager
-        android:id="@+id/hpage_viewpager"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/linear_top_bar" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
 
     <LinearLayout
-        android:id="@+id/relative_editor_exception"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@id/view_status_height"
+            android:background="?view_status_bar_bg_lollipop"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ll_search_mini"
+            android:background="?common_bg_white_black"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"/>
+
+        <View
+            android:id="@id/the_bottom_line"
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.20000005dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/relative_editor_exception"
+        android:background="@color/theme_color_half2"
+        android:padding="11.0dip"
+        android:visibility="gone"
+        android:clickable="true"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linear_top_bar"
-        android:background="@color/theme_color_half2"
-        android:clickable="true"
-        android:orientation="horizontal"
-        android:padding="11.0dip"
-        android:visibility="gone">
+        android:layout_below="@id/linear_top_bar">
+
         <TextView
+            android:textColor="@color/white"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1.0"
+            android:text="@string/prompt_editor_exception"
             android:drawableLeft="@drawable/img_write_crash"
             android:drawablePadding="10.0dip"
-            android:text="@string/prompt_editor_exception"
-            android:textColor="@color/white" />
+            android:layout_weight="1.0"/>
 
         <ImageView
+            android:layout_gravity="center_vertical"
             android:id="@id/img_dismiss"
+            android:padding="10.0dip"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_marginLeft="11.0dip"
-            android:clickable="true"
-            android:src="@drawable/button_close_white" />
+            android:src="@drawable/button_close_white"/>
     </LinearLayout>
-</RelativeLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:id="@id/ll_search_right"
+        android:background="@drawable/shape_search_mini"
+        android:layout_width="82.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginRight="15.0dip">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"/>
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/gray400"
+            android:gravity="center_vertical"
+            android:id="@id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/hint_search_home"
+            android:maxLines="1"
+            android:maxEms="2"/>
+    </LinearLayout>
+</FrameLayout>

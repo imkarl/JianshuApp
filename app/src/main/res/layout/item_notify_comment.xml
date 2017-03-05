@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="22.0dip" android:paddingBottom="22.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/img_icon_avatar" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="12.0dip" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:id="@id/text_noty_comment_name" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginRight="80.0dip" android:maxLines="2" android:layout_toRightOf="@id/img_icon_avatar" android:layout_alignTop="@id/img_icon_avatar" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:textColorLink="@color/text_blue" android:id="@id/text_noty_comment_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginRight="20.0dip" android:maxLines="5" android:layout_below="@id/img_icon_avatar" android:layout_alignLeft="@id/img_icon_avatar" />
-    <TextView android:textSize="14.0sp" android:textColor="?text_color_1" android:textColorLink="@color/text_blue" android:id="@id/text_notify_comment_content" android:background="?shape_rect_frame" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:maxLines="5" android:layout_below="@id/text_noty_comment_action" android:layout_alignLeft="@id/text_noty_comment_action" android:lineSpacingExtra="4.0dip" />
-    <TextView android:textSize="12.0sp" android:textColor="?text_color_2" android:id="@id/text_notify_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="20.0dip" android:text="00:00" android:singleLine="true" android:layout_below="@id/text_notify_comment_content" android:layout_alignLeft="@id/text_noty_comment_action" />
-    <Button android:textSize="12.0sp" android:textColor="?text_color_1" android:id="@id/btn_notify_comment_reply" android:background="?selector_btn_gray_frame" android:layout_width="50.0dip" android:layout_height="28.0dip" android:layout_marginRight="20.0dip" android:text="@string/hui_fu" android:layout_alignTop="@id/img_icon_avatar" android:layout_alignParentRight="true" />
+<RelativeLayout android:paddingTop="18.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@id/fl_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip">
+
+        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            android:id="@id/img_icon_avatar"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:src="@drawable/icon_wechat_default"
+            android:scaleType="centerCrop"
+            app:border_width="0.30000007dip"
+            app:border_color="?gray300"
+            app:oval="true"/>
+
+        <ImageView
+            android:id="@id/img_icon_avatar_gif"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:src="@drawable/icon_wechat_default"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:id="@id/text_noty_comment_name"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="3.0dip"
+        android:text="sdfsdf"
+        android:maxLines="2"
+        android:layout_toRightOf="@id/fl_avatar"
+        android:layout_alignTop="@id/fl_avatar"/>
+
+    <com.baiji.jianshu.widget.TextViewHandleLink
+        android:textSize="14.0sp"
+        android:textColor="?text_color_1"
+        android:textColorLink="@color/text_blue"
+        android:id="@id/text_notify_comment_content"
+        android:background="?shape_rect_frame"
+        android:padding="11.0dip"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:layout_marginRight="10.0dip"
+        android:text="ssssss"
+        android:maxLines="5"
+        android:layout_below="@id/text_noty_comment_action"
+        android:layout_alignLeft="@id/text_noty_comment_action"
+        android:lineSpacingExtra="4.0dip"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?text_color_2"
+        android:id="@id/text_notify_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:singleLine="true"
+        android:layout_below="@id/text_notify_comment_content"
+        android:layout_alignLeft="@id/text_noty_comment_action"/>
+
+    <Button
+        android:textSize="12.0sp"
+        android:textColor="?text_color_1"
+        android:id="@id/btn_notify_comment_reply"
+        android:background="?selector_btn_gray_frame"
+        android:layout_width="50.0dip"
+        android:layout_height="28.0dip"
+        android:layout_marginRight="15.0dip"
+        android:text="@string/hui_fu"
+        android:layout_alignTop="@id/fl_avatar"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:background="?separate_line_color"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="18.0dip"
+        android:layout_below="@id/text_notify_time"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:textColorLink="@color/text_blue"
+        android:id="@id/text_noty_comment_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginRight="11.0dip"
+        android:text="你的文章****"
+        android:maxLines="5"
+        android:layout_below="@id/fl_avatar"
+        android:layout_alignLeft="@id/fl_avatar"
+        android:lineSpacingExtra="4.0dip"/>
 </RelativeLayout>

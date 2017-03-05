@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="?common_bg_white_black"
@@ -17,13 +18,13 @@
             android:layout_marginBottom="50.0dip"
             android:layout_marginLeft="18.0dip"
             android:layout_marginTop="50.0dip"
-            android:src="@drawable/seting_aboutus_logo" />
+            android:src="@drawable/seting_aboutus_logo"/>
     </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="0.39999998dip"
-        android:background="?listview_divider" />
+        android:background="?listview_divider"/>
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -44,14 +45,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/jian_jie"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <TextView
                 android:id="@id/text_tab_website"
@@ -59,14 +59,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/about_tab_website"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <TextView
                 android:id="@id/text_tab_webchat_account"
@@ -74,14 +73,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/about_tab_wetchat_account"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <TextView
                 android:id="@id/text_tab_sinaweibo"
@@ -89,14 +87,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/about_tab_sinaweibo"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <TextView
                 android:id="@id/text_tab_twitter"
@@ -104,14 +101,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/twitter"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <TextView
                 android:id="@id/text_tab_protocol"
@@ -119,14 +115,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/user_protocol"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <TextView
                 android:id="@id/text_tab_policy"
@@ -134,14 +129,13 @@
                 android:layout_height="56.0dip"
                 android:background="?press_selector"
                 android:clickable="true"
-                android:drawableRight="@drawable/gywm_icon_tiaozhuan"
                 android:gravity="center_vertical"
                 android:onClick="onMyClick"
                 android:paddingLeft="18.0dip"
                 android:paddingRight="18.0dip"
                 android:text="@string/user_policy"
                 android:textColor="?color_2f_b1"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
         </LinearLayout>
     </ScrollView>
 
@@ -153,5 +147,5 @@
         android:gravity="center"
         android:text="@string/jianshu_copyright"
         android:textColor="@color/theme_color"
-        android:textSize="11.0sp" />
+        android:textSize="11.0sp"/>
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="false" android:drawable="@color/bg_black" />
-    <item android:state_selected="true" android:drawable="@drawable/shap_tab_indicator_dark" />
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/bg_black" android:state_selected="false"/>
+    <item android:drawable="@drawable/shap_tab_indicator_dark" android:state_selected="true"/>
 </selector>

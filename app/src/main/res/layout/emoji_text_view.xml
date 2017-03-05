@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vanniktech.emoji.EmojiTextView android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:id="@id/emoji_icon"
+                                    android:background="?selectableItemBackground"
+                                    android:layout_width="32.0dip"
+                                    android:layout_height="32.0dip"
+                                    app:emojiSize="30.0dip"
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"/>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center"
+              android:layout_gravity="center"
+              android:orientation="vertical"
+              android:background="?shape_rect_gray0"
+              android:layout_width="240.0dip"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_edit"
+        android:paddingLeft="@dimen/popup_window_padding_left"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:text="@string/edit"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_delete"
+        android:paddingLeft="@dimen/popup_window_padding_left"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:text="@string/delete"/>
+
+    <View
+        android:id="@id/line_manage"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_manage"
+        android:paddingLeft="@dimen/popup_window_padding_left"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:text="@string/submission_manage"/>
+
+    <View
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_private"
+        android:paddingLeft="@dimen/popup_window_padding_left"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:text="@string/set_private"/>
+
+    <TextView
+        android:textSize="@dimen/popup_window_text_size"
+        android:textColor="?gray900"
+        android:gravity="center_vertical"
+        android:id="@id/tv_public"
+        android:paddingLeft="@dimen/popup_window_padding_left"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/popup_window_item_height"
+        android:text="@string/set_public"/>
+</LinearLayout>

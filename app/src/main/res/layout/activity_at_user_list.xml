@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="?common_bg_white_black"
@@ -20,7 +21,7 @@
             android:layout_gravity="center_vertical"
             android:background="?press_selector"
             android:onClick="onMyClick"
-            android:src="@drawable/zw_icon_back" />
+            android:src="@drawable/zw_icon_back"/>
 
         <LinearLayout
             android:layout_width="0.0dip"
@@ -47,13 +48,13 @@
                 android:singleLine="true"
                 android:textColor="?color_2f_b1"
                 android:textColorHint="?color_99_88"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"/>
 
             <View
                 android:layout_width="0.30000007dip"
                 android:layout_height="19.0dip"
                 android:layout_gravity="center_vertical"
-                android:background="?listview_divider" />
+                android:background="?listview_divider"/>
 
             <ImageView
                 android:id="@id/img_search"
@@ -64,14 +65,14 @@
                 android:onClick="onMyClick"
                 android:orientation="horizontal"
                 android:scaleType="center"
-                android:src="@drawable/search_icon" />
+                android:src="@drawable/search_icon"/>
         </LinearLayout>
     </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="0.39999998dip"
-        android:background="?listview_divider" />
+        android:background="?listview_divider"/>
 
     <TextView
         android:id="@id/tv_title"
@@ -81,16 +82,16 @@
         android:paddingLeft="18.0dip"
         android:text="@string/frequently_interact_user"
         android:textColor="?color_99_88"
-        android:textSize="12.0sp" />
+        android:textSize="12.0sp"/>
 
     <View
         android:id="@id/line_below_text"
         android:layout_width="fill_parent"
         android:layout_height="0.39999998dip"
-        android:background="?listview_divider" />
+        android:background="?listview_divider"/>
 
     <com.baiji.jianshu.widget.ListViewLisOnBottom
         android:id="@id/user_list"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"/>
 </LinearLayout>

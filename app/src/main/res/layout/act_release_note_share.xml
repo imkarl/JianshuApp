@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baiji.jianshu.widget.JSSwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/refresh_release_share"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="?shap_line"
+            android:orientation="vertical"
+            android:showDividers="end|middle">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?common_bg_lightest"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@id/container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginLeft="30.0dip"
+                    android:layout_marginRight="30.0dip"
+                    android:layout_marginTop="30.0dip">
+
+                    <ImageView
+                        android:id="@id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="?fabushare_share"/>
+
+                    <TextView
+                        android:id="@id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@id/img"
+                        android:text="@string/release_note_share_tip"
+                        android:textColor="?color_2f_b1"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text1"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/img"
+                        android:text="@string/release_note_to_collection_tip"
+                        android:textColor="?color_99_88"
+                        android:textSize="11.0sp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@id/text_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container"
+                    android:padding="12.0dip"
+                    android:text="@string/fen_xiang_dao"
+                    android:textColor="?text_color_2"
+                    android:textColorLink="@color/text_blue"
+                    android:textSize="12.0sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="30.0dip"
+                android:paddingLeft="6.0dip"
+                android:paddingRight="6.0dip"
+                android:paddingTop="30.0dip">
+
+                <TextView
+                    android:id="@id/text_share_picture"
+                    style="@style/share_item"
+                    android:layout_gravity="center"
+                    android:drawableTop="?icon_share_pic"
+                    android:onClick="onClick_Share"
+                    android:text="@string/generate_and_share_picture"
+                    android:textSize="10.0sp"/>
+
+                <TextView
+                    android:id="@id/text_sina_weibo"
+                    style="@style/share_item"
+                    android:layout_gravity="center"
+                    android:drawableTop="?icon_share_sina"
+                    android:onClick="onClick_Share"
+                    android:text="@string/sinaweibo"
+                    android:textSize="10.0sp"/>
+
+                <TextView
+                    android:id="@id/text_wechat"
+                    style="@style/share_item"
+                    android:layout_gravity="center"
+                    android:drawableTop="?icon_share_wechat"
+                    android:onClick="onClick_Share"
+                    android:text="@string/wechat"
+                    android:textSize="10.0sp"/>
+
+                <TextView
+                    android:id="@id/text_wechat_moments"
+                    style="@style/share_item"
+                    android:layout_gravity="center"
+                    android:drawableTop="?icon_share_wechat_moment"
+                    android:onClick="onClick_Share"
+                    android:text="@string/wechatmoments"
+                    android:textSize="10.0sp"/>
+
+                <TextView
+                    android:id="@id/text_qq"
+                    style="@style/share_item"
+                    android:layout_gravity="center"
+                    android:drawableTop="?icon_share_qq"
+                    android:onClick="onClick_Share"
+                    android:text="@string/qq"
+                    android:textSize="10.0sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?common_bg_lightest"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="12.0dip"
+                android:paddingTop="18.0dip"
+                android:text="@string/tou_gao_dao"
+                android:textColor="?text_color_2"
+                android:textColorLink="@color/text_blue"
+                android:textSize="12.0sp"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?press_selector"
+                android:paddingBottom="15.0dip"
+                android:paddingTop="15.0dip">
+
+                <ImageView
+                    android:id="@id/img_submit_homepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@drawable/fabushare_icon_shouye"/>
+
+                <TextView
+                    android:id="@id/text_submit_homepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_toRightOf="@id/img_submit_homepage"
+                    android:text="@string/submit_to_homepage"
+                    android:textColor="?text_color_1"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/text_submit_homepage"
+                    android:layout_below="@id/text_submit_homepage"
+                    android:layout_marginTop="4.0dip"
+                    android:text="@string/submission_homepage_result_tip"
+                    android:textColor="?text_color_2"
+                    android:textSize="10.0sp"/>
+
+                <TextView
+                    android:id="@id/btn_submission_opt"
+                    android:layout_width="56.0dip"
+                    android:layout_height="26.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/selector_btn_green_frame"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick_Submit"
+                    android:text="@string/tou_gao"
+                    android:textColor="@color/green_common"
+                    android:textSize="12.0sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/item_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?press_selector"
+                android:clickable="true"
+                android:onClick="onClick_To_Collection_Submit"
+                android:paddingBottom="15.0dip"
+                android:paddingTop="15.0dip">
+
+                <ImageView
+                    android:id="@id/img_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@drawable/fabushare_icon_zhuanti"/>
+
+                <TextView
+                    android:id="@id/text_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_toRightOf="@id/img_submit"
+                    android:text="@string/submit_to_collection"
+                    android:textColor="?text_color_1"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/text_submit"
+                    android:layout_below="@id/text_submit"
+                    android:layout_marginTop="4.0dip"
+                    android:text="@string/submission_recommend_tips_3"
+                    android:textColor="?text_color_2"
+                    android:textSize="10.0sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.baiji.jianshu.widget.JSSwipeRefreshLayout>

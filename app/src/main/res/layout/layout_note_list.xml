@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.baiji.jianshu.widget.JSSwipeRefreshLayout android:id="@id/swipelayout_common_notes" android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.baiji.jianshu.widget.recyclerview.PageRecyclerView android:id="@id/recycler_notes" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+<RelativeLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+        android:id="@id/swipelayout_common_notes"
+        android:background="?common_bg_white_black"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.baiji.jianshu.widget.recyclerview.PageRecyclerView
+            android:id="@id/recycler_notes"
+            android:scrollbars="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+
+    <ViewStub
+        android:id="@id/view_stub_none_note"
+        android:layout="@layout/view_stub_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100.0dip"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

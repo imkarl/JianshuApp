@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="68.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/img_user_icon" android:layout_width="38.0dip" android:layout_height="38.0dip" android:src="@drawable/tx_image_3" android:scaleType="centerCrop" android:layout_centerVertical="true" app:border_width="1.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:ellipsize="end" android:id="@id/text_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="0.0dip" android:text="title" android:singleLine="true" android:maxLength="14" android:layout_toRightOf="@id/img_user_icon" android:layout_centerVertical="true" />
-    <TextView android:textSize="12.0sp" android:textColor="@color/theme_color" android:id="@id/text_blacklist_operation" android:background="@drawable/selector_btn_theme_frame" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:paddingRight="10.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jie_chu_hei_ming_dan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+<RelativeLayout android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="68.0dip"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/img_user_icon"
+        android:layout_width="38.0dip"
+        android:layout_height="38.0dip"
+        android:src="@drawable/tx_image"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        app:border_width="1.0dip"
+        app:border_color="@drawable/selector_color_theme_tran"
+        app:oval="true"/>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="?text_color_1"
+        android:ellipsize="end"
+        android:id="@id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="0.0dip"
+        android:text="title"
+        android:singleLine="true"
+        android:maxLength="14"
+        android:layout_toRightOf="@id/img_user_icon"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/theme_color"
+        android:id="@id/text_blacklist_operation"
+        android:background="@drawable/selector_btn_theme_frame"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jie_chu_hei_ming_dan"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
 </RelativeLayout>

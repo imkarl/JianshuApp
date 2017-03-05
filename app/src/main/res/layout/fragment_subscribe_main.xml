@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/title_bar_root"
+              android:background="?common_bg_white_black"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@id/view_status_height"
+        android:background="?view_status_bar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:id="@id/title_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="7.0dip"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="?color_2f_b1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guan_zhu"/>
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/iv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:src="?icon_dropdown"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/add_subscribe"
+            android:padding="5.0dip"
+            android:visibility="visible"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.0dip"
+            android:src="?icon_add_people"
+            android:layout_toLeftOf="@id/iv_search"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@id/iv_search"
+            android:padding="5.0dip"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16.0dip"
+            android:src="?icon_search"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:layout_gravity="bottom"
+            android:id="@id/divider"
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@id/subscribe_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+</LinearLayout>

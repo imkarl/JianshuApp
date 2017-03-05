@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.baiji.jianshu.widget.LoopViewpager.LoopViewPager android:id="@id/viewpager_banner" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.viewpagerindicator.CirclePageIndicator android:layout_gravity="bottom|center" android:id="@id/indicator_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
-</FrameLayout>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhy="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@id/view_page_null_flag"
+        android:background="?common_bg_white_black"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"/>
+
+    <FrameLayout
+        android:id="@id/fl_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.baiji.jianshu.widget.LoopViewpager.LoopViewPager
+            android:id="@id/viewpager_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:layout_gravity="bottom|center"
+            android:id="@id/indicator_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12.0dip"/>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/card_recycler"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="15.0dip"/>
+
+    <ImageView
+        android:id="@id/iv_place_rl_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="15.0dip"
+        android:src="@drawable/placeholder_banner"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:layout_marginTop="26.0dip">
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:id="@id/flag_left"
+            android:background="@color/theme_color"
+            android:layout_width="2.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginLeft="15.0dip"/>
+
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray500"
+            android:gravity="center"
+            android:id="@id/tv_popular"
+            android:paddingLeft="7.0dip"
+            android:paddingRight="15.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/hot_collection"/>
+
+        <View
+            android:visibility="invisible"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="1.0"/>
+
+        <ImageView
+            android:id="@id/iv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_search_change"/>
+
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray500"
+            android:gravity="center"
+            android:id="@id/tv_title_contribute"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="20.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/change_other"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/iv_place_collection"
+        android:background="@drawable/placeholder_collections"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="15.0dip"/>
+
+    <com.baiji.jianshu.view.flowlayout.TagFlowLayout
+        android:id="@id/tag_flow_layout"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="-20.0dip"
+        zhy:max_select="-1"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical"
+             android:id="@id/view_all_root"
+             android:background="?press_selector"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textColor="@color/green_common"
+        android:gravity="center"
+        android:id="@id/txt_view_all"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:text="@string/view_all"/>
+
+    <View
+        android:layout_gravity="bottom"
+        android:id="@id/bottom_divider"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"/>
+</FrameLayout>

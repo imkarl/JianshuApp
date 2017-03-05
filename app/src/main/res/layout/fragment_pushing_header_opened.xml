@@ -1,20 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rootView" android:background="?color_fc_3a" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.baiji.jianshu.widget.rounded_imageview.RoundedImageView android:id="@id/avatar" android:layout_width="67.0dip" android:layout_height="67.0dip" android:layout_marginTop="22.0dip" android:src="@drawable/zt_image_1" android:scaleType="centerCrop" app:border_width="0.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-    <TextView android:textSize="18.0sp" android:textColor="?color_2f_b1" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="18.0dip" android:text="name" />
-    <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:textColorLink="#ff3e94c7" android:gravity="center" android:id="@id/tv_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="18.0dip" android:text="" />
-    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:layout_marginBottom="27.0dip">
-        <include android:layout_gravity="center_vertical" android:id="@id/container_subscribe" android:clickable="true" android:layout_width="wrap_content" android:layout_height="25.0dip" layout="@layout/include_follow_button" />
-        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/action_tougao" android:background="@drawable/shap_rect_green_frame" android:visibility="gone" android:layout_width="68.0dip" android:layout_height="25.0dip" android:layout_marginLeft="9.0dip">
-            <TextView android:textSize="12.0sp" android:textColor="@color/green_common" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tou_gao" android:drawableLeft="@drawable/new_icon_tougao" android:drawablePadding="4.0dip" />
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:id="@id/rootView"
+              android:background="?color_fc_3a"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        android:id="@id/avatar"
+        android:layout_width="67.0dip"
+        android:layout_height="67.0dip"
+        android:layout_marginTop="22.0dip"
+        android:src="@drawable/zt_image"
+        android:scaleType="centerCrop"
+        app:corner_radius="2.0dip"
+        app:border_width="0.30000007dip"
+        app:border_color="?gray300"
+        app:oval="false"/>
+
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="?color_2f_b1"
+        android:id="@id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginRight="18.0dip"
+        android:text=""/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="?color_99_88"
+        android:textColorLink="#ff3e94c7"
+        android:gravity="center"
+        android:id="@id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginTop="13.0dip"
+        android:layout_marginRight="18.0dip"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17.0dip"
+        android:layout_marginBottom="27.0dip">
+
+        <include
+            android:layout_gravity="center_vertical"
+            android:id="@id/container_subscribe"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            layout="@layout/include_follow_button"/>
+
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:id="@id/action_tougao"
+            android:background="@drawable/shap_rect_green_frame"
+            android:visibility="gone"
+            android:layout_width="68.0dip"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="9.0dip">
+
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/green_common"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tou_gao"
+                android:drawableLeft="@drawable/icon_request"
+                android:drawablePadding="4.0dip"/>
         </FrameLayout>
     </LinearLayout>
-    <View android:id="@id/line" android:background="?listview_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
-    <RelativeLayout android:id="@id/desc_group" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="10.0dip">
-        <TextView android:textSize="12.0sp" android:textColor="?color_99_88" android:id="@id/text_ztjj" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zhuan_ti_jian_jie" />
-        <TextView android:textSize="10.0sp" android:textColor="?color_b1_71" android:id="@id/text_submit_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:drawableLeft="@drawable/zt_icon_advice" android:drawablePadding="4.0dip" android:layout_below="@id/text_ztjj" android:layout_alignLeft="@id/text_ztjj" />
-        <com.baiji.jianshu.widget.TextViewDetectEllipsize android:textSize="12.0sp" android:textColor="?color_2f_b1" android:textColorLink="@color/text_blue" android:ellipsize="end" android:id="@id/text_collect_desc" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:text="ABC   " android:maxLines="3" android:layout_below="@id/text_submit_state" android:lineSpacingExtra="2.0dip" />
-        <TextView android:textSize="12.0sp" android:textColor="@color/text_blue" android:gravity="center_horizontal" android:id="@id/text_expand" android:background="?press_selector" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/spread" android:layout_below="@id/text_collect_desc" />
+
+    <View
+        android:id="@id/line"
+        android:background="?listview_divider"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"/>
+
+    <RelativeLayout
+        android:id="@id/desc_group"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginTop="18.0dip"
+        android:layout_marginRight="18.0dip"
+        android:layout_marginBottom="10.0dip">
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="?color_99_88"
+            android:id="@id/text_ztjj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zhuan_ti_jian_jie"/>
+
+        <TextView
+            android:textSize="10.0sp"
+            android:textColor="?color_b1_71"
+            android:id="@id/text_submit_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.0dip"
+            android:drawableLeft="@drawable/zt_icon_advice"
+            android:drawablePadding="4.0dip"
+            android:layout_below="@id/text_ztjj"
+            android:layout_alignLeft="@id/text_ztjj"
+            android:drawableStart="@drawable/zt_icon_advice"/>
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="?color_2f_b1"
+            android:textColorLink="@color/text_blue"
+            android:ellipsize="end"
+            android:linksClickable="true"
+            android:id="@id/text_collect_desc"
+            android:visibility="visible"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.0dip"
+            android:maxLines="3"
+            android:layout_below="@id/text_submit_state"
+            android:lineSpacingExtra="2.0dip"/>
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="?color_2f_b1"
+            android:textColorLink="@color/text_blue"
+            android:ellipsize="end"
+            android:linksClickable="true"
+            android:id="@id/text_collect_expand"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.0dip"
+            android:layout_below="@id/text_collect_desc"
+            android:lineSpacingExtra="2.0dip"/>
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/text_blue"
+            android:gravity="center_horizontal"
+            android:id="@id/text_expand"
+            android:background="?press_selector"
+            android:paddingTop="4.0dip"
+            android:paddingBottom="4.0dip"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/spread"
+            android:layout_below="@id/text_collect_expand"/>
     </RelativeLayout>
 </LinearLayout>

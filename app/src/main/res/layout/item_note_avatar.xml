@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/recycler_item_root"
+                android:background="?press_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="136.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/first_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.baiji.jianshu.view.rounded_imageview.RoundedImageView android:layout_gravity="center_vertical"
+                                                                           android:id="@id/author_avatar"
+                                                                           android:padding="2.0dip"
+                                                                           android:layout_width="26.0dip"
+                                                                           android:layout_height="26.0dip"
+                                                                           android:src="@drawable/tx_image"
+                                                                           android:scaleType="centerCrop"
+                                                                           app:oval="true"
+                                                                           xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+                <TextView
+                    android:textSize="12.0sp"
+                    android:textColor="?note_read_state_color"
+                    android:ellipsize="end"
+                    android:id="@id/author_name"
+                    android:paddingTop="3.0dip"
+                    android:paddingBottom="3.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:maxWidth="200.0dip"
+                    android:text=""
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:textSize="10.0sp"
+                    android:textColor="?text_b1_color"
+                    android:id="@id/last_compiled_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.0dip"
+                    android:text=""
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="?note_read_state_color"
+                android:ellipsize="end"
+                android:id="@id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:text=""
+                android:maxLines="2"
+                android:layout_below="@id/first_row"
+                android:lineSpacingExtra="2.0dip"/>
+
+            <TextView
+                android:textSize="10.0sp"
+                android:textColor="?color_b1_71"
+                android:id="@id/extra_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:text=""
+                android:singleLine="true"
+                android:drawablePadding="5.0dip"
+                android:layout_below="@id/title"/>
+        </RelativeLayout>
+
+        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            android:id="@id/image"
+            android:visibility="visible"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginRight="5.0dip"
+            android:src="@drawable/image_list"
+            android:scaleType="centerCrop"
+            app:corner_radius="2.0dip"
+            app:border_width="0.30000007dip"
+            app:border_color="?color_f4_3a"/>
+    </LinearLayout>
+
+    <View
+        android:background="?separate_line_color"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_alignBottom="@id/linear_container"/>
+</RelativeLayout>

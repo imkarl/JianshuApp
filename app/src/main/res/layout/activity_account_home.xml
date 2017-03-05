@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/gray" android:layout_width="wrap_content" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.baiji.jianshu.widget.CropImageView android:id="@id/img_loading_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_bg_new" android:scaleType="fitCenter" />
-    <ImageView android:id="@id/img_logo_market" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:src="@drawable/logo_prompt_360_xxhdpi" android:scaleType="fitCenter" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-    <ImageView android:id="@id/img_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_marginBottom="60.0dip" android:src="@drawable/denglu_icon" android:layout_centerHorizontal="true" />
-    <ImageView android:id="@id/img_float_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="92.0dip" android:layout_marginBottom="70.0dip" android:src="@drawable/logo" android:layout_centerHorizontal="true" />
-    <FrameLayout android:id="@id/frame_replace" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/img_float_logo" />
-</RelativeLayout>

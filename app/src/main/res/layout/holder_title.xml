@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="20.0dip"
+              android:layout_marginTop="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_gravity="center_vertical"
+        android:id="@id/flag_left"
+        android:background="@color/theme_color"
+        android:layout_width="2.0dip"
+        android:layout_height="15.0dip"
+        android:layout_marginLeft="15.0dip"/>
+
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray500"
+        android:gravity="center"
+        android:id="@id/tv_popular"
+        android:paddingLeft="7.0dip"
+        android:paddingRight="15.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/title_hot"/>
+
+    <View
+        android:visibility="invisible"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:layout_weight="1.0"/>
+
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray500"
+        android:gravity="center"
+        android:id="@id/tv_title_contribute"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="20.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/title_contribute"
+        android:drawableLeft="@drawable/icon_discover_custom"
+        android:drawablePadding="7.0dip"/>
+</LinearLayout>

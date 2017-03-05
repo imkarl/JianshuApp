@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="18.0dip"
+        android:layout_marginRight="15.0dip">
+
+        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/img_source_avatar"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/tx_image"
+            android:scaleType="centerCrop"
+            app:corner_radius="2.0dip"
+            app:border_width="0.30000007dip"
+            app:border_color="?gray300"
+            app:oval="true"/>
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="?color_99_88"
+            android:textColorLink="?note_read_state_color"
+            android:id="@id/txt_user_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40.0dip"
+            android:singleLine="true"/>
+
+        <TextView
+            android:textSize="11.0sp"
+            android:textColor="?color_b1_71"
+            android:id="@id/tx_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40.0dip"
+            android:layout_marginTop="20.0dip"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@id/vg_subscribed_thing"
+        android:background="?friend_circle_item_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginRight="15.0dip">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="68.0dip"
+            android:layout_marginLeft="15.0dip">
+
+            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/img_target"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:src="@drawable/tx_image"
+                android:scaleType="centerCrop"
+                app:border_width="0.0dip"
+                app:border_color="@drawable/selector_color_theme_tran"
+                app:oval="true"/>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="?color_2f_b1"
+                    android:ellipsize="end"
+                    android:id="@id/txt_target_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:textSize="11.0sp"
+                    android:textColor="?color_99_88"
+                    android:ellipsize="end"
+                    android:id="@id/txt_target_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_gravity="center_vertical"
+                android:id="@id/vg_subscribe"
+                android:padding="7.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8.0dip">
+
+                <TextView
+                    android:textSize="10.0sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@id/txt_subscribe"
+                    android:background="?selector_shap_guanzhu"
+                    android:paddingTop="4.0dip"
+                    android:paddingBottom="4.0dip"
+                    android:layout_width="40.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guan_zhu"
+                    android:singleLine="true"/>
+
+                <fr.castorflex.android.circularprogressbar.CircularProgressBar
+                    android:layout_gravity="center"
+                    android:id="@id/follow_loading"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cpb_color="@color/pg_loading_color"
+                    app:cpb_stroke_width="2.0dip"
+                    app:cpb_sweep_speed="1.0"
+                    app:cpb_rotation_speed="1.0"
+                    style="?android:attr/progressBarStyleSmall"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@id/desc_divider"
+            android:background="?listview_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"/>
+
+        <com.baiji.jianshu.widget.TextViewFixTouchConsume
+            android:textSize="12.0sp"
+            android:textColor="?color_99_88"
+            android:id="@id/txt_target_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginBottom="15.0dip"
+            android:maxLines="2"
+            android:lineSpacingExtra="5.0dip"/>
+    </LinearLayout>
+
+    <View
+        android:id="@id/bottom_divider"
+        android:background="?listview_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.39999998dip"
+        android:layout_marginTop="25.0dip"/>
+</LinearLayout>
