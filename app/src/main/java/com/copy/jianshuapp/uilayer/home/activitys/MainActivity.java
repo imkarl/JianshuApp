@@ -1,29 +1,6 @@
 package com.copy.jianshuapp.uilayer.home.activitys;
 
-import android.graphics.ColorFilter;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import com.copy.jianshuapp.R;
-import com.copy.jianshuapp.uilayer.BaseActivity;
-import com.copy.jianshuapp.uilayer.home.fragments.MainDiscoverFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.MainDynamicFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.MainHomeFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.MainMoreFragment;
-import com.copy.jianshuapp.uilayer.home.views.listeners.OnMultiClickListener;
-import com.copy.jianshuapp.utils.JSToast;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
+import com.copy.jianshuapp.uilayer.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

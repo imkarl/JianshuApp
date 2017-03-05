@@ -19,7 +19,7 @@ import io.reactivex.subjects.BehaviorSubject;
  * 支持绑定Rx生命周期的Activity
  * @version imkarl 2016-12
  */
-public class RxLifecycleActivity extends Activity implements LifecycleProvider<ActivityEvent> {
+class RxLifecycleActivity extends Activity implements LifecycleProvider<ActivityEvent> {
 
     private final BehaviorSubject<ActivityEvent> lifecycleSubject = BehaviorSubject.create();
 

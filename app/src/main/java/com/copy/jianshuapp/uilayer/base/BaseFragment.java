@@ -1,4 +1,4 @@
-package com.copy.jianshuapp.uilayer;
+package com.copy.jianshuapp.uilayer.base;
 
 import android.app.Fragment;
 

@@ -2,10 +2,9 @@ package com.copy.jianshuapp.uilayer;
 
 import android.os.Bundle;
 
-import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.modellayer.local.SettingsUtils;
+import com.copy.jianshuapp.uilayer.base.BaseActivity;
 import com.copy.jianshuapp.uilayer.guide.GuideActivity;
-import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
 
 import java.util.concurrent.TimeUnit;
 

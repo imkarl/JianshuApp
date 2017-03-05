@@ -1,4 +1,4 @@
-package com.copy.jianshuapp.uilayer;
+package com.copy.jianshuapp.uilayer.base;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -7,11 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 
-import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.common.statusbar.StatusBarCompat;
-import com.copy.jianshuapp.uilayer.base.RxLifecycleActivity;
 import com.copy.jianshuapp.utils.pair.KeyValuePair;
 
 /**

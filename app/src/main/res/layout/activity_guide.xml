@@ -1,58 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-              android:background="@color/white"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
+    <com.copy.jianshuapp.uilayer.widget.FixViewPager
         android:id="@id/viewPager"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dip"
-        android:layout_weight="1.0"/>
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        />
 
     <com.viewpagerindicator.CirclePageIndicator
-        android:layout_gravity="center_horizontal"
         android:id="@id/indicator"
-        android:paddingLeft="10.0dip"
-        android:paddingRight="10.0dip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
         app:fillColor="#ffe78170"/>
 
     <FrameLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="92.0dip">
 
         <TextView
-            android:textColor="?color_99_88"
-            android:layout_gravity="bottom|center"
             android:id="@id/tv_skip"
-            android:background="@drawable/shap_rect_gray_light_frame"
-            android:paddingLeft="10.0dip"
-            android:paddingTop="4.0dip"
-            android:paddingRight="10.0dip"
-            android:paddingBottom="4.0dip"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
             android:layout_marginBottom="24.0dip"
-            android:text="@string/skip"/>
+            android:background="@drawable/shap_rect_gray_light_frame"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="4.0dip"
+            android:text="@string/skip"
+            android:textColor="?color_99_88"
+            android:visibility="visible"/>
 
         <TextView
-            android:textSize="18.0sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:layout_gravity="bottom|center"
             android:id="@id/tv_enter"
-            android:background="@drawable/shap_rect_theme"
-            android:visibility="gone"
             android:layout_width="fill_parent"
             android:layout_height="44.0dip"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="24.0dip"
             android:layout_marginLeft="24.0dip"
             android:layout_marginRight="24.0dip"
-            android:layout_marginBottom="24.0dip"
-            android:text="@string/enter_jian_shu"/>
+            android:background="@drawable/shap_rect_theme"
+            android:gravity="center"
+            android:text="@string/enter_jian_shu"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp"
+            android:visibility="gone"/>
     </FrameLayout>
 </LinearLayout>
