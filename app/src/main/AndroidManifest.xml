@@ -53,6 +53,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/theme_day_opaque"
             />
+        <activity
+            android:name=".uilayer.login.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
 
 
         <activity
@@ -442,10 +446,6 @@
             android:name="com.jianshu.activity.SetRewardDefaultDescriptionActivity"
             android:label="@string/set_default_reward_desc"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.jianshu.ui.login.LoginActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name="com.jianshu.ui.login.presenter.ChooseCountryActivity"
             android:screenOrientation="portrait"

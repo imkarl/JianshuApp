@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.copy.jianshuapp.R;
+import com.copy.jianshuapp.common.AppUtils;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
+import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
+import com.copy.jianshuapp.uilayer.login.activity.LoginActivity;
 import com.copy.jianshuapp.uilayer.widget.FixViewPager;
 import com.copy.jianshuapp.uilayer.widget.adapter.BasePagerAdapter;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -60,13 +63,12 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
 
     @Override
     public void finish() {
-//        if (JSMainApplication.a().j() != null) {
-//            MainActivity.a((Context) activity);
-//        } else if (TextUtils.isEmpty(af.a(activity))) {
-//            LoginActivity.b(activity);
-//        } else {
-//            LoginActivity.a(activity);
-//        }
+        // 判断是否已登录
+        if (AppUtils.isLogin()) {
+            startActivity(MainActivity.class);
+        } else {
+            startActivity(LoginActivity.launchRegister());
+        }
 
         super.finish();
     }
