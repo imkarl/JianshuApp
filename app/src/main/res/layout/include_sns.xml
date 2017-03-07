@@ -10,7 +10,7 @@
               xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_wechat"
         android:clickable="true"
@@ -22,7 +22,7 @@
         app:border_width="0.0dip"
         app:oval="true"/>
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_qq"
         android:clickable="true"
@@ -35,7 +35,7 @@
         app:border_color="@drawable/selector_color_theme_tran"
         app:oval="true"/>
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
         android:id="@id/iv_weibo"
         android:clickable="true"
         android:layout_width="40.0dip"
@@ -57,7 +57,7 @@
         android:layout_marginLeft="20.0dip"
         android:text="@string/other"/>
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_douban"
         android:visibility="gone"
@@ -70,7 +70,7 @@
         app:border_width="0.0dip"
         app:oval="true"/>
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_google"
         android:visibility="gone"

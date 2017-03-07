@@ -14,8 +14,11 @@ import com.copy.jianshuapp.utils.pair.KeyValuePair;
 /**
  * Activity基类
  * @author alafighting 2016-01-19
+ * @author imkarl 2017-03
  */
 public class BaseActivity extends RxLifecycleActivity {
+
+    private FragmentManagerHelper mFragmentManagerHelper = new FragmentManagerHelper(this);
 
     public Context getContext() {
         return super.getApplicationContext();
@@ -52,6 +55,13 @@ public class BaseActivity extends RxLifecycleActivity {
     public <T extends Fragment> T newFragment(Class<T> fragmentClass, Bundle args) {
         Fragment fragment = Fragment.instantiate(getContext(), fragmentClass.getName(), args);
         return (T) fragment;
+    }
+
+    public FragmentManagerHelper getFragmentHelper() {
+        return mFragmentManagerHelper;
+    }
+    public FragmentTransactionHelper beginTransaction() {
+        return new FragmentTransactionHelper(mFragmentManagerHelper);
     }
 
     @Override
