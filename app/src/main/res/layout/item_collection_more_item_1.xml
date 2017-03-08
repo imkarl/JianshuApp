@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:layout_gravity="center_horizontal"
             android:id="@id/avatar"
             android:layout_width="40.0dip"
@@ -21,9 +21,9 @@
             android:layout_marginRight="10.0dip"
             android:src="@drawable/tx_image"
             android:scaleType="centerCrop"
-            app:border_width="0.0dip"
-            app:border_color="@drawable/selector_color_theme_tran"
-            app:oval="true"/>
+            app:riv_border_width="0.0dip"
+            app:riv_border_color="@drawable/selector_color_theme_tran"
+            app:riv_oval="true"/>
 
         <TextView
             android:textSize="8.0sp"

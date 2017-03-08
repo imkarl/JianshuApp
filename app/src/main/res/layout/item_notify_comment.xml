@@ -11,15 +11,15 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15.0dip">
 
-        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@id/img_icon_avatar"
             android:layout_width="35.0dip"
             android:layout_height="35.0dip"
             android:src="@drawable/icon_wechat_default"
             android:scaleType="centerCrop"
-            app:border_width="0.30000007dip"
-            app:border_color="?gray300"
-            app:oval="true"/>
+            app:riv_border_width="0.30000007dip"
+            app:riv_border_color="?gray300"
+            app:riv_oval="true"/>
 
         <ImageView
             android:id="@id/img_icon_avatar_gif"

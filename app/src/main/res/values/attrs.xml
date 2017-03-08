@@ -329,8 +329,6 @@
     <attr name="reverseLayout" format="boolean"/>
     <attr name="stackFromEnd" format="boolean"/>
     <attr name="corner_radius" format="dimension"/>
-    <attr name="border_width" format="dimension"/>
-    <attr name="border_color" format="color"/>
     <attr name="mutate_background" format="boolean"/>
     <attr name="oval" format="boolean"/>
     <attr name="behavior_overlapTop" format="dimension"/>
@@ -413,19 +411,5 @@
     <attr name="paddingEnd" format="dimension"/>
     <attr name="theme" format="reference"/>
     <attr name="backgroundTint" format="color"/>
-    <attr name="vpiCirclePageIndicatorStyle" format="reference"/>
-    <attr name="vpiIconPageIndicatorStyle" format="reference"/>
-    <attr name="vpiLinePageIndicatorStyle" format="reference"/>
-    <attr name="vpiTitlePageIndicatorStyle" format="reference"/>
-    <attr name="vpiTabPageIndicatorStyle" format="reference"/>
-    <attr name="vpiUnderlinePageIndicatorStyle" format="reference"/>
-    <attr name="ct_backgroundColor" format="color"/>
-    <attr name="ct_border_width" format="dimension"/>
-    <attr name="ct_border_color" format="color"/>
-    <attr name="ct_border_alpha" format="float"/>
-    <attr name="ct_type">
-        <enum name="shadow_alpha" value="2"/>
-        <enum name="shadow_gradual" value="1"/>
-    </attr>
     <attr name="emojiSize" format="dimension"/>
 </resources>

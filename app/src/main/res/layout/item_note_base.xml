@@ -82,7 +82,7 @@
                 android:layout_below="@id/title"/>
         </RelativeLayout>
 
-        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@id/image"
             android:visibility="visible"
             android:layout_width="80.0dip"
@@ -90,9 +90,9 @@
             android:layout_marginRight="5.0dip"
             android:src="@drawable/image_list"
             android:scaleType="centerCrop"
-            app:corner_radius="2.0dip"
-            app:border_width="0.30000007dip"
-            app:border_color="?gray300"/>
+            app:riv_corner_radius="2.0dip"
+            app:riv_border_width="0.30000007dip"
+            app:riv_border_color="?gray300"/>
     </LinearLayout>
 
     <View

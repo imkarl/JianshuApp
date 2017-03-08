@@ -50,7 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
-                        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                        <com.makeramen.roundedimageview.RoundedImageView
                             android:layout_gravity="bottom"
                             android:id="@id/author_avatar"
                             android:padding="2.0dip"
@@ -58,9 +58,9 @@
                             android:layout_height="26.0dip"
                             android:src="@drawable/tx_image"
                             android:scaleType="centerCrop"
-                            app:border_width="0.30000007dip"
-                            app:border_color="?gray300"
-                            app:oval="true"/>
+                            app:riv_border_width="0.30000007dip"
+                            app:riv_border_color="?gray300"
+                            app:riv_oval="true"/>
 
                         <ImageView
                             android:layout_gravity="bottom"
@@ -153,15 +153,15 @@
             </LinearLayout>
         </LinearLayout>
 
-        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@id/image"
             android:visibility="visible"
             android:layout_width="80.0dip"
             android:layout_height="80.0dip"
             android:layout_marginRight="5.0dip"
             android:scaleType="centerCrop"
-            app:corner_radius="2.0dip"
-            app:border_width="0.30000007dip"
-            app:border_color="?gray300"/>
+            app:riv_corner_radius="2.0dip"
+            app:riv_border_width="0.30000007dip"
+            app:riv_border_color="?gray300"/>
     </LinearLayout>
 </RelativeLayout>

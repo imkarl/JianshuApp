@@ -5,17 +5,17 @@
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@id/round_collection_icon"
         android:layout_width="40.0dip"
         android:layout_height="40.0dip"
         android:layout_marginLeft="2.0dip"
         android:src="@drawable/zt_image"
         android:scaleType="centerCrop"
-        app:corner_radius="4.0dip"
-        app:border_width="0.0dip"
-        app:border_color="@drawable/selector_color_tran_theme"
-        app:oval="false"/>
+        app:riv_corner_radius="4.0dip"
+        app:riv_border_width="0.0dip"
+        app:riv_border_color="@drawable/selector_color_tran_theme"
+        app:riv_oval="false"/>
 
     <TextView
         android:textSize="16.0sp"

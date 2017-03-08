@@ -13,16 +13,16 @@
         android:layout_width="fill_parent"
         android:layout_height="54.0dip">
 
-        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@id/img_collect_icon"
             android:layout_width="33.0dip"
             android:layout_height="33.0dip"
             android:src="@drawable/tx_image"
             android:scaleType="centerCrop"
             android:layout_centerVertical="true"
-            app:border_width="1.0dip"
-            app:border_color="@drawable/selector_color_theme_tran"
-            app:oval="true"/>
+            app:riv_border_width="1.0dip"
+            app:riv_border_color="@drawable/selector_color_theme_tran"
+            app:riv_oval="true"/>
 
         <TextView
             android:textSize="16.0sp"

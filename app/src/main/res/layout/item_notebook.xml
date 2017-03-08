@@ -6,17 +6,17 @@
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@id/avatar"
         android:layout_width="40.0dip"
         android:layout_height="40.0dip"
         android:src="@drawable/wenji_icon_for_search"
         android:scaleType="centerCrop"
         android:layout_centerVertical="true"
-        app:corner_radius="4.0dip"
-        app:border_width="0.0dip"
-        app:border_color="@drawable/selector_color_theme_tran"
-        app:oval="false"/>
+        app:riv_corner_radius="4.0dip"
+        app:riv_border_width="0.0dip"
+        app:riv_border_color="@drawable/selector_color_theme_tran"
+        app:riv_oval="false"/>
 
     <LinearLayout
         android:orientation="vertical"

@@ -10,7 +10,7 @@
               xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_wechat"
         android:clickable="true"
@@ -19,10 +19,10 @@
         android:layout_marginRight="20.0dip"
         android:src="@drawable/icon_wechat"
         android:scaleType="fitXY"
-        app:border_width="0.0dip"
-        app:oval="true"/>
+        app:riv_border_width="0.0dip"
+        app:riv_oval="true"/>
 
-    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_qq"
         android:clickable="true"
@@ -31,19 +31,19 @@
         android:layout_marginRight="20.0dip"
         android:src="@drawable/icon_qq"
         android:scaleType="centerCrop"
-        app:border_width="0.0dip"
-        app:border_color="@drawable/selector_color_theme_tran"
-        app:oval="true"/>
+        app:riv_border_width="0.0dip"
+        app:riv_border_color="@drawable/selector_color_theme_tran"
+        app:riv_oval="true"/>
 
-    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@id/iv_weibo"
         android:clickable="true"
         android:layout_width="40.0dip"
         android:layout_height="40.0dip"
         android:src="@drawable/icon_weibo"
-        app:corner_radius="20.0dip"
-        app:border_width="0.0dip"
-        app:oval="true"/>
+        app:riv_corner_radius="20.0dip"
+        app:riv_border_width="0.0dip"
+        app:riv_oval="true"/>
 
     <TextView
         android:textSize="10.0dip"
@@ -57,7 +57,7 @@
         android:layout_marginLeft="20.0dip"
         android:text="@string/other"/>
 
-    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_douban"
         android:visibility="gone"
@@ -67,10 +67,10 @@
         android:layout_marginLeft="20.0dip"
         android:layout_marginRight="20.0dip"
         android:src="@drawable/icon_douban"
-        app:border_width="0.0dip"
-        app:oval="true"/>
+        app:riv_border_width="0.0dip"
+        app:riv_oval="true"/>
 
-    <com.copy.jianshuapp.uilayer.home.views.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:layout_gravity="center"
         android:id="@id/iv_google"
         android:visibility="gone"
@@ -78,6 +78,6 @@
         android:layout_width="40.0dip"
         android:layout_height="40.0dip"
         android:src="@drawable/icon_google"
-        app:border_width="0.0dip"
-        app:oval="true"/>
+        app:riv_border_width="0.0dip"
+        app:riv_oval="true"/>
 </LinearLayout>

@@ -1,69 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:padding="16.0dip"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="16.0dip">
 
-    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@id/round_collection_icon"
         android:layout_width="40.0dip"
         android:layout_height="40.0dip"
         android:layout_marginLeft="2.0dip"
         android:scaleType="centerCrop"
-        app:corner_radius="2.0dip"
-        app:border_width="0.30000007dip"
-        app:border_color="?gray300"
-        app:oval="false"/>
+        app:riv_border_color="?gray300"
+        app:riv_border_width="0.30000007dip"
+        app:riv_corner_radius="2.0dip"
+        app:riv_oval="false"/>
 
     <TextView
-        android:textSize="16.0sp"
-        android:textColor="?color_2f_b1"
         android:id="@id/text_collection_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="9.0dip"
+        android:layout_toRightOf="@id/round_collection_icon"
         android:maxWidth="200.0dip"
         android:singleLine="true"
-        android:layout_toRightOf="@id/round_collection_icon"/>
+        android:textColor="?color_2f_b1"
+        android:textSize="16.0sp"/>
 
     <TextView
-        android:textSize="10.0sp"
-        android:textColor="?color_b1_71"
         android:id="@id/text_collection_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9.0dip"
-        android:text="@string/info_collection"
-        android:singleLine="true"
+        android:layout_alignLeft="@id/text_collection_name"
         android:layout_below="@id/text_collection_name"
-        android:layout_alignLeft="@id/text_collection_name"/>
+        android:layout_marginTop="9.0dip"
+        android:singleLine="true"
+        android:text="@string/info_collection"
+        android:textColor="?color_b1_71"
+        android:textSize="10.0sp"/>
 
     <TextView
-        android:textSize="12.0sp"
-        android:textColor="?color_99_88"
-        android:ellipsize="end"
         android:id="@id/text_collection_desc"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12.0dip"
-        android:maxLines="3"
+        android:layout_alignLeft="@id/text_collection_title"
         android:layout_below="@id/round_collection_icon"
-        android:layout_alignLeft="@id/text_collection_title"/>
+        android:layout_marginTop="12.0dip"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="?color_99_88"
+        android:textSize="12.0sp"
+        android:visibility="gone"/>
 
     <TextView
-        android:textSize="12.0sp"
-        android:textColor="@drawable/selector_tv_follow"
-        android:gravity="center"
         android:id="@id/text_subscribe_opt"
-        android:background="?selector_shap_guanzhu"
-        android:padding="4.0dip"
-        android:clickable="true"
         android:layout_width="65.0dip"
         android:layout_height="wrap_content"
-        android:text="@string/yi_guan_zhu"
-        android:singleLine="true"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:background="?selector_shap_guanzhu"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="4.0dip"
+        android:singleLine="true"
+        android:text="@string/yi_guan_zhu"
+        android:textColor="@drawable/selector_tv_follow"
+        android:textSize="12.0sp"/>
 </RelativeLayout>

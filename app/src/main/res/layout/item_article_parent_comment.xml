@@ -14,16 +14,16 @@
         android:layout_marginLeft="16.0dip"
         android:layout_marginRight="16.0dip">
 
-        <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:layout_gravity="center"
             android:id="@id/img_avatar"
             android:layout_width="28.0dip"
             android:layout_height="28.0dip"
             android:src="@drawable/tx_image"
             android:scaleType="centerCrop"
-            app:border_width="0.30000007dip"
-            app:border_color="?gray300"
-            app:oval="true"/>
+            app:riv_border_width="0.30000007dip"
+            app:riv_border_color="?gray300"
+            app:riv_oval="true"/>
 
         <ImageView
             android:layout_gravity="center"

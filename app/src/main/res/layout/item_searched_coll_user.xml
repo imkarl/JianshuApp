@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.0">
 
-            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@id/img_1"
                 android:layout_width="33.0dip"
                 android:layout_height="33.0dip"
@@ -40,9 +40,9 @@
                 android:scaleType="centerCrop"
                 android:layout_column="0"
                 android:layout_row="0"
-                app:border_width="0.30000007dip"
-                app:border_color="?gray300"
-                app:oval="true"/>
+                app:riv_border_width="0.30000007dip"
+                app:riv_border_color="?gray300"
+                app:riv_oval="true"/>
 
             <TextView
                 android:textSize="12.0sp"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.0">
 
-            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@id/img_2"
                 android:layout_width="33.0dip"
                 android:layout_height="33.0dip"
@@ -74,9 +74,9 @@
                 android:scaleType="centerCrop"
                 android:layout_column="0"
                 android:layout_row="0"
-                app:border_width="0.30000007dip"
-                app:border_color="?gray300"
-                app:oval="true"/>
+                app:riv_border_width="0.30000007dip"
+                app:riv_border_color="?gray300"
+                app:riv_oval="true"/>
 
             <TextView
                 android:textSize="12.0sp"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.0">
 
-            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@id/img_3"
                 android:layout_width="33.0dip"
                 android:layout_height="33.0dip"
@@ -108,9 +108,9 @@
                 android:scaleType="centerCrop"
                 android:layout_column="0"
                 android:layout_row="0"
-                app:border_width="0.30000007dip"
-                app:border_color="?gray300"
-                app:oval="true"/>
+                app:riv_border_width="0.30000007dip"
+                app:riv_border_color="?gray300"
+                app:riv_oval="true"/>
 
             <TextView
                 android:textSize="12.0sp"
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.0">
 
-            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@id/img_4"
                 android:layout_width="33.0dip"
                 android:layout_height="33.0dip"
@@ -142,9 +142,9 @@
                 android:scaleType="centerCrop"
                 android:layout_column="0"
                 android:layout_row="0"
-                app:border_width="0.30000007dip"
-                app:border_color="?gray300"
-                app:oval="true"/>
+                app:riv_border_width="0.30000007dip"
+                app:riv_border_color="?gray300"
+                app:riv_oval="true"/>
 
             <TextView
                 android:textSize="12.0sp"

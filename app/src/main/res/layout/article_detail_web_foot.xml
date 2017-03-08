@@ -72,16 +72,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="150.0dip">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_seventh_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -93,16 +93,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="125.0dip">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_sixth_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -114,16 +114,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="100.0dip">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_fifth_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -135,16 +135,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="75.0dip">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_fourth_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -156,16 +156,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50.0dip">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_third_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -177,16 +177,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25.0dip">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_second_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -197,16 +197,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <com.baiji.jianshu.view.rounded_imageview.RoundedImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@id/img_first_buyer"
                         android:visibility="gone"
                         android:layout_width="30.5dip"
                         android:layout_height="30.5dip"
                         android:src="@drawable/tx_image"
                         android:scaleType="centerCrop"
-                        app:border_width="0.5dip"
-                        app:border_color="?gray300"
-                        app:oval="true"/>
+                        app:riv_border_width="0.5dip"
+                        app:riv_border_color="?gray300"
+                        app:riv_oval="true"/>
                 </RelativeLayout>
             </RelativeLayout>
 

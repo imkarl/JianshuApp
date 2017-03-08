@@ -1,17 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?common_bg_white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:gravity="center_vertical" android:id="@id/title_root" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height">
-        <View android:id="@id/titlebar_separate_line" android:background="?separate_line_color_2" android:layout_width="fill_parent" android:layout_height="0.6dip" android:layout_alignParentBottom="true" />
-        <TextView android:textSize="16.0sp" android:textColor="?text_color_1" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/titlebar_navigation_title" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/wan_shan_zi_liao" android:singleLine="true" android:maxLength="17" android:layout_centerInParent="true" />
-        <TextView android:textSize="16.0sp" android:textColor="@color/theme_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text_complete" android:background="?press_selector" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/wan_cheng" android:singleLine="true" android:maxLength="4" android:layout_alignParentRight="true" android:onClick="onClick_Complete" />
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black">
+
+    <RelativeLayout
+        android:id="@id/title_root"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@id/titlebar_separate_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:layout_alignParentBottom="true"
+            android:background="?separate_line_color_2"/>
+
+        <TextView
+            android:id="@id/titlebar_navigation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="17"
+            android:paddingRight="10.0dip"
+            android:singleLine="true"
+            android:text="@string/wan_shan_zi_liao"
+            android:textColor="?text_color_1"
+            android:textSize="16.0sp"/>
+
+        <TextView
+            android:id="@id/text_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="?press_selector"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="4"
+            android:onClick="onClick_Complete"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:singleLine="true"
+            android:text="@string/wan_cheng"
+            android:textColor="@color/theme_color"
+            android:textSize="16.0sp"/>
     </RelativeLayout>
-    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/titlebar_height">
-        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="60.0dip">
-            <com.baiji.jianshu.view.rounded_imageview.RoundedImageView android:layout_gravity="center_horizontal" android:id="@id/img_avatar" android:clickable="true" android:layout_width="66.0dip" android:layout_height="66.0dip" android:src="@drawable/tx_image" android:scaleType="centerCrop" android:onClick="onCLick_Change_Avatar" app:border_width="1.0dip" app:border_color="@drawable/selector_color_theme_tran" app:oval="true" />
-            <TextView android:textSize="16.0sp" android:textColor="?text_color_2" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/change_avatar_tip" />
-            <AutoCompleteTextView android:textSize="16.0sp" android:textColor="?color_2f_b1" android:textColorHint="?color_99_88" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/edit_username" android:background="?shape_rect_frame" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="34.0dip" android:hint="@string/set_username_hint" android:singleLine="true" android:drawableLeft="?icon_wanshanziliao" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionDone" android:imeActionLabel="@string/sou_suo" />
-            <TextView android:textSize="12.0sp" android:textColor="?text_color_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/username_occupy_tip" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/titlebar_height">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60.0dip"
+            android:orientation="vertical"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@id/img_avatar"
+                android:layout_width="66.0dip"
+                android:layout_height="66.0dip"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:onClick="onCLick_Change_Avatar"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tx_image"
+                app:riv_border_color="@drawable/selector_color_theme_tran"
+                app:riv_border_width="1.0dip"
+                app:riv_oval="true"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center_horizontal"
+                android:text="@string/change_avatar_tip"
+                android:textColor="?text_color_2"
+                android:textSize="16.0sp"/>
+
+            <AutoCompleteTextView
+                android:id="@id/edit_username"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="34.0dip"
+                android:layout_weight="1.0"
+                android:background="?shape_rect_frame"
+                android:drawableLeft="?icon_wanshanziliao"
+                android:drawablePadding="8.0dip"
+                android:gravity="center_vertical"
+                android:hint="@string/set_username_hint"
+                android:imeActionLabel="@string/sou_suo"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingLeft="8.0dip"
+                android:singleLine="true"
+                android:textColor="?color_2f_b1"
+                android:textColorHint="?color_99_88"
+                android:textSize="16.0sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:text="@string/username_occupy_tip"
+                android:textColor="?text_color_3"
+                android:textSize="12.0sp"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
