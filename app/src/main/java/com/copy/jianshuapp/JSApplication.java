@@ -5,7 +5,8 @@ import android.app.Application;
 import com.copy.jianshuapp.common.AppUtils;
 import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.exception.CrashHandlerHelper;
-import com.copy.jianshuapp.exception.OnExceptionHandler;
+import com.vanniktech.emoji.EmojiManager;
+import com.vanniktech.emoji.ios.IosEmojiProvider;
 
 /**
  * 全局应用程序类
@@ -27,12 +28,9 @@ public class JSApplication extends Application {
     public void onCreate() {
         super.onCreate();
         AppUtils.onCreate(this);
-    }
 
-    @Override
-    public void onTerminate() {
-        super.onTerminate();
-        mCrashHandler.unregist();
+        // emoji
+        EmojiManager.install(new IosEmojiProvider());
     }
 
 }

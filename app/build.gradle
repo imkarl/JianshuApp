@@ -100,6 +100,6 @@ dependencies {
 
     // emoji
     compile 'com.vanniktech:emoji-ios:0.4.0'
-    compile 'com.vanniktech:emoji-one:0.4.0'
+    //compile 'com.vanniktech:emoji-one:0.4.0'
 
 }

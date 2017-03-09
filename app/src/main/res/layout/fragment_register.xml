@@ -175,7 +175,7 @@
             android:layout_marginTop="10.0dip"
             android:orientation="vertical">
 
-            <com.baiji.jianshu.widget.TextViewFixTouchConsume
+            <jianshu.widget.TextViewFixTouchConsume
                 android:id="@id/tv_user_agreement"
                 android:layout_width="250.0dip"
                 android:layout_height="wrap_content"
@@ -289,7 +289,6 @@
         android:layout_marginTop="6.0dip"
         android:background="?press_selector"
         android:clickable="true"
-        android:onClick="onMyClick"
         android:padding="8.0dip"
         android:src="@drawable/tjzt_image_delete_normal"/>
 </RelativeLayout>

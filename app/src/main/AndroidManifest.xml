@@ -57,6 +57,10 @@
             android:name=".uilayer.login.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".uilayer.browser.BrowserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
 
 
         <activity
@@ -199,10 +203,6 @@
             android:name="com.jianshu.collection.CollectionCoEditorsListActivity"
             android:label="@string/edit_list"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.jianshu.inner_browser.BrowserActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name="com.jianshu.search.views.SearchActivity"
             android:label="@string/sou_suo"
