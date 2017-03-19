@@ -2,9 +2,12 @@ package com.copy.jianshuapp.uilayer;
 
 import android.os.Bundle;
 
+import com.copy.jianshuapp.common.AppUtils;
 import com.copy.jianshuapp.modellayer.local.SettingsUtils;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
 import com.copy.jianshuapp.uilayer.guide.GuideActivity;
+import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
+import com.copy.jianshuapp.uilayer.login.activity.LoginActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -26,12 +29,23 @@ public class SplashActivity extends BaseActivity {
                 .subscribe(it -> {
                     // 判断是否应该显示引导页
                     if (SettingsUtils.getBoolean(SettingsUtils.HAS_SHOW_GUIDE, false)) {
-//                        startActivity(MainActivity.class);
-                        startActivity(GuideActivity.class);
+                        if (AppUtils.isLogin()) {
+                            // 主页
+                            startActivity(MainActivity.class);
+                        } else {
+                            // 判断是否有登录或注册成功过
+                            if (SettingsUtils.getBoolean(SettingsUtils.HAS_LOGIN)
+                                    || SettingsUtils.getBoolean(SettingsUtils.HAS_REGIST)) {
+                                startActivity(LoginActivity.launchLogin());
+                            } else {
+                                startActivity(LoginActivity.launchRegister());
+                            }
+                        }
                     } else {
+                        // 引导页
+                        SettingsUtils.put(SettingsUtils.HAS_SHOW_GUIDE, true);
                         startActivity(GuideActivity.class);
                     }
-                    SettingsUtils.put(SettingsUtils.HAS_SHOW_GUIDE, true);
 
                     super.finish();
                 });
