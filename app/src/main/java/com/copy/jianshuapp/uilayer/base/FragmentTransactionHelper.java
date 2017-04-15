@@ -23,7 +23,7 @@ public class FragmentTransactionHelper {
         this.mTransaction = transaction;
     }
 
-    public <T extends Fragment> FragmentTransactionHelper replace(@IdRes int id, Class<T> fragmentClass) {
+    public FragmentTransactionHelper replace(@IdRes int id, Class<? extends Fragment> fragmentClass) {
         return replace(id, mFragmentManager.findOrCreate(fragmentClass));
     }
     public FragmentTransactionHelper replace(@IdRes int id, Fragment fragment) {
@@ -40,6 +40,9 @@ public class FragmentTransactionHelper {
     }
 
 
+    public FragmentTransactionHelper add(@IdRes int id, Class<? extends Fragment> fragmentClass) {
+        return add(id, mFragmentManager.findOrCreate(fragmentClass));
+    }
     public FragmentTransactionHelper add(@IdRes int id, Fragment fragment) {
         add(id, fragment, FragmentManagerHelper.createTag(fragment));
         return this;

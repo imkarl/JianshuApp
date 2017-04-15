@@ -42,6 +42,9 @@ public class LoginActivity extends BaseActivity {
         if (intent != null) {
             this.mLoginType = intent.getIntExtra(EXTRA_TYPE, TYPE_LOGIN);
         }
+        if (savedInstanceState != null) {
+            this.mLoginType = savedInstanceState.getInt(EXTRA_TYPE);
+        }
 
         if (this.mLoginType == TYPE_REGISTER) {
             showRegisterFragment();
@@ -56,20 +59,14 @@ public class LoginActivity extends BaseActivity {
         outState.putInt(EXTRA_TYPE, this.mLoginType);
     }
 
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        this.mLoginType = savedInstanceState.getInt(EXTRA_TYPE, TYPE_LOGIN);
-    }
-
-    private void showRegisterFragment() {
+    public void showRegisterFragment() {
         beginTransaction()
-                .replace(R.id.frame_root, RegisterFragment.class)
+                .add(R.id.frame_root, RegisterFragment.class)
                 .commit();
     }
-    private void showLoginFragment() {
+    public void showLoginFragment() {
         beginTransaction()
-                .replace(R.id.frame_root, LoginFragment.class)
+                .add(R.id.frame_root, LoginFragment.class)
                 .commit();
     }
 

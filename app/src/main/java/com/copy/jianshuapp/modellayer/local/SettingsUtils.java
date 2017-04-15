@@ -1,6 +1,5 @@
 package com.copy.jianshuapp.modellayer.local;
 
-import com.copy.jianshuapp.common.AppUtils;
 import com.copy.jianshuapp.common.PreferenceUtils;
 
 /**
@@ -17,7 +16,7 @@ public class SettingsUtils {
         if (sPreference == null) {
             synchronized (SettingsUtils.class) {
                 if (sPreference == null) {
-                    sPreference = new PreferenceUtils(AppUtils.getContext(), PREFERNCE_NAME);
+                    sPreference = new PreferenceUtils(PREFERNCE_NAME);
                 }
             }
         }
@@ -69,5 +68,8 @@ public class SettingsUtils {
 
 
     public static final String HAS_SHOW_GUIDE = "has_show_guide";
+
+    public static final String HAS_LOGIN = "has_login";
+    public static final String HAS_REGIST = "has_regist";
 
 }

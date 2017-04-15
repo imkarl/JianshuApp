@@ -1,9 +1,7 @@
 package jianshu.api;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
-import android.text.TextUtils;
 
 import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.common.ObjectUtils;
@@ -21,7 +19,7 @@ public class MatchJianShuUrl {
         if (ObjectUtils.isEmpty(url)) {
             return false;
         }
-        if (!f(url)) {
+        if (!isHyperlink(url)) {
             url = "http://" + url;
         }
         LogUtils.d("after append scheme : url = " + url);
@@ -36,7 +34,7 @@ public class MatchJianShuUrl {
         if ("jianshu".equalsIgnoreCase(scheme)) {
             return matchUrl(host, path, context, from);
         }
-        return b(host, path, context, from);
+        return isHttp(host, path, context, from);
     }
 
     private static boolean matchUrl(String host, String path, Context context, String from) {
@@ -72,8 +70,8 @@ public class MatchJianShuUrl {
 //            try {
 //                CommentDetailActivity.a((Activity) context, Long.valueOf(id), null);
 //                return true;
-//            } catch (NumberFormatException e) {
-//                e.printStackTrace();
+//            } catch (NumberFormatException isWebsite) {
+//                isWebsite.printStackTrace();
 //                return false;
 //            }
 //        } else if (path.contains("recommended/user")) {
@@ -87,7 +85,7 @@ public class MatchJianShuUrl {
 //        }
     }
 
-    private static boolean b(String host, String path, Context context, String from) {
+    private static boolean isHttp(String host, String path, Context context, String from) {
 
         // FIXME: 17/3/10 待恢复
         return true;
@@ -130,8 +128,8 @@ public class MatchJianShuUrl {
 //                try {
 //                    CommentDetailActivity.a((Activity) context, Long.valueOf(id), null);
 //                    return true;
-//                } catch (NumberFormatException e) {
-//                    e.printStackTrace();
+//                } catch (NumberFormatException isWebsite) {
+//                    isWebsite.printStackTrace();
 //                }
 //            } else {
 //                i--;
@@ -148,46 +146,50 @@ public class MatchJianShuUrl {
 //        }
     }
 
-    public static boolean a(String host) {
-        return !ObjectUtils.isEmpty(host) && ("www.jianshu.com".equalsIgnoreCase(host) || "jianshu.com".equalsIgnoreCase(host) || "www.jianshu.io".equalsIgnoreCase(host) || "jianshu.io".equalsIgnoreCase(host));
+    public static boolean isJianShuHost(String host) {
+        return !ObjectUtils.isEmpty(host)
+                && ("www.jianshu.com".equalsIgnoreCase(host)
+                    || "jianshu.com".equalsIgnoreCase(host)
+                    || "www.jianshu.io".equalsIgnoreCase(host)
+                    || "jianshu.io".equalsIgnoreCase(host));
     }
 
-    public static boolean b(String url) {
+    public static boolean isHttp(String url) {
         if (url == null || url.length() <= 6 || !url.substring(0, 7).equalsIgnoreCase("http://")) {
             return false;
         }
         return true;
     }
 
-    public static boolean c(String url) {
+    public static boolean isHttps(String url) {
         if (url == null || url.length() <= 7 || !url.substring(0, 8).equalsIgnoreCase("https://")) {
             return false;
         }
         return true;
     }
 
-    public static boolean d(String url) {
+    public static boolean isJianshuScheme(String url) {
         if (url == null || url.length() <= 9 || !url.substring(0, 10).equalsIgnoreCase("jianshu://")) {
             return false;
         }
         return true;
     }
 
-    public static boolean e(String url) {
+    public static boolean isWebsite(String url) {
         if (url == null || url.length() == 0) {
             return false;
         }
-        if (b(url) || c(url)) {
+        if (isHttp(url) || isHttps(url)) {
             return true;
         }
         return false;
     }
 
-    public static boolean f(String url) {
+    public static boolean isHyperlink(String url) {
         if (url == null || url.length() == 0) {
             return false;
         }
-        if (e(url) || d(url)) {
+        if (isWebsite(url) || isJianshuScheme(url)) {
             return true;
         }
         return false;

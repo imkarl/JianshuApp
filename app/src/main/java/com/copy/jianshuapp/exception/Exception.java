@@ -1,7 +1,10 @@
 package com.copy.jianshuapp.exception;
 
+import com.copy.jianshuapp.common.ObjectUtils;
+
 /**
- * @author alafighting 2016-01
+ * 异常基类
+ * @version imkarl 2016-08
  */
 public class Exception extends RuntimeException {
 
@@ -18,6 +21,18 @@ public class Exception extends RuntimeException {
 
     public Exception(Throwable throwable) {
         super(throwable);
+    }
+
+
+    /**
+     * 获取人性化的描述
+     */
+    public String getDescription() {
+        String msg = getMessage();
+        if (ObjectUtils.isEmpty(msg)) {
+            msg = String.valueOf(getClass());
+        }
+        return msg;
     }
 
 }

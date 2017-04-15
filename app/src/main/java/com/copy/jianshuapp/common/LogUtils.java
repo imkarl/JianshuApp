@@ -153,6 +153,7 @@ public final class LogUtils {
                 ,"View.updateDisplayListIfDirty"
                 ,"android.app.ActivityThread.-wrap"
                 ,"android.app.ActivityThread$H"
+                ,"at io.reactivex.internal"
         );
     }
     private static boolean contains(String text, String... strs) {

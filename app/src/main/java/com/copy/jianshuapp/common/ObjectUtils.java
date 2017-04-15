@@ -5,6 +5,8 @@ import android.text.TextUtils;
 
 import java.io.File;
 import java.util.Collection;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * Java对象的常用处理
@@ -16,10 +18,18 @@ public final class ObjectUtils {
     public static boolean isEmpty(Object obj) {
         if (obj instanceof CharSequence) {
             return isEmpty((CharSequence)obj);
+        } else if (obj instanceof Bundle) {
+            return isEmpty((Bundle)obj);
         } else if (obj instanceof Collection) {
             return isEmpty((Collection)obj);
+        } else if (obj instanceof Map) {
+            return isEmpty((Map)obj);
         }
         return obj == null;
+    }
+
+    public static boolean isEmpty(CharSequence str) {
+        return TextUtils.isEmpty(str) && !Pattern.matches("\\s", str);
     }
 
     public static boolean isEmpty(Bundle bundle) {
@@ -34,8 +44,8 @@ public final class ObjectUtils {
         return list == null || list.length==0;
     }
 
-    public static boolean isEmpty(CharSequence value) {
-        return TextUtils.isEmpty(value);
+    public static boolean isEmpty(Map map) {
+        return map == null || map.isEmpty();
     }
 
     public static int toInt(CharSequence value) {

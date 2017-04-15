@@ -13,8 +13,8 @@ public class PreferenceUtils {
 
     private SharedPreferences mSharedPreferences;
 
-    public PreferenceUtils(Context context, String name) {
-        mSharedPreferences = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+    public PreferenceUtils(String name) {
+        mSharedPreferences = AppUtils.getContext().getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
 

@@ -55,24 +55,27 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
     // support
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support:recyclerview-v7:25.2.0'
-    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.zhy:percent-support-extends:1.1.1'
 
     // rxjava
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'com.github.JakeWharton.RxBinding:rxbinding:31e02dcaca'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
     compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
 
     // retrofit
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
 
     // http debug
     compile 'com.facebook.stetho:stetho-okhttp3:1.4.1'
+
+    // url
+    compile 'com.github.ImKarl:UrlBuilder:0.2'
 
     // image loader
     compile 'com.facebook.fresco:fresco:1.0.0'
@@ -101,5 +104,11 @@ dependencies {
     // emoji
     compile 'com.vanniktech:emoji-ios:0.4.0'
     //compile 'com.vanniktech:emoji-one:0.4.0'
+
+    // loading
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+
+    // dialog
+    compile 'com.github.imkarl.material-dialogs:core:v0.9.4.2_1'
 
 }
