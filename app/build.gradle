@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
+apply from: "${project.rootProject.file('config.gradle')}"
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion build_tools_version
 
     defaultConfig {
         applicationId "com.copy.jianshuapp"
         minSdkVersion min_sdk_version
         targetSdkVersion target_sdk_version
-        versionCode app_version_code.toInteger()
+        versionCode app_version_code
         versionName app_version_name
 
         ndk {
@@ -55,9 +56,9 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
     // support
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
+    compile "com.android.support:appcompat-v7:${support_version}"
+    compile "com.android.support:recyclerview-v7:${support_version}"
+    compile "com.android.support:design:${support_version}"
     compile 'com.zhy:percent-support-extends:1.1.1'
 
     // rxjava

@@ -17,6 +17,7 @@ import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.common.rx.RxTextViews;
 import com.copy.jianshuapp.exception.ApiException;
 import com.copy.jianshuapp.exception.ExceptionUtils;
+import com.copy.jianshuapp.modellayer.local.SettingsUtils;
 import com.copy.jianshuapp.modellayer.remote.ErrorCode;
 import com.copy.jianshuapp.modellayer.repository.UserRepository;
 import com.copy.jianshuapp.uilayer.base.BaseFragment;
@@ -152,6 +153,7 @@ public class RegisterFragment extends BaseFragment {
                                                 .observeOn(AndroidSchedulers.mainThread())
                                                 .subscribe(success -> {
                                                     ToastUtils.show("注册成功");
+                                                    SettingsUtils.put(SettingsUtils.HAS_REGIST, true);
                                                     mRegisterPlugin.destroy();
                                                     // 切换成登录界面
                                                     showLoginFragment();
