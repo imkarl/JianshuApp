@@ -135,8 +135,6 @@ public final class LogUtils {
                 part
                 ,"rx.internal"
                 ,"rx.Subscriber"
-                ,"retrofit2.OkHttpCall"
-                ,"retrofit2.ServiceMethod"
                 ,"okio.RealBufferedSource"
                 ,"okhttp3.internal"
                 ,"okhttp3.RealCall"

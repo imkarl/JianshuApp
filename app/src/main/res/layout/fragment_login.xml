@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/root_view"
-                android:background="?common_bg_light"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:background="?common_bg_light"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:id="@id/iv_close"
@@ -144,9 +144,9 @@
         </LinearLayout>
 
         <Button
+            android:id="@id/btn_login"
             android:textSize="18.0sp"
             android:textColor="@color/white"
-            android:id="@id/btn_login"
             android:background="?btn_login"
             android:layout_width="fill_parent"
             android:layout_height="48.0dip"
@@ -157,10 +157,10 @@
             style="?android:attr/borderlessButtonStyle"/>
 
         <TextView
+            android:id="@+id/tv_forget_pass_bottom"
             android:textSize="16.0sp"
             android:textColor="?text_color_2"
             android:layout_gravity="center"
-            android:id="@id/tv_forget_pass_bottom"
             android:background="?press_selector"
             android:padding="10.0dip"
             android:clickable="true"
@@ -169,7 +169,7 @@
             android:layout_marginTop="10.0dip"
             android:text="@string/forget_password"
             android:layout_centerInParent="true"
-            android:onClick="onMyClick"/>
+            />
 
         <LinearLayout
             android:gravity="center_horizontal"
@@ -214,9 +214,9 @@
             android:layout_marginBottom="18.0dip">
 
             <TextView
+                android:id="@id/btn_register"
                 android:textSize="16.0sp"
                 android:textColor="@color/theme_color"
-                android:id="@id/btn_register"
                 android:background="?press_selector"
                 android:paddingTop="10.0dip"
                 android:paddingRight="8.0dip"
@@ -225,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_new_user"
-                android:onClick="onMyClick"/>
+                />
 
             <View
                 android:layout_gravity="center_vertical"

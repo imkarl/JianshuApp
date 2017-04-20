@@ -31,6 +31,10 @@ public class CheckFormatUtils {
      * <p>虚拟运营商：170</p>
      */
     public static final String REGEX_PHONE  = "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|(147))\\d{8}$";
+    /**
+     * 正则：邮箱
+     */
+    public static final String REGEX_EMAIL = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
 
 
     /**
@@ -60,7 +64,15 @@ public class CheckFormatUtils {
     }
 
     /**
-     * 手机号是否合法
+     * 邮箱是否合法
+     * @return true:格式合法，false:非法
+     */
+    public static boolean isEmail(String text) {
+        return isMatch(REGEX_EMAIL, text);
+    }
+
+    /**
+     * 密码是否合法
      * @return true:格式合法，false:非法
      */
     public static boolean isPassword(String text) {

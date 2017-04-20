@@ -72,4 +72,6 @@ public class SettingsUtils {
     public static final String HAS_LOGIN = "has_login";
     public static final String HAS_REGIST = "has_regist";
 
+    public static final String GUID = "guid";
+
 }

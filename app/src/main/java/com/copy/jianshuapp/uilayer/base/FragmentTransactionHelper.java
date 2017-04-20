@@ -61,6 +61,8 @@ public class FragmentTransactionHelper {
                     mTransaction.add(id, fragment, tag);
                 }
             }
+        } else {
+            mTransaction.show(fragment);
         }
         return this;
     }
@@ -73,9 +75,16 @@ public class FragmentTransactionHelper {
 
 
     public FragmentTransactionHelper hide(Fragment fragment) {
+        if (fragment == null) {
+            return this;
+        }
         if (FragmentManagerHelper.isAdded(fragment)) {
             mTransaction.hide(fragment);
         }
+        return this;
+    }
+    public FragmentTransactionHelper hide(Class<? extends Fragment> fragmentClass) {
+        hide(mFragmentManager.find(fragmentClass));
         return this;
     }
 

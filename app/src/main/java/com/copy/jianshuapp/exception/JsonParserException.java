@@ -1,7 +1,8 @@
 package com.copy.jianshuapp.exception;
 
+import com.copy.jianshuapp.modellayer.model.NoBody;
+import com.copy.jianshuapp.modellayer.remote.JSResponse;
 import com.copy.jianshuapp.modellayer.remote.RemoteManager;
-import com.copy.jianshuapp.modellayer.remote.ResponseWrapper;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
@@ -13,7 +14,7 @@ import java.lang.reflect.Type;
  */
 public class JsonParserException extends Exception {
 
-    private final JsonElement json;
+    private JsonElement json;
 
     public JsonParserException(JsonElement json, String detailMessage) {
         super(detailMessage);
@@ -23,15 +24,18 @@ public class JsonParserException extends Exception {
         super(throwable);
         this.json = json;
     }
+    public JsonParserException(Throwable throwable) {
+        super(throwable);
+    }
 
     @Override
     public String getDescription() {
         String description;
 
         // 获取响应结果
-        ResponseWrapper<Object> response = null;
+        NoBody response = null;
         try {
-            response = getResponse(new TypeToken<ResponseWrapper<Object>>() {}.getType());
+            response = getResponse(new TypeToken<NoBody>() {}.getType());
         } catch (Throwable ignored) { }
 
         if (response != null) {
@@ -51,7 +55,7 @@ public class JsonParserException extends Exception {
     public JsonElement getJson() {
         return json;
     }
-    public <T> ResponseWrapper<T> getResponse(Type type) {
+    public <T extends JSResponse> T getResponse(Type type) {
         return RemoteManager.getInstance().gson().fromJson(json, type);
     }
 

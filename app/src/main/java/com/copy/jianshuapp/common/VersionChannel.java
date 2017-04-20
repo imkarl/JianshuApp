@@ -37,14 +37,8 @@ public enum VersionChannel {
         }
     }
     static void onCreate() {
-        // Application.onCreate() 之后才能获取到AppInfo
-        AppInfo appInfo = AppUtils.getAppInfo(AppUtils.getContext());
-        if (appInfo == null) {
-            return;
-        }
-
         // 判断是否内测版
-        String versionName = appInfo.getVersionName();
+        String versionName = AppInfo.getVersionName();
         boolean isBetaVersion = versionName.startsWith("beta");
         if (isBetaVersion && sCurrentChannel!= VersionChannel.UnitTest) {
             sCurrentChannel = VersionChannel.Beta;

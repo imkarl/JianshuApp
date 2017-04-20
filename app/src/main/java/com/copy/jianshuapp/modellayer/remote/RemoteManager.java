@@ -16,9 +16,8 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.adapter.rxjava2.CustomCallAdapterFactory;
 import retrofit2.converter.gson.CustomGsonConverterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * 远程接口管理
@@ -73,7 +72,7 @@ public class RemoteManager {
                 .baseUrl(API_HOST_URL)
                 .client(httpClient)
                 .addConverterFactory(CustomGsonConverterFactory.create(gson))
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create());
+                .addCallAdapterFactory(CustomCallAdapterFactory.create());
         retrofit = retrofitBuilder.build();
 
         // TODO 支持缓存功能

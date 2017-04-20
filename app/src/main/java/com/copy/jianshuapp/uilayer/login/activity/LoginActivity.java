@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 
 import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.AppUtils;
+import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
 import com.copy.jianshuapp.uilayer.login.fragment.LoginFragment;
 import com.copy.jianshuapp.uilayer.login.fragment.RegisterFragment;
@@ -62,11 +63,13 @@ public class LoginActivity extends BaseActivity {
     public void showRegisterFragment() {
         beginTransaction()
                 .add(R.id.frame_root, RegisterFragment.class)
+                .hide(LoginFragment.class)
                 .commit();
     }
     public void showLoginFragment() {
         beginTransaction()
                 .add(R.id.frame_root, LoginFragment.class)
+                .hide(RegisterFragment.class)
                 .commit();
     }
 

@@ -3,11 +3,7 @@ package com.copy.jianshuapp.exception;
 import com.copy.jianshuapp.common.ObjectUtils;
 import com.copy.jianshuapp.modellayer.remote.ErrorCode;
 import com.copy.jianshuapp.modellayer.remote.ErrorMsg;
-import com.copy.jianshuapp.modellayer.remote.RemoteManager;
-import com.copy.jianshuapp.modellayer.remote.ResponseWrapper;
-import com.google.gson.JsonElement;
 
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,6 +25,9 @@ public class ApiException extends Exception {
     }
     public ApiException(ErrorMsg... errors) {
         this(Arrays.asList(errors));
+    }
+    public ApiException(ErrorCode errorCode) {
+        this(new ErrorMsg(errorCode, errorCode.getDescription()));
     }
 
     @Override

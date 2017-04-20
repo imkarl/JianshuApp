@@ -3,7 +3,6 @@ package com.copy.jianshuapp.common;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.security.DigestInputStream;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -20,143 +19,43 @@ import javax.crypto.spec.SecretKeySpec;
 public class EncryptUtils {
     private EncryptUtils() { }
 
-    /*********************** 哈希加密相关 ***********************/
-    /**
-     * MD2加密
-     *
-     * @param data 明文字符串
-     * @return 16进制密文
-     */
-    public static String encryptMD2ToString(String data) {
-        return encryptMD2ToString(data.getBytes());
-    }
-
-    /**
-     * MD2加密
-     *
-     * @param data 明文字节数组
-     * @return 16进制密文
-     */
-    public static String encryptMD2ToString(byte[] data) {
-        return ConvertUtils.bytes2HexString(encryptMD2(data));
-    }
-
-    /**
-     * MD2加密
-     *
-     * @param data 明文字节数组
-     * @return 密文字节数组
-     */
-    public static byte[] encryptMD2(byte[] data) {
-        return hashTemplate(data, "MD2");
-    }
-
     /**
      * MD5加密
-     *
-     * @param data 明文字符串
-     * @return 16进制密文
+     * @param data 待加密字符串
+     * @return 32位密文
      */
-    public static String encryptMD5ToString(String data) {
-        return encryptMD5ToString(data.getBytes());
+    public static String md5(String data) {
+        return md5(data.getBytes());
     }
-
     /**
      * MD5加密
-     *
-     * @param data 明文字符串
-     * @param salt 盐
-     * @return 16进制加盐密文
+     * @param data 待加密字节数组
+     * @return 32位密文
      */
-    public static String encryptMD5ToString(String data, String salt) {
-        return ConvertUtils.bytes2HexString(encryptMD5((data + salt).getBytes()));
+    public static String md5(byte[] data) {
+        return ConvertUtils.bytes2HexString(hashTemplate(data, "MD5"));
     }
-
-    /**
-     * MD5加密
-     *
-     * @param data 明文字节数组
-     * @return 16进制密文
-     */
-    public static String encryptMD5ToString(byte[] data) {
-        return ConvertUtils.bytes2HexString(encryptMD5(data));
-    }
-
-    /**
-     * MD5加密
-     *
-     * @param data 明文字节数组
-     * @param salt 盐字节数组
-     * @return 16进制加盐密文
-     */
-    public static String encryptMD5ToString(byte[] data, byte[] salt) {
-        if (data == null || salt == null) return null;
-        byte[] dataSalt = new byte[data.length + salt.length];
-        System.arraycopy(data, 0, dataSalt, 0, data.length);
-        System.arraycopy(salt, 0, dataSalt, data.length, salt.length);
-        return ConvertUtils.bytes2HexString(encryptMD5(dataSalt));
-    }
-
-    /**
-     * MD5加密
-     *
-     * @param data 明文字节数组
-     * @return 密文字节数组
-     */
-    public static byte[] encryptMD5(byte[] data) {
-        return hashTemplate(data, "MD5");
-    }
-
     /**
      * MD5加密文件
-     *
-     * @param filePath 文件路径
-     * @return 文件的16进制密文
+     * @param file 待加密文件
+     * @return 32位密文
      */
-    public static String encryptMD5File2String(String filePath) {
-        File file = StringUtils.isSpace(filePath) ? null : new File(filePath);
-        return encryptMD5File2String(file);
-    }
+    public static String md5(File file) {
+        if (!FileUtils.exists(file)) {
+            return null;
+        }
 
-    /**
-     * MD5加密文件
-     *
-     * @param filePath 文件路径
-     * @return 文件的MD5校验码
-     */
-    public static byte[] encryptMD5File(String filePath) {
-        File file = StringUtils.isSpace(filePath) ? null : new File(filePath);
-        return encryptMD5File(file);
-    }
-
-    /**
-     * MD5加密文件
-     *
-     * @param file 文件
-     * @return 文件的16进制密文
-     */
-    public static String encryptMD5File2String(File file) {
-        return ConvertUtils.bytes2HexString(encryptMD5File(file));
-    }
-
-    /**
-     * MD5加密文件
-     *
-     * @param file 文件
-     * @return 文件的MD5校验码
-     */
-    public static byte[] encryptMD5File(File file) {
-        if (file == null) return null;
         FileInputStream fis = null;
-        DigestInputStream digestInputStream;
         try {
             fis = new FileInputStream(file);
             MessageDigest md = MessageDigest.getInstance("MD5");
-            digestInputStream = new DigestInputStream(fis, md);
             byte[] buffer = new byte[256 * 1024];
-            while (digestInputStream.read(buffer) > 0) ;
-            md = digestInputStream.getMessageDigest();
-            return md.digest();
+            int byteCount;
+            while ((byteCount = fis.read(buffer)) > 0) {
+                md.update(buffer, 0, byteCount);
+            }
+            byte[] data = md.digest();
+            return ConvertUtils.bytes2HexString(data);
         } catch (NoSuchAlgorithmException | IOException e) {
             LogUtils.w(e);
             return null;
@@ -167,32 +66,19 @@ public class EncryptUtils {
 
     /**
      * SHA1加密
-     *
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptSHA1ToString(String data) {
-        return encryptSHA1ToString(data.getBytes());
+    public static String sha1(String data) {
+        return sha1(data.getBytes());
     }
-
     /**
      * SHA1加密
-     *
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptSHA1ToString(byte[] data) {
-        return ConvertUtils.bytes2HexString(encryptSHA1(data));
-    }
-
-    /**
-     * SHA1加密
-     *
-     * @param data 明文字节数组
-     * @return 密文字节数组
-     */
-    public static byte[] encryptSHA1(byte[] data) {
-        return hashTemplate(data, "SHA1");
+    public static String sha1(byte[] data) {
+        return ConvertUtils.bytes2HexString(hashTemplate(data, "SHA1"));
     }
 
     /**

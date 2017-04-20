@@ -7,15 +7,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * 响应数据
+ * 响应数据-基类
  * @version imkarl 2017-04
  */
-public class ResponseWrapper<T> {
+public abstract class JSResponse {
 
     @SerializedName("error")
     private List<ErrorMsg> errors;
-    @SerializedName("data")
-    private T data;
 
     /**
      * 是否为成功
@@ -49,9 +47,8 @@ public class ResponseWrapper<T> {
 
     @Override
     public String toString() {
-        return "ResponseWrapper{" +
+        return "JSResponse{" +
                 "errors=" + errors +
-                ", data=" + data +
                 '}';
     }
 
@@ -60,11 +57,5 @@ public class ResponseWrapper<T> {
     }
     public void setErrors(List<ErrorMsg> errors) {
         this.errors = errors;
-    }
-    public T getData() {
-        return data;
-    }
-    public void setData(T data) {
-        this.data = data;
     }
 }

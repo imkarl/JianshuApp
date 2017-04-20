@@ -51,4 +51,18 @@ public class Alerts {
         });
     }
 
+    /**
+     * 提示框
+     * @param message 提示内容
+     */
+    public static void tips(String message) {
+        if (ObjectUtils.isEmpty(message)) {
+            return;
+        }
+
+        new MaterialDialog.Builder(ActivityLifcycleManager.get().current())
+                .content(message)
+                .positiveText("确定")
+                .show();
+    }
 }

@@ -742,7 +742,6 @@
     <item type="id" name="iv_delete_tel">false</item>
     <item type="id" name="et_password">false</item>
     <item type="id" name="iv_delete_pass">false</item>
-    <item type="id" name="tv_forget_pass_bottom">false</item>
     <item type="id" name="ll_switch">false</item>
     <item type="id" name="tv_go_mainpage">false</item>
     <item type="id" name="tv_login_error">false</item>

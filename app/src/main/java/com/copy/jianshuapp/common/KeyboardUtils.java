@@ -32,7 +32,6 @@ public class KeyboardUtils {
 	 * 关闭软键盘 
 	 */
 	public static void hideSoftInput(View view) {
-		view.clearFocus();
 		InputMethodManager imm = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
 		if (imm == null) {
 			return;
@@ -48,7 +47,7 @@ public class KeyboardUtils {
 		if (view != null) {
 			view.clearFocus();
 		} else {
-			view = new View(activity);
+			view = activity.findViewById(android.R.id.content);
 		}
 		hideSoftInput(view);
 	}

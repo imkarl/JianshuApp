@@ -90,25 +90,27 @@ public final class CustomGsonConverterFactory extends Converter.Factory {
                 return (T) value.string();
             }
 
-            // TODO 解析错误时可获取原始JSON
-            JsonElement jsonElement = gson.fromJson(value.charStream(), JsonElement.class);
-            if (jsonElement == null) {
-                jsonElement = JsonNull.INSTANCE;
-            }
+            JsonElement jsonElement = null;
+            T result;
             try {
-                T result = adapter.fromJsonTree(jsonElement);
+                // 解析错误时可获取原始JSON
+                jsonElement = gson.fromJson(value.charStream(), JsonElement.class);
+                if (jsonElement == null) {
+                    jsonElement = JsonNull.INSTANCE;
+                }
+                result = adapter.fromJsonTree(jsonElement);
                 if (result == null) {
                     try {
                         result = adapter.fromJson("{}");
                     } catch (Exception ignored) {
                     }
                 }
-                return result;
             } catch (JsonSyntaxException e) {
                 throw new JsonParserException(jsonElement, e.getMessage());
             } finally {
                 value.close();
             }
+            return result;
         }
     }
 

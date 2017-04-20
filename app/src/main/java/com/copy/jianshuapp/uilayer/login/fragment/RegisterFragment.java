@@ -27,6 +27,7 @@ import com.copy.jianshuapp.uilayer.plugin.register.RegisterPlugin;
 import com.copy.jianshuapp.uilayer.widget.dialog.Alerts;
 import com.copy.jianshuapp.utils.CheckFormatUtils;
 import com.copy.jianshuapp.utils.ToastUtils;
+import com.jakewharton.rxbinding2.view.RxView;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.concurrent.TimeUnit;
@@ -120,63 +121,82 @@ public class RegisterFragment extends BaseFragment {
             getActivity().onBackPressed();
         });
 
+        // 跳转到登录
+        mBtnLogin.setOnClickListener(v -> ((LoginActivity)getActivity()).showLoginFragment());
+
         // 注册按钮
-        mBtnRegister1.setOnClickListener(v -> {
-            // 关闭键盘
-            KeyboardUtils.hideSoftInput(getActivity());
+        RxView.clicks(mBtnRegister1)
+                .throttleFirst(1, TimeUnit.SECONDS)
+                .flatMap(it -> {
+                    String nickname = mEtNickname.getText().toString().trim();
+                    String phone = mEtTel.getText().toString().trim();
+                    // 检查用户名、手机号是否可用
+                    return UserRepository.checkNickname(nickname)
+                            .flatMap(success -> UserRepository.checkPhone(phone))
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .onErrorResumeNext(throwable -> {
+                                ToastUtils.show(ExceptionUtils.getDescription(throwable));
+                                return Observable.just(false);
+                            });
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(bindToLifecycle())
+                .subscribe(usable -> {
+                    // 填写资料不合法
+                    if (!usable) {
+                        return;
+                    }
 
-            String nickname = mEtNickname.getText().toString().trim();
-            String phone = mEtTel.getText().toString().trim();
-            String password = mEtPassword.getText().toString().trim();
+                    // 关闭键盘
+                    KeyboardUtils.hideSoftInput(getActivity());
 
-            // 检查用户名、手机号是否可用
-            UserRepository.checkNickname(nickname)
-                    .flatMap(it -> UserRepository.checkPhone(phone))
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .compose(bindToLifecycle())
-                    .subscribe(usable -> {
-                        mRegisterPlugin = RegisterPlugin.inject(getActivity())
-                                .addOnLoadFinish(() -> {
-                                    // 确保html渲染完成
-                                    Observable.timer(300, TimeUnit.MILLISECONDS)
+                    String nickname = mEtNickname.getText().toString().trim();
+                    String phone = mEtTel.getText().toString().trim();
+                    String password = mEtPassword.getText().toString().trim();
+
+                    // 载入注册组件，完成注册
+                    mRegisterPlugin = RegisterPlugin.inject(getActivity())
+                            .addOnLoadFinish(() -> {
+                                // 确保html渲染完成
+                                Observable.timer(300, TimeUnit.MILLISECONDS)
+                                        .observeOn(AndroidSchedulers.mainThread())
+                                        .subscribe(it -> {
+                                            mRegisterPlugin.sendCaptcha(nickname, phone, password);
+                                        });
+                            })
+                            .setOnSendCaptchaListener(new OnSendCaptchaListener() {
+                                @Override
+                                public void onSendCaptcha() {
+                                    // 输入验证码，并提交注册
+                                    Alerts.prompt("手机验证", "验证码已发送到"+phone+"，请注意查收", "请输入验证码")
+                                            .compose(bindToLifecycle())
+                                            .flatMap(captcha -> mRegisterPlugin.submit(captcha))
                                             .observeOn(AndroidSchedulers.mainThread())
-                                            .subscribe(it -> {
-                                                mRegisterPlugin.sendCaptcha(nickname, phone, password);
-                                            });
-                                })
-                                .setOnSendCaptchaListener(new OnSendCaptchaListener() {
-                                    @Override
-                                    public void onSendCaptcha() {
-                                        Alerts.prompt("手机验证", "验证码已发送到"+phone+"，请注意查收", "请输入验证码")
-                                                .compose(bindToLifecycle())
-                                                .flatMap(captcha -> mRegisterPlugin.submit(captcha))
-                                                .observeOn(AndroidSchedulers.mainThread())
-                                                .subscribe(success -> {
-                                                    ToastUtils.show("注册成功");
-                                                    SettingsUtils.put(SettingsUtils.HAS_REGIST, true);
-                                                    mRegisterPlugin.destroy();
-                                                    // 切换成登录界面
-                                                    showLoginFragment();
-                                                }, err -> {
-                                                    LogUtils.e(err);
-                                                    ToastUtils.show(ExceptionUtils.getDescription(err));
+                                            .subscribe(success -> {
+                                                ToastUtils.show("注册成功");
+                                                SettingsUtils.put(SettingsUtils.HAS_REGIST, true);
+                                                mRegisterPlugin.destroy();
+                                                // 切换成登录界面
+                                                showLoginFragment();
+                                            }, err -> {
+                                                LogUtils.e(err);
+                                                ToastUtils.show(ExceptionUtils.getDescription(err));
 
-                                                    if (err instanceof ApiException) {
-                                                        // 验证码错误
-                                                        if (((ApiException) err).contains(ErrorCode.PARAMETER_CAPTCHA_WRONG)) {
-                                                            onSendCaptcha();
-                                                            return;
-                                                        }
+                                                if (err instanceof ApiException) {
+                                                    // 验证码错误
+                                                    if (((ApiException) err).contains(ErrorCode.PARAMETER_CAPTCHA_WRONG)) {
+                                                        onSendCaptcha();
+                                                        return;
                                                     }
-                                                    mRegisterPlugin.destroy();
-                                                });
-                                    }
-                                });
-                    }, err -> {
-                        LogUtils.e(err);
-                        ToastUtils.show(ExceptionUtils.getDescription(err));
-                    });
-        });
+                                                }
+                                                mRegisterPlugin.destroy();
+                                            });
+                                }
+                            });
+                }, err -> {
+                    LogUtils.e(err);
+                    ToastUtils.show(ExceptionUtils.getDescription(err));
+                });
     }
 
     private boolean checkInputs(boolean tips) {

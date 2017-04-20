@@ -166,11 +166,7 @@ public class FileUtils {
         if (!exists(file)) {
             return null;
         }
-        byte[] byteMD5 = EncryptUtils.encryptMD5File(file);
-        if (byteMD5 == null) {
-            return null;
-        }
-        return ConvertUtils.bytes2HexString(byteMD5);
+        return EncryptUtils.md5(file);
     }
 
     /*

@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 
 import com.copy.jianshuapp.BuildConfig;
 import com.copy.jianshuapp.R;
-import com.copy.jianshuapp.common.AppUtils;
+import com.copy.jianshuapp.common.DisplayInfo;
 import com.copy.jianshuapp.exception.IllegalException;
 import com.copy.jianshuapp.uilayer.widget.webview.SafeWebChromeClient;
 import com.copy.jianshuapp.uilayer.widget.webview.SafeWebView;
@@ -181,8 +181,8 @@ public abstract class Plugin {
                         if (mLoadingView.getParent() == null) {
                             int width = mWebView.getWidth();
                             int height = mWebView.getHeight();
-                            int paddingHorizontal = (width - AppUtils.dp2px(40)) / 2;
-                            int paddingVertical = (height - AppUtils.dp2px(40)) / 2;
+                            int paddingHorizontal = (width - DisplayInfo.dp2px(40)) / 2;
+                            int paddingVertical = (height - DisplayInfo.dp2px(40)) / 2;
                             mRootLayout.addView(mLoadingView, new FrameLayout.LayoutParams(width, height, Gravity.CENTER));
                             mLoadingView.setPadding(paddingHorizontal, paddingVertical, paddingHorizontal, paddingVertical);
                         }

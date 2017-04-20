@@ -1,38 +1,67 @@
 package com.copy.jianshuapp.common;
 
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+
+import com.copy.jianshuapp.R;
 
 /**
  * App基本信息
+ * @tips Application.onCreate() 之后才能获取到属性值
  * @version imkarl 2017-04
  */
 public class AppInfo {
 
     /** 名称 */
-    private String name;
+    private static final String name;
     /** 图标 */
-    private Drawable icon;
+    private static final Drawable icon;
     /** 包名 */
-    private String packageName;
+    private static final String packageName;
     /** 包路径 */
-    private String packagePath;
+    private static final String packagePath;
     /** 版本名称 */
-    private String versionName;
+    private static final String versionName;
     /** 版本号 */
-    private int versionCode;
+    private static final int versionCode;
     /** 是否系统应用 */
-    private boolean system;
+    private static final boolean system;
+
+    static {
+        Context context = AppUtils.getContext();
+        PackageManager pm = context.getPackageManager();
+        PackageInfo pi = null;
+        try {
+            pi = pm.getPackageInfo(context.getApplicationContext().getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            LogUtils.w(e);
+        }
+
+        if (pi != null) {
+            ApplicationInfo ai = pi.applicationInfo;
+
+            name = ai.loadLabel(pm).toString();
+            icon = ai.loadIcon(pm);
+            packageName = pi.packageName;
+            packagePath = ai.sourceDir;
+            versionName = pi.versionName;
+            versionCode = pi.versionCode;
+            system = (ApplicationInfo.FLAG_SYSTEM & ai.flags) != 0;
+        } else {
+            name = AppUtils.getContext().getResources().getString(R.string.app_name);
+            icon = AppUtils.getContext().getResources().getDrawable(R.mipmap.jianshu_icon);
+            packageName = AppUtils.getContext().getPackageName();
+            packagePath = AppUtils.getContext().getPackageCodePath();
+            versionName = "";
+            versionCode = 0;
+            system = false;
+        }
+    }
 
     public AppInfo() {
-    }
-    public AppInfo(String name, Drawable icon, String packageName, String packagePath, String versionName, int versionCode, boolean system) {
-        this.name = name;
-        this.icon = icon;
-        this.packageName = packageName;
-        this.packagePath = packagePath;
-        this.versionName = versionName;
-        this.versionCode = versionCode;
-        this.system = system;
     }
 
     @Override
@@ -48,59 +77,26 @@ public class AppInfo {
                 '}';
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Drawable getIcon() {
+    public static Drawable getIcon() {
         return icon;
     }
-
-    public void setIcon(Drawable icon) {
-        this.icon = icon;
-    }
-
-    public String getPackageName() {
+    public static String getPackageName() {
         return packageName;
     }
-
-    public void setPackageName(String packageName) {
-        this.packageName = packageName;
-    }
-
-    public String getPackagePath() {
+    public static String getPackagePath() {
         return packagePath;
     }
-
-    public void setPackagePath(String packagePath) {
-        this.packagePath = packagePath;
-    }
-
-    public String getVersionName() {
+    public static String getVersionName() {
         return versionName;
     }
-
-    public void setVersionName(String versionName) {
-        this.versionName = versionName;
-    }
-
-    public int getVersionCode() {
+    public static int getVersionCode() {
         return versionCode;
     }
-
-    public void setVersionCode(int versionCode) {
-        this.versionCode = versionCode;
-    }
-
-    public boolean isSystem() {
+    public static boolean isSystem() {
         return system;
     }
 
-    public void setSystem(boolean system) {
-        this.system = system;
-    }
 }
