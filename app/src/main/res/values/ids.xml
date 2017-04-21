@@ -757,7 +757,6 @@
     <item type="id" name="et_nickname">false</item>
     <item type="id" name="iv_delete_nickname">false</item>
     <item type="id" name="et_tel">false</item>
-    <item type="id" name="tv_user_agreement">false</item>
     <item type="id" name="rootView">false</item>
     <item type="id" name="action_tougao">false</item>
     <item type="id" name="tv_author">false</item>

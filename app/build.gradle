@@ -112,4 +112,7 @@ dependencies {
     // dialog
     compile 'com.github.imkarl.material-dialogs:core:v0.9.4.2_1'
 
+    // common
+    compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
+
 }

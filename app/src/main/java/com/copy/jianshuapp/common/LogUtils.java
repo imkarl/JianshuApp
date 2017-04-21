@@ -14,7 +14,7 @@ import okhttp3.Interceptor;
 /**
  * 日志打印
  * @version imkarl 2016-08
- * @see {@link 'https://github.com/zserge/log'}
+ * @see <a href="https://github.com/zserge/log">zserge/log</a>
  */
 public final class LogUtils {
     private LogUtils() {}
@@ -144,13 +144,11 @@ public final class LogUtils {
                 ,"InetAddress.getAllByNameImpl"
                 ,"Posix.android_getaddrinfo"
                 ,"okio.AsyncTimeout"
-                ,"view.Choreographer"
-                ,"view.ViewRootImpl"
-                ,"view.ThreadedRenderer"
                 ,"internal.policy.PhoneWindow"
                 ,"View.updateDisplayListIfDirty"
                 ,"android.app.ActivityThread.-wrap"
                 ,"android.app.ActivityThread$H"
+                ,"at android.view.ViewRootImpl"
                 ,"at io.reactivex.internal"
         );
     }

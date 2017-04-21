@@ -153,6 +153,7 @@
             android:layout_marginLeft="20.0dip"
             android:layout_marginTop="20.0dip"
             android:layout_marginRight="20.0dip"
+            android:enabled="false"
             android:text="@string/deng_lu"
             style="?android:attr/borderlessButtonStyle"/>
 

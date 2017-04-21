@@ -22,7 +22,7 @@ public class DeviceInfo {
     private static final String model = Build.MODEL;
     private static final String brand = Build.BRAND;
     private static final int sdkVersion = Build.VERSION.SDK_INT;
-    private static final String cpu1 = Build.CPU_ABI;
+    private static final String cpu = Build.CPU_ABI;
     private static final String cpu2 = Build.CPU_ABI2;
 
     private static String uniqueId;
@@ -73,8 +73,8 @@ public class DeviceInfo {
     }
 
     public static String getCpu() {
-        if (!TextUtils.isEmpty(cpu1)) {
-            return cpu1;
+        if (!TextUtils.isEmpty(cpu)) {
+            return cpu;
         }
         if (!TextUtils.isEmpty(cpu2)) {
             return cpu2;
@@ -142,7 +142,7 @@ public class DeviceInfo {
                 "model=" + model +
                 ", brand=" + brand +
                 ", sdkVersion=" + sdkVersion +
-                ", cpu1=" + cpu1 +
+                ", cpu=" + cpu +
                 ", cpu2=" + cpu2 +
                 ", uniqueId=" + getUniqueId() +
                 '}';

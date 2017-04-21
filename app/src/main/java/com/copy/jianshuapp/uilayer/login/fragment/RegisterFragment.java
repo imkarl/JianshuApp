@@ -2,6 +2,7 @@ package com.copy.jianshuapp.uilayer.login.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.KeyboardUtils;
 import com.copy.jianshuapp.common.LogUtils;
+import com.copy.jianshuapp.common.ObjectUtils;
+import com.copy.jianshuapp.common.rx.RxKeyboard;
 import com.copy.jianshuapp.common.rx.RxTextViews;
 import com.copy.jianshuapp.exception.ApiException;
 import com.copy.jianshuapp.exception.ExceptionUtils;
@@ -36,13 +39,14 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import jianshu.widget.LocalLinkMovementMethod;
 import jianshu.widget.TextViewFixTouchConsume;
 
 /**
  * 用户注册
  * @version imkarl 2017-03
  */
-public class RegisterFragment extends BaseFragment {
+public class RegisterFragment extends BaseFragment implements View.OnFocusChangeListener, View.OnClickListener {
 
     @Bind(R.id.et_nickname)
     EditText mEtNickname;
@@ -88,6 +92,7 @@ public class RegisterFragment extends BaseFragment {
     ImageView mIvClose;
 
     private RegisterPlugin mRegisterPlugin;
+    private boolean mShowPassword;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
@@ -100,24 +105,62 @@ public class RegisterFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView();
-        // 预加载，提高响应速度
-        RegisterPlugin.inject(getActivity()).destroy();
+
+        Observable.timer(1, TimeUnit.SECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(it -> {
+                    // 预加载，提高响应速度
+                    RegisterPlugin.inject(getActivity()).destroy();
+                });
     }
 
     private void initView() {
+        // 提示信息
+        mTvUserAgreement.setMovementMethod(LocalLinkMovementMethod.getInstance());
+        mTvUserAgreement.setTextViewHTML("点击&#160;\"注册简书帐号\"&#160;即表示你同意并愿意遵守简书 <should href=\"http://www.jianshu.com/FormBody/c44d171298ce\">用户协议</should> 和 <should href=\"http://www.jianshu.com/FormBody/2ov8x3\">隐私政策</should>");
+        RxKeyboard.stateChange(getActivity())
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(bindToLifecycle())
+                .subscribe(isOpen -> {
+                    mTvUserAgreement.setVisibility(isOpen ? View.VISIBLE : View.GONE);
+                });
+
         // 监听输入
         RxTextViews.textChanges(mEtNickname, mEtTel, mEtPassword)
                 .subscribe(it -> {
-                    if (checkInputs(false)) {
+                    String nickname = mEtNickname.getText().toString().trim();
+                    String phone = mEtTel.getText().toString().trim();
+                    String password = mEtPassword.getText().toString().trim();
+
+                    if (!ObjectUtils.isEmpty(nickname)
+                            && !ObjectUtils.isEmpty(phone)
+                            && !ObjectUtils.isEmpty(password)) {
                         mBtnRegister1.setEnabled(true);
                     } else {
                         mBtnRegister1.setEnabled(false);
                     }
                 });
 
+        RxView.focusChanges(mEtNickname)
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(bindToLifecycle())
+                .subscribe(isFocus -> onFocusChange(mEtNickname, isFocus));
+        RxView.focusChanges(mEtTel)
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(bindToLifecycle())
+                .subscribe(isFocus -> onFocusChange(mEtTel, isFocus));
+        RxView.focusChanges(mEtPassword)
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(bindToLifecycle())
+                .subscribe(isFocus -> onFocusChange(mEtPassword, isFocus));
+
+        mIvDeleteNickname.setOnClickListener(this);
+        mIvDeleteTel.setOnClickListener(this);
+        mIvDeletePass.setOnClickListener(this);
+
         // 关闭按钮
         mIvClose.setOnClickListener(v -> {
-            KeyboardUtils.hideSoftInput(getActivity());
+            KeyboardUtils.hideSoftInput();
             getActivity().onBackPressed();
         });
 
@@ -126,6 +169,7 @@ public class RegisterFragment extends BaseFragment {
 
         // 注册按钮
         RxView.clicks(mBtnRegister1)
+                .filter(it -> checkInputs(true))
                 .throttleFirst(1, TimeUnit.SECONDS)
                 .flatMap(it -> {
                     String nickname = mEtNickname.getText().toString().trim();
@@ -148,7 +192,7 @@ public class RegisterFragment extends BaseFragment {
                     }
 
                     // 关闭键盘
-                    KeyboardUtils.hideSoftInput(getActivity());
+                    KeyboardUtils.hideSoftInput();
 
                     String nickname = mEtNickname.getText().toString().trim();
                     String phone = mEtTel.getText().toString().trim();
@@ -199,11 +243,45 @@ public class RegisterFragment extends BaseFragment {
                 });
     }
 
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+        mIvDeleteNickname.setVisibility(View.GONE);
+        mIvDeleteTel.setVisibility(View.GONE);
+        mIvDeletePass.setVisibility(View.GONE);
+
+        if (v == mEtNickname) {
+            mIvDeleteNickname.setVisibility(hasFocus ? View.VISIBLE : View.GONE);
+        } else if (v == mEtTel) {
+            mIvDeleteTel.setVisibility(hasFocus ? View.VISIBLE : View.GONE);
+        } else if (v == mEtPassword) {
+            mIvDeletePass.setVisibility(hasFocus ? View.VISIBLE : View.GONE);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mIvDeleteNickname) {
+            mEtNickname.getText().clear();
+        } else if (v == mIvDeleteTel) {
+            mEtTel.getText().clear();
+        } else if (v == mIvDeletePass) {
+            if (!this.mShowPassword) {
+                this.mEtPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                this.mIvDeletePass.setImageResource(R.drawable.icon_password_eyes_invisible);
+            } else {
+                this.mEtPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                this.mIvDeletePass.setImageResource(R.drawable.icon_password_eyes_visible);
+            }
+            this.mShowPassword = !this.mShowPassword;
+            this.mEtPassword.setSelection(this.mEtPassword.getText().length());
+        }
+    }
+
     private boolean checkInputs(boolean tips) {
         String nickname = mEtNickname.getText().toString().trim();
         if (!CheckFormatUtils.isNickname(nickname)) {
             if (tips) {
-                ToastUtils.show("昵称 格式无效");
+                Alerts.tips("昵称 格式无效");
             }
             return false;
         }
@@ -211,7 +289,7 @@ public class RegisterFragment extends BaseFragment {
         String phone = mEtTel.getText().toString().trim();
         if (!CheckFormatUtils.isPhone(phone)) {
             if (tips) {
-                ToastUtils.show("手机号 格式无效");
+                Alerts.tips("手机号 格式无效");
             }
             return false;
         }
@@ -220,7 +298,7 @@ public class RegisterFragment extends BaseFragment {
         String password = mEtPassword.getText().toString();
         if (!CheckFormatUtils.isPassword(password)) {
             if (tips) {
-                ToastUtils.show("密码 格式无效");
+                Alerts.tips("密码 格式无效");
             }
             return false;
         }

@@ -15,7 +15,8 @@ public class DisplayInfo {
 
     private static final int widthPixels;
     private static final int heightPixels;
-    private static final int resolutionHeight;
+    private static final int realWidthPixels;
+    private static final int realHeightPixels;
     private static final float density;
     private static final int densityDpi;
     private static final float scaledDensity;
@@ -23,8 +24,6 @@ public class DisplayInfo {
     private static final float ydpi;
 
     static {
-        resolutionHeight = ActivityLifcycleManager.get().current().getWindow().getDecorView().getHeight();
-
         // 屏幕信息
         DisplayMetrics dm = new DisplayMetrics();
         WindowManager wm = (WindowManager) AppUtils.getContext().getSystemService(Context.WINDOW_SERVICE);
@@ -37,6 +36,10 @@ public class DisplayInfo {
         scaledDensity = dm.scaledDensity;
         xdpi = dm.xdpi;
         ydpi = dm.ydpi;
+
+        wm.getDefaultDisplay().getRealMetrics(dm);
+        realWidthPixels = dm.widthPixels;
+        realHeightPixels = dm.heightPixels;
     }
 
     public static int dp2px(float dp) {
@@ -59,8 +62,12 @@ public class DisplayInfo {
         return heightPixels;
     }
 
-    public static int getResolutionHeight() {
-        return resolutionHeight;
+    public static int getRealWidthPixels() {
+        return realWidthPixels;
+    }
+
+    public static int getRealHeightPixels() {
+        return realHeightPixels;
     }
 
     public static float getDensity() {
@@ -87,6 +94,8 @@ public class DisplayInfo {
         return "DisplayInfo{" +
                 "widthPixels=" + widthPixels +
                 ", heightPixels=" + heightPixels +
+                ", realWidthPixels=" + realWidthPixels +
+                ", realHeightPixels=" + realHeightPixels +
                 ", density=" + density +
                 ", densityDpi=" + densityDpi +
                 ", scaledDensity=" + scaledDensity +

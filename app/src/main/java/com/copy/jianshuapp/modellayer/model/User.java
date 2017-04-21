@@ -3,6 +3,7 @@ package com.copy.jianshuapp.modellayer.model;
 import com.copy.jianshuapp.modellayer.remote.JSResponse;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -30,8 +31,26 @@ public class User extends JSResponse {
     private boolean default_subscription_push;
     private boolean is_nickname_slug;
     private boolean is_newly_registered;
-    private List<?> accesses;
-    private List<?> public_snses;
+    private List<Accesses> accesses;
+    private List<Snses> public_snses;
+
+    public class Accesses {
+        public String email;
+        public int id;
+        public String name;
+        public String provider;
+        public List<Snses> snses;
+        public String uid;
+        public String username;
+    }
+
+    public class Snses {
+        public String homepage;
+        public int id;
+        public boolean is_public;
+        public String name;
+        public String nickname;
+    }
 
     @Override
     public String toString() {
@@ -203,19 +222,19 @@ public class User extends JSResponse {
         this.is_newly_registered = is_newly_registered;
     }
 
-    public List<?> getAccesses() {
+    public List<Accesses> getAccesses() {
         return accesses;
     }
 
-    public void setAccesses(List<?> accesses) {
+    public void setAccesses(List<Accesses> accesses) {
         this.accesses = accesses;
     }
 
-    public List<?> getPublic_snses() {
+    public List<Snses> getPublic_snses() {
         return public_snses;
     }
 
-    public void setPublic_snses(List<?> public_snses) {
+    public void setPublic_snses(List<Snses> public_snses) {
         this.public_snses = public_snses;
     }
 }

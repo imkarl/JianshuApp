@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@id/root_view"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="?common_bg_light">
@@ -63,7 +62,8 @@
                     android:padding="16.0dip"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icon_delete"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible"
+                    tools:visibility="visible"/>
 
                 <ImageView
                     android:id="@id/imageView"
@@ -118,7 +118,8 @@
                     android:padding="16.0dip"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icon_delete"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible"
+                    tools:visibility="visible"/>
             </FrameLayout>
 
             <View
@@ -164,7 +165,8 @@
                     android:padding="16.0dip"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icon_password_eyes_visible"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible"
+                    tools:visibility="visible"/>
             </FrameLayout>
         </LinearLayout>
 
@@ -178,7 +180,7 @@
             android:orientation="vertical">
 
             <jianshu.widget.TextViewFixTouchConsume
-                android:id="@id/tv_user_agreement"
+                android:id="@+id/tv_user_agreement"
                 android:layout_width="250.0dip"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
