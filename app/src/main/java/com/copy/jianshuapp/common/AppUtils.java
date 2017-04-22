@@ -1,24 +1,18 @@
 package com.copy.jianshuapp.common;
 
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import com.copy.jianshuapp.JSApplication;
 import com.copy.jianshuapp.modellayer.local.db.AccountDao;
-import com.copy.jianshuapp.modellayer.local.db.model.Account;
+import com.copy.jianshuapp.modellayer.model.Account;
 
 /**
  * App通用工具类
  * @version imkarl 2017-03
  */
 public class AppUtils {
-
-    private static final Account NO_LOGIN = new Account();
 
     private static Account sLoginAccount;
     private static JSApplication sContext;
@@ -42,24 +36,20 @@ public class AppUtils {
         if (sLoginAccount == null) {
             synchronized (AccountDao.class) {
                 if (sLoginAccount == null) {
-                    Account account = AccountDao.getLoginAccount();
-                    if (account == null) {
-                        account = NO_LOGIN;
-                    }
-                    sLoginAccount = account;
+                    sLoginAccount = AccountDao.readLoginAccount();
                 }
             }
         }
         return sLoginAccount;
     }
     public static void setLoginAccount(Account account) {
-        if (account == null) {
-            account = NO_LOGIN;
+        if (account != null) {
+            AccountDao.saveLoginAccount(account);
         }
         sLoginAccount = account;
     }
     public static boolean isLogin() {
-        return getLoginAccount() != NO_LOGIN;
+        return getLoginAccount() != null;
     }
 
     /**

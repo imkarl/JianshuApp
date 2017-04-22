@@ -1,6 +1,6 @@
 package com.copy.jianshuapp.modellayer.local.db;
 
-import com.copy.jianshuapp.modellayer.local.db.model.Account;
+import com.copy.jianshuapp.modellayer.model.Account;
 
 /**
  * 登录账户Dao
@@ -9,8 +9,12 @@ import com.copy.jianshuapp.modellayer.local.db.model.Account;
 public class AccountDao extends BaseDao {
     private AccountDao() { }
 
-    public static Account getLoginAccount() {
+    public static Account readLoginAccount() {
         return queryOne(Account.class);
+    }
+
+    public static boolean saveLoginAccount(Account account) {
+        return save(account);
     }
 
 }

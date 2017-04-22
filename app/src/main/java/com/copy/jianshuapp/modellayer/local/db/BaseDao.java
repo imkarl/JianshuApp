@@ -32,4 +32,9 @@ abstract class BaseDao {
         return defValue;
     }
 
+    static boolean save(Object value) {
+        long id = orm().save(value);
+        return id > 0;
+    }
+
 }

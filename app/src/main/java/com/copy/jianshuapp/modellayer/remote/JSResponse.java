@@ -3,6 +3,7 @@ package com.copy.jianshuapp.modellayer.remote;
 import com.copy.jianshuapp.common.ObjectUtils;
 import com.copy.jianshuapp.exception.ApiException;
 import com.google.gson.annotations.SerializedName;
+import com.litesuits.orm.db.annotation.Ignore;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  */
 public abstract class JSResponse {
 
+    @Ignore
     @SerializedName("error")
     private List<ErrorMsg> errors;
 

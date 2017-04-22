@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/root_view"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="?common_bg_lightest"
@@ -22,9 +22,11 @@
 
     <include
         layout="@layout/navigator_bar_main"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        tools:visibility="visible"/>
 
     <include
         layout="@layout/navigator_bar_sign"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        tools:visibility="visible"/>
 </LinearLayout>

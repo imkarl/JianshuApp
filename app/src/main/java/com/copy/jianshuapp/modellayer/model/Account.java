@@ -2,16 +2,22 @@ package com.copy.jianshuapp.modellayer.model;
 
 import com.copy.jianshuapp.modellayer.remote.JSResponse;
 import com.google.gson.annotations.SerializedName;
+import com.litesuits.orm.db.annotation.Column;
+import com.litesuits.orm.db.annotation.PrimaryKey;
+import com.litesuits.orm.db.annotation.Table;
+import com.litesuits.orm.db.enums.AssignType;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
- * 用户
+ * 账户
  * @version imkarl 2017-04
  */
-public class User extends JSResponse {
+@Table("t_account")
+public class Account extends JSResponse {
 
+    @PrimaryKey(AssignType.BY_MYSELF)
+    @Column("id")
     private int id;
     private String email;
     @SerializedName("mobile_number")
@@ -54,7 +60,7 @@ public class User extends JSResponse {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Account{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +

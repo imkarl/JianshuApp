@@ -6,8 +6,8 @@ import android.support.annotation.Nullable;
 
 import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.AppUtils;
-import com.copy.jianshuapp.common.LogUtils;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
+import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
 import com.copy.jianshuapp.uilayer.login.fragment.LoginFragment;
 import com.copy.jianshuapp.uilayer.login.fragment.RegisterFragment;
 
@@ -58,6 +58,12 @@ public class LoginActivity extends BaseActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(EXTRA_TYPE, this.mLoginType);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(MainActivity.launch());
+        super.onBackPressed();
     }
 
     public void showRegisterFragment() {

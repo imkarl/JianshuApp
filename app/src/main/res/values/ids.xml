@@ -1252,26 +1252,18 @@
     <item type="id" name="rich_text">false</item>
     <item type="id" name="mark_down">false</item>
     <item type="id" name="navigation_bar_main">false</item>
-    <item type="id" name="tab_discover">false</item>
-    <item type="id" name="tab_iv_follow">false</item>
     <item type="id" name="img_guanzhu_unread">false</item>
-    <item type="id" name="tab_main_page">false</item>
     <item type="id" name="iv_home">false</item>
-    <item type="id" name="tab_writting">false</item>
     <item type="id" name="iv_write">false</item>
     <item type="id" name="tv_writting_bg">false</item>
-    <item type="id" name="tab_dynamic">false</item>
     <item type="id" name="ll_notification">false</item>
     <item type="id" name="iv_notification">false</item>
     <item type="id" name="text_notify_sum_count">false</item>
-    <item type="id" name="tab_more">false</item>
     <item type="id" name="iv_mine">false</item>
     <item type="id" name="tv_more_menu">false</item>
     <item type="id" name="menu_anchor">false</item>
     <item type="id" name="navigation_bar_sign">false</item>
-    <item type="id" name="tab_login">false</item>
     <item type="id" name="text_login">false</item>
-    <item type="id" name="tab_register">false</item>
     <item type="id" name="text_register">false</item>
     <item type="id" name="ll_empty">false</item>
     <item type="id" name="note_scrollview">false</item>

@@ -70,7 +70,7 @@ public final class RegisterPlugin extends Plugin {
 
     @Override
     protected String getCurrentLink() {
-        return JSApi.URL_REGISTER;
+        return JSApi.WEBPAGE_REGISTER;
     }
 
     /**

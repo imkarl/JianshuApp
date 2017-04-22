@@ -23,8 +23,9 @@ public class URLSpanNoUnderline extends URLSpan {
     }
 
     public void onClick(View widget) {
-        if (!MatchJianShuUrl.matchUrl(getURL(), widget.getContext()))
+        if (!MatchJianShuUrl.matchUrl(getURL(), widget.getContext())) {
             BrowserActivity.launch(getURL());
+        }
     }
 
 

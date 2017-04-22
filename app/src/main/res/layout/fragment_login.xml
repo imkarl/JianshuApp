@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="?common_bg_light"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent">
 
     <ImageView
         android:id="@id/iv_close"
@@ -38,13 +39,14 @@
             android:layout_centerHorizontal="true"/>
 
         <TextView
+            android:id="@id/tv_last_account"
             android:textColor="@color/theme_color"
             android:layout_gravity="center_horizontal"
-            android:id="@id/tv_last_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10.0dip"
-            android:text="上次登入方式: 手机"/>
+            android:text="上次登入方式: 手机"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:orientation="vertical"
@@ -66,11 +68,11 @@
                     android:src="@drawable/icon_user"/>
 
                 <EditText
+                    android:id="@id/et_account"
                     android:textSize="16.0sp"
                     android:textColor="?text_color_1"
                     android:textColorHint="?text_color_2"
                     android:gravity="start|center"
-                    android:id="@id/et_account"
                     android:background="@null"
                     android:paddingLeft="20.0dip"
                     android:paddingRight="20.0dip"
@@ -85,15 +87,16 @@
                     android:imeOptions="actionNext"/>
 
                 <ImageView
+                    android:id="@+id/iv_delete_account"
                     android:layout_gravity="end|center"
-                    android:id="@id/iv_delete_tel"
                     android:background="?press_selector"
                     android:padding="16.0dip"
-                    android:visibility="invisible"
                     android:layout_width="48.0dip"
                     android:layout_height="48.0dip"
                     android:src="@drawable/icon_delete"
-                    android:scaleType="fitCenter"/>
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible"
+                    tools:visibility="visible"/>
             </FrameLayout>
 
             <View
@@ -135,11 +138,12 @@
                     android:id="@id/iv_delete_pass"
                     android:background="?press_selector"
                     android:padding="16.0dip"
-                    android:visibility="visible"
                     android:layout_width="48.0dip"
                     android:layout_height="48.0dip"
                     android:src="@drawable/icon_password_eyes_visible"
-                    android:scaleType="fitCenter"/>
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible"
+                    tools:visibility="visible"/>
             </FrameLayout>
         </LinearLayout>
 

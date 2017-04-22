@@ -1,57 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_gravity="bottom"
-              android:orientation="horizontal"
-              android:id="@id/navigation_bar_sign"
-              android:background="?bg_theme_black"
-              android:visibility="gone"
-              android:layout_width="fill_parent"
-              android:layout_height="@dimen/bottom_navigation_height"
-              android:showDividers="middle"
-              xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/navigation_bar_sign"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bottom_navigation_height"
+    android:layout_gravity="bottom"
+    android:background="?bg_theme_black"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    android:visibility="gone"
+    tools:visibility="visible">
 
     <FrameLayout
-        android:id="@id/tab_login"
-        android:clickable="true"
+        android:id="@+id/tab_login"
         android:layout_width="0.0dip"
         android:layout_height="fill_parent"
-        android:layout_weight="1.0">
+        android:layout_weight="1.0"
+        android:clickable="true">
 
         <TextView
-            android:textSize="16.0sp"
-            android:textColor="?text_color_white_theme"
-            android:layout_gravity="center"
             android:id="@id/text_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/deng_lu"
+            android:layout_gravity="center"
             android:drawableLeft="?home_icon_login"
-            android:drawablePadding="8.0dip"/>
+            android:drawablePadding="8.0dip"
+            android:text="@string/deng_lu"
+            android:textColor="?text_color_white_theme"
+            android:textSize="16.0sp"/>
     </FrameLayout>
 
     <View
         android:id="@id/divider_line"
-        android:background="?text_color_white_theme"
         android:layout_width="0.39999998dip"
         android:layout_height="fill_parent"
+        android:layout_marginBottom="12.0dip"
         android:layout_marginTop="12.0dip"
-        android:layout_marginBottom="12.0dip"/>
+        android:background="?text_color_white_theme"/>
 
     <FrameLayout
-        android:id="@id/tab_register"
-        android:clickable="true"
+        android:id="@+id/tab_register"
         android:layout_width="0.0dip"
         android:layout_height="fill_parent"
-        android:layout_weight="1.0">
+        android:layout_weight="1.0"
+        android:clickable="true">
 
         <TextView
-            android:textSize="16.0sp"
-            android:textColor="?text_color_white_theme"
-            android:layout_gravity="center"
             android:id="@id/text_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/zhu_ce"
+            android:layout_gravity="center"
             android:drawableLeft="?home_icon_signup"
-            android:drawablePadding="8.0dip"/>
+            android:drawablePadding="8.0dip"
+            android:text="@string/zhu_ce"
+            android:textColor="?text_color_white_theme"
+            android:textSize="16.0sp"/>
     </FrameLayout>
 </LinearLayout>

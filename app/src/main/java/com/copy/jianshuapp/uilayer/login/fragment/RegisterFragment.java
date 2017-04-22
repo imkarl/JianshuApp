@@ -117,7 +117,7 @@ public class RegisterFragment extends BaseFragment implements View.OnFocusChange
     private void initView() {
         // 提示信息
         mTvUserAgreement.setMovementMethod(LocalLinkMovementMethod.getInstance());
-        mTvUserAgreement.setTextViewHTML("点击&#160;\"注册简书帐号\"&#160;即表示你同意并愿意遵守简书 <should href=\"http://www.jianshu.com/FormBody/c44d171298ce\">用户协议</should> 和 <should href=\"http://www.jianshu.com/FormBody/2ov8x3\">隐私政策</should>");
+        mTvUserAgreement.setTextViewHTML("点击&#160;\"注册简书帐号\"&#160;即表示你同意并愿意遵守简书 <a href=\"http://www.jianshu.com/FormBody/c44d171298ce\">用户协议</a> 和 <a href=\"http://www.jianshu.com/FormBody/2ov8x3\">隐私政策</a>");
         RxKeyboard.stateChange(getActivity())
                 .observeOn(AndroidSchedulers.mainThread())
                 .compose(bindToLifecycle())

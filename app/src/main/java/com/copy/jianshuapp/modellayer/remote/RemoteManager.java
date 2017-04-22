@@ -34,7 +34,7 @@ public class RemoteManager {
     }
 
 
-    public static final String API_HOST_URL = JSApi.HTTPS;
+    public static final String API_HOST_URL = JSApi.API_HOST;
 
     private static final long RESPONSE_CACHE_SIZE = 10 * 1024 * 1024;
     private static final long HTTP_CONNECT_TIMEOUT = 10;
