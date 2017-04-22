@@ -13,6 +13,8 @@ import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.statusbar.StatusBarCompat;
 import com.copy.jianshuapp.common.statusbar.StatusBarStyle;
 import com.copy.jianshuapp.modellayer.local.SettingsUtils;
+import com.copy.jianshuapp.uilayer.SplashActivity;
+import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
 import com.copy.jianshuapp.utils.Constants;
 import com.copy.jianshuapp.utils.pair.KeyValuePair;
 
@@ -73,16 +75,34 @@ public class BaseActivity extends RxLifecycleActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        switchTheme(SettingsUtils.getTheme());
+        Constants.JSTheme theme = SettingsUtils.getTheme();
+        switchTheme(theme);
+        switchStatusBarStyle(theme);
     }
 
     private void switchTheme(Constants.JSTheme theme) {
+        if (this instanceof SplashActivity || this instanceof MainActivity) {
+            return;
+        }
+
         if (theme == null) {
             theme = Constants.JSTheme.DAY;
         }
         switch (theme) {
             case DAY:
                 setTheme(R.style.theme_day);
+                break;
+            case NIGHT:
+                setTheme(R.style.theme_night);
+                break;
+        }
+    }
+    private void switchStatusBarStyle(Constants.JSTheme theme) {
+        if (theme == null) {
+            theme = Constants.JSTheme.DAY;
+        }
+        switch (theme) {
+            case DAY:
                 // 设置状态栏风格
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     StatusBarCompat.setTransparent(this);
@@ -92,7 +112,6 @@ public class BaseActivity extends RxLifecycleActivity {
                 StatusBarCompat.setStyle(this, StatusBarStyle.Light);
                 break;
             case NIGHT:
-                setTheme(R.style.theme_night);
                 // 设置状态栏风格
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     StatusBarCompat.setTransparent(this);

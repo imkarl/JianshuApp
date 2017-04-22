@@ -3,8 +3,8 @@
     <style name="SplashTheme" parent="AppTheme">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowIsTranslucent">false</item>
     </style>
     <style name="theme_day_opaque" parent="@style/theme_day">
         <!-- 不透明主题 -->

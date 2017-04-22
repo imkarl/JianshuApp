@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 状态栏样式：白色背景 -->
+        <item name="android:colorPrimaryDark">@android:color/white</item>
+    </style>
+
+</resources>
