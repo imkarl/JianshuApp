@@ -17,9 +17,9 @@ import com.copy.jianshuapp.modellayer.model.Account;
 import com.copy.jianshuapp.modellayer.repository.SubscriptionRepository;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
 import com.copy.jianshuapp.uilayer.home.fragments.DiscoverFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.DynamicFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.MainPageFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.MoreFragment;
+import com.copy.jianshuapp.uilayer.home.fragments.NotificationFragment;
+import com.copy.jianshuapp.uilayer.home.fragments.SubscriptionFragment;
+import com.copy.jianshuapp.uilayer.home.fragments.MeFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -78,11 +78,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private int mCurrentTab = 0;
 
-    private MainPageFragment fragmentMainPage;
-    private DiscoverFragment fragmentDiscover;
-    private DynamicFragment fragmentDynamic;
-    private MoreFragment fragmentMore;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,7 +106,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             this.mNavigationBarSign.findViewById(R.id.tab_login).setOnClickListener(this);
             this.mNavigationBarSign.findViewById(R.id.tab_register).setOnClickListener(this);
 
-            showFragment(fragmentDiscover, DiscoverFragment.class);
+            showFragment(DiscoverFragment.class);
         } else {
             this.mNavigationBarMain.setVisibility(View.VISIBLE);
             this.mNavigationBarSign.setVisibility(View.GONE);
@@ -144,13 +139,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 setSelected(view);
                 mCurrentTab = id;
 
-                showFragment(fragmentDiscover, DiscoverFragment.class);
+                showFragment(DiscoverFragment.class);
                 break;
             case R.id.tab_main_page:
                 setSelected(view);
                 mCurrentTab = id;
 
-                showFragment(fragmentMainPage, MainPageFragment.class);
+                showFragment(SubscriptionFragment.class);
                 break;
             case R.id.tab_writting:
                 setSelected(view);
@@ -163,34 +158,31 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 setSelected(view);
                 mCurrentTab = id;
 
-                showFragment(fragmentDynamic, DynamicFragment.class);
+                showFragment(NotificationFragment.class);
                 break;
             case R.id.tab_more:
                 setSelected(view);
                 mCurrentTab = id;
 
-                showFragment(fragmentMore, MoreFragment.class);
+                showFragment(MeFragment.class);
                 break;
         }
     }
 
-    private <T extends Fragment> void showFragment(T fragment, Class<T> fragmentClass) {
-        if (fragment == null) {
-            fragment = getFragmentHelper().findOrCreate(fragmentClass);
-        }
+    private <T extends Fragment> void showFragment(Class<T> fragmentClass) {
         getFragmentHelper().beginTransaction()
-                .add(R.id.container, fragment)
-                .show(fragment)
+                .add(R.id.container, fragmentClass)
+                .show(fragmentClass)
                 .commit();
     }
 
     private void hideAllFragment() {
         getFragmentHelper()
                 .beginTransaction()
-                .hide(fragmentMainPage)
-                .hide(fragmentDiscover)
-                .hide(fragmentDynamic)
-                .hide(fragmentMore)
+                .hide(SubscriptionFragment.class)
+                .hide(DiscoverFragment.class)
+                .hide(NotificationFragment.class)
+                .hide(MeFragment.class)
                 .commit();
     }
 

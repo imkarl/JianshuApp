@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
+import com.copy.jianshuapp.common.statusbar.StatusBarCompat;
+
 /**
  * 屏幕相关信息
  * @version imkarl 2017-04
@@ -23,6 +25,8 @@ public class DisplayInfo {
     private static final float xdpi;
     private static final float ydpi;
 
+    private static final int statusBarHeight;
+
     static {
         // 屏幕信息
         DisplayMetrics dm = new DisplayMetrics();
@@ -40,7 +44,10 @@ public class DisplayInfo {
         wm.getDefaultDisplay().getRealMetrics(dm);
         realWidthPixels = dm.widthPixels;
         realHeightPixels = dm.heightPixels;
+
+        statusBarHeight = StatusBarCompat.getStatusBarHeight();
     }
+
 
     public static int dp2px(float dp) {
         return (int) (dp * density + 0.5f);
@@ -90,6 +97,10 @@ public class DisplayInfo {
         return ydpi;
     }
 
+    public static int getStatusBarHeight() {
+        return statusBarHeight;
+    }
+
     public static String getDescription() {
         return "DisplayInfo{" +
                 "widthPixels=" + widthPixels +
@@ -101,6 +112,7 @@ public class DisplayInfo {
                 ", scaledDensity=" + scaledDensity +
                 ", xdpi=" + xdpi +
                 ", ydpi=" + ydpi +
+                ", statusBarHeight=" + statusBarHeight +
                 '}';
     }
 

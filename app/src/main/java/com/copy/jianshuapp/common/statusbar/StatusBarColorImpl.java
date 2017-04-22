@@ -30,7 +30,7 @@ class StatusBarColorImpl {
         } else if (VersionUtils.isSupport(VersionUtils.KITKAT)) {
             IMPL = new KitkatStatusBarImpl();
         } else {
-            IMPL = (window, color) -> LogUtils.d("不支持 setStatusBarColor() 的版本");
+            IMPL = (window, color) -> LogUtils.d("该系统不支持 StatusBarColor.setColor()");
         }
     }
 
@@ -38,10 +38,10 @@ class StatusBarColorImpl {
     private static class MStatusBarImpl implements StatusBarCompat.StatusBarColor {
         @TargetApi(Build.VERSION_CODES.M)
         @Override
-        public void setStatusBarColor(Window window, @ColorInt int color) {
+        public void setColor(Window window, @ColorInt int color) {
             //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+            //需要设置这个 flag 才能调用 setColor 来设置状态栏颜色
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             //设置状态栏颜色
             window.setStatusBarColor(color);
@@ -57,10 +57,10 @@ class StatusBarColorImpl {
     private static class LollipopStatusBarImpl implements StatusBarCompat.StatusBarColor {
         @TargetApi(Build.VERSION_CODES.LOLLIPOP)
         @Override
-        public void setStatusBarColor(Window window, @ColorInt int color) {
+        public void setColor(Window window, @ColorInt int color) {
             //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+            //需要设置这个 flag 才能调用 setColor 来设置状态栏颜色
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             //设置状态栏颜色
             window.setStatusBarColor(color);
@@ -72,7 +72,7 @@ class StatusBarColorImpl {
 
         @TargetApi(Build.VERSION_CODES.KITKAT)
         @Override
-        public void setStatusBarColor(Window window, @ColorInt int color) {
+        public void setColor(Window window, @ColorInt int color) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
             ViewGroup decorViewGroup = (ViewGroup) window.getDecorView();
@@ -80,14 +80,14 @@ class StatusBarColorImpl {
             if (statusBarView == null) {
                 statusBarView = new View(window.getContext());
                 statusBarView.setTag(STATUS_BAR_VIEW_TAG);
-                int statusBarHeight = StatusBarCompat.getStatusBarHeight(window.getContext());
+                int statusBarHeight = StatusBarCompat.getStatusBarHeight();
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, statusBarHeight);
                 params.gravity = Gravity.TOP;
                 statusBarView.setLayoutParams(params);
                 decorViewGroup.addView(statusBarView);
             }
             statusBarView.setBackgroundColor(color);
-            StatusBarCompat.setFitsSystemWindows(window, true);
+            FitsSystemWindowsImpl.IMPL.setFitsSystemWindows(window, true);
         }
     }
 

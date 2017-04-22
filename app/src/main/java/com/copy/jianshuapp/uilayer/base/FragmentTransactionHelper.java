@@ -5,6 +5,8 @@ import android.app.FragmentTransaction;
 import android.support.annotation.IdRes;
 import android.text.TextUtils;
 
+import com.copy.jianshuapp.common.LogUtils;
+
 /**
  * FragmentTransaction辅助类
  * @version imkarl 2017-03
@@ -27,13 +29,15 @@ public class FragmentTransactionHelper {
         return replace(id, mFragmentManager.findOrCreate(fragmentClass));
     }
     public FragmentTransactionHelper replace(@IdRes int id, Fragment fragment) {
+        if (fragment == null) {
+            return this;
+        }
+
         Fragment oldFragment = mFragmentManager.find(id);
-        if (oldFragment != null) {
-            if (oldFragment != fragment) {
-                mTransaction.remove(oldFragment);
-                mTransaction.replace(id, fragment);
-            }
-        } else {
+        if (oldFragment != null && oldFragment != fragment) {
+            mTransaction.remove(oldFragment);
+        }
+        if (oldFragment != fragment) {
             mTransaction.replace(id, fragment);
         }
         return this;
@@ -90,7 +94,14 @@ public class FragmentTransactionHelper {
 
 
     public FragmentTransactionHelper show(Fragment fragment) {
+        if (fragment == null) {
+            return this;
+        }
         mTransaction.show(fragment);
+        return this;
+    }
+    public FragmentTransactionHelper show(Class<? extends Fragment> fragmentClass) {
+        show(mFragmentManager.find(fragmentClass));
         return this;
     }
 

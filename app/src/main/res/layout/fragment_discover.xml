@@ -5,7 +5,7 @@
              android:layout_height="fill_parent"
              xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+    <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
         android:id="@id/swipe_refresh_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -14,7 +14,7 @@
             android:id="@id/recyclerView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"/>
-    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+    </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
 
     <LinearLayout
         android:orientation="vertical"

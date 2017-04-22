@@ -61,7 +61,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0.5dip"/>
 
-    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+    <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
         android:id="@id/refresh_view"
         android:layout_width="wrap_content"
         android:layout_height="392.0dip">
@@ -74,5 +74,5 @@
             android:layout_height="wrap_content"
             android:divider="@null"
             android:dividerHeight="0.0dip"/>
-    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+    </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
 </LinearLayout>

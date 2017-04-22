@@ -5,10 +5,15 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
+import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.statusbar.StatusBarCompat;
+import com.copy.jianshuapp.common.statusbar.StatusBarStyle;
+import com.copy.jianshuapp.modellayer.local.SettingsUtils;
+import com.copy.jianshuapp.utils.Constants;
 import com.copy.jianshuapp.utils.pair.KeyValuePair;
 
 /**
@@ -65,12 +70,38 @@ public class BaseActivity extends RxLifecycleActivity {
     }
 
     @Override
-    public void onContentChanged() {
-        super.onContentChanged();
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        // 设置状态栏风格
-        StatusBarCompat.setStatusBarColor(getWindow(), Color.WHITE);
-        StatusBarCompat.setStatusBarLight(getWindow(), true);
+        switchTheme(SettingsUtils.getTheme());
+    }
+
+    private void switchTheme(Constants.JSTheme theme) {
+        if (theme == null) {
+            theme = Constants.JSTheme.DAY;
+        }
+        switch (theme) {
+            case DAY:
+                setTheme(R.style.theme_day);
+                // 设置状态栏风格
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    StatusBarCompat.setTransparent(this);
+                } else {
+                    StatusBarCompat.setColorRes(this, R.color.white);
+                }
+                StatusBarCompat.setStyle(this, StatusBarStyle.Light);
+                break;
+            case NIGHT:
+                setTheme(R.style.theme_night);
+                // 设置状态栏风格
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    StatusBarCompat.setTransparent(this);
+                } else {
+                    StatusBarCompat.setColorRes(this, R.color.bg_black_light);
+                }
+                StatusBarCompat.setStyle(this, StatusBarStyle.Dark);
+                break;
+        }
     }
 
 }

@@ -1,6 +1,8 @@
 package com.copy.jianshuapp.modellayer.local;
 
+import com.copy.jianshuapp.common.ObjectUtils;
 import com.copy.jianshuapp.common.PreferenceUtils;
+import com.copy.jianshuapp.utils.Constants;
 
 /**
  * 设置相关工具类
@@ -73,5 +75,14 @@ public class SettingsUtils {
     public static final String HAS_REGIST = "has_regist";
 
     public static final String GUID = "guid";
+
+    private static final String THEME = "theme";
+    public static Constants.JSTheme getTheme() {
+        String theme = getString(THEME);
+        if (ObjectUtils.isEmpty(theme)) {
+            return Constants.JSTheme.DAY;
+        }
+        return Constants.JSTheme.valueOf(theme);
+    }
 
 }

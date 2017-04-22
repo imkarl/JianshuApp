@@ -1,102 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-              android:id="@id/linear_root"
-              android:background="?bg_mine"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/linear_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?bg_mine"
+    android:orientation="vertical">
 
     <View
         android:id="@id/view_status_height"
-        android:background="?view_status_bar_bg"
         android:layout_width="fill_parent"
-        android:layout_height="0.0dip"/>
+        android:layout_height="0.0dip"
+        android:background="?view_status_bar_bg"/>
 
     <RelativeLayout
         android:id="@id/rl_title_bar"
-        android:background="?common_bg_white_black"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/titlebar_height">
+        android:layout_height="@dimen/titlebar_height"
+        android:background="?common_bg_white_black">
 
         <TextView
-            android:textSize="16.0sp"
-            android:textColor="?color_2f_b1"
             android:id="@id/text_title_user"
-            android:background="?gray0"
-            android:paddingTop="5.0dip"
-            android:paddingRight="5.0dip"
-            android:paddingBottom="5.0dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="16.0dip"
+            android:background="?gray0"
+            android:paddingBottom="5.0dip"
+            android:paddingRight="5.0dip"
+            android:paddingTop="5.0dip"
             android:text="@string/wo_de"
-            android:layout_centerVertical="true"/>
+            android:textColor="?color_2f_b1"
+            android:textSize="16.0sp"/>
 
         <ImageView
             android:id="@id/iv_setting"
-            android:padding="5.0dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="12.0dip"
-            android:src="?icon_setting"
-            android:layout_toLeftOf="@id/iv_search"
             android:layout_centerVertical="true"
-            android:onClick="onMyClick"/>
+            android:layout_marginRight="12.0dip"
+            android:layout_toLeftOf="@id/iv_search"
+            android:padding="5.0dip"
+            android:src="?icon_setting"/>
 
         <ImageView
             android:id="@id/iv_search"
-            android:padding="5.0dip"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16.0dip"
-            android:src="?icon_search"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.0dip"
+            android:padding="5.0dip"
+            android:src="?icon_search"
+            android:visibility="visible"/>
     </RelativeLayout>
 
     <View
         android:id="@id/top_line"
-        android:background="?listview_divider"
         android:layout_width="fill_parent"
-        android:layout_height="0.5dip"/>
+        android:layout_height="0.5dip"
+        android:background="?listview_divider"/>
 
-    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+    <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
         android:id="@id/refresh_user_info"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <ScrollView
             android:id="@id/scroll_user_content"
-            android:scrollbars="none"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:id="@id/linear_container"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16.0dip"
                 android:divider="?shap_line"
+                android:orientation="vertical"
                 android:showDividers="middle">
 
                 <FrameLayout
                     android:id="@id/container_login"
-                    android:background="?common_bg_white_black"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="?common_bg_white_black">
 
                     <RelativeLayout
                         android:id="@id/item_user"
-                        android:background="?press_selector"
-                        android:paddingLeft="20.0dip"
-                        android:paddingTop="18.0dip"
-                        android:paddingBottom="18.0dip"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector"
+                        android:paddingBottom="18.0dip"
+                        android:paddingLeft="20.0dip"
+                        android:paddingTop="18.0dip">
 
                         <FrameLayout
                             android:id="@id/fl_avatar"
@@ -108,49 +107,48 @@
                                 android:layout_width="50.0dip"
                                 android:layout_height="50.0dip"
                                 android:layout_marginRight="10.0dip"
-                                android:src="@drawable/tx_image"
                                 android:scaleType="centerCrop"
-                                app:riv_border_width="0.30000007dip"
+                                android:src="@drawable/tx_image"
                                 app:riv_border_color="?gray300"
+                                app:riv_border_width="0.30000007dip"
                                 app:riv_oval="true"/>
 
                             <ImageView
                                 android:id="@id/iv_avatar_gif"
-                                android:visibility="gone"
                                 android:layout_width="50.0dip"
                                 android:layout_height="50.0dip"
                                 android:layout_marginRight="10.0dip"
+                                android:scaleType="centerCrop"
                                 android:src="@drawable/tx_image"
-                                android:scaleType="centerCrop"/>
+                                android:visibility="gone"/>
                         </FrameLayout>
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:ellipsize="end"
-                            android:gravity="center_vertical"
                             android:id="@id/text_user_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="10.0dip"
                             android:layout_marginRight="6.0dip"
-                            android:text="@string/deng_lu_he_zhu_ce"
-                            android:maxLength="15"
-                            android:drawablePadding="10.0dip"
                             android:layout_toRightOf="@id/fl_avatar"
-                            android:layout_centerVertical="true"/>
+                            android:drawablePadding="10.0dip"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="15"
+                            android:text="@string/deng_lu_he_zhu_ce"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <ImageView
                             android:id="@id/iv_edit_info"
-                            android:paddingTop="10.0dip"
-                            android:paddingRight="10.0dip"
-                            android:paddingBottom="10.0dip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/icon_edit_info"
-                            android:layout_toRightOf="@id/text_user_name"
                             android:layout_centerVertical="true"
-                            android:onClick="onMyClick"/>
+                            android:layout_toRightOf="@id/text_user_name"
+                            android:paddingBottom="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:paddingTop="10.0dip"
+                            android:src="@drawable/icon_edit_info"/>
                     </RelativeLayout>
                 </FrameLayout>
 
@@ -160,259 +158,252 @@
                     android:layout_height="16.0dip"/>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:id="@id/linear_container_user"
-                    android:background="?common_bg_white_black"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="?common_bg_white_black"
                     android:divider="?shap_line"
-                    android:showDividers="middle"
-                    android:dividerPadding="14.0dip">
+                    android:dividerPadding="14.0dip"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
 
                     <RelativeLayout
                         android:id="@id/item_public_note"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="45.0dip"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_public_note"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/gong_kai_wen_zhang"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_article_public"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_article_public"/>
+                            android:drawableStart="@drawable/grzy_icon_article_public"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/gong_kai_wen_zhang"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?text_color_2"
-                            android:gravity="center"
                             android:id="@id/text_public_note_count"
-                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="24.0dip"
-                            android:layout_marginRight="20.0dip"
-                            android:singleLine="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20.0dip"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="?text_color_2"
+                            android:textSize="14.0sp"
+                            android:visibility="visible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_private_note"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_private_note"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/si_mi_wen_zhang"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_article_secret"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_article_secret"/>
+                            android:drawableStart="@drawable/grzy_icon_article_secret"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/si_mi_wen_zhang"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?text_color_2"
-                            android:gravity="center"
                             android:id="@id/text_private_note_count"
-                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="24.0dip"
-                            android:layout_marginRight="20.0dip"
-                            android:singleLine="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20.0dip"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="?text_color_2"
+                            android:textSize="14.0sp"
+                            android:visibility="visible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_mark_note"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_mark_note"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/bookmark_article"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_mark"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_mark"/>
+                            android:drawableStart="@drawable/grzy_icon_mark"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/bookmark_article"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?text_color_2"
-                            android:gravity="center"
                             android:id="@id/text_mark_note_count"
-                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="24.0dip"
-                            android:layout_marginRight="20.0dip"
-                            android:singleLine="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20.0dip"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="?text_color_2"
+                            android:textSize="14.0sp"
+                            android:visibility="visible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_liked_note"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_like_note"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/xi_huan_de_wen_zhang"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_like_normal"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_like_normal"/>
+                            android:drawableStart="@drawable/grzy_icon_like_normal"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/xi_huan_de_wen_zhang"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?text_color_2"
-                            android:gravity="center"
                             android:id="@id/text_like_note_count"
-                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="20.0dip"
-                            android:singleLine="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20.0dip"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="?text_color_2"
+                            android:textSize="14.0sp"
+                            android:visibility="visible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_topic"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/tv_topic_note"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/wo_de_zhuan_ti"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/icon_mine_topic_gray"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/icon_mine_topic_gray"/>
+                            android:drawableStart="@drawable/icon_mine_topic_gray"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/wo_de_zhuan_ti"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?text_color_2"
-                            android:gravity="center"
                             android:id="@id/tv_topic_count"
-                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="20.0dip"
-                            android:singleLine="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20.0dip"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="?text_color_2"
+                            android:textSize="14.0sp"
+                            android:visibility="visible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_mine_book"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/tv_mine_book"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/mine_notebook"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/icon_mine_book_gray"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/icon_mine_book_gray"/>
+                            android:drawableStart="@drawable/icon_mine_book_gray"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/mine_notebook"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
                         <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?text_color_2"
-                            android:gravity="center"
                             android:id="@id/tv_mine_book_count"
-                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="20.0dip"
-                            android:singleLine="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20.0dip"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="?text_color_2"
+                            android:textSize="14.0sp"
+                            android:visibility="visible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_wallet"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_wallet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/wo_de_qian_bao"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_wallet_normal"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_wallet_normal"/>
+                            android:drawableStart="@drawable/grzy_icon_wallet_normal"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/wo_de_qian_bao"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -422,70 +413,70 @@
                     android:layout_height="16.0dip"/>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:id="@id/linear_container_common"
-                    android:background="?common_bg_white_black"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="?common_bg_white_black"
                     android:divider="?shap_line"
-                    android:showDividers="middle"
-                    android:dividerPadding="14.0dip">
+                    android:dividerPadding="14.0dip"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
 
                     <RelativeLayout
                         android:id="@id/itme_theme"
-                        android:background="?press_selector"
-                        android:clickable="false"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/user_item_height">
+                        android:layout_height="@dimen/user_item_height"
+                        android:background="?press_selector"
+                        android:clickable="false">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_theme_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/menu_night_theme"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_night"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_night"/>
+                            android:drawableStart="@drawable/grzy_icon_night"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/menu_night_theme"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
 
-                        <com.baiji.jianshu.widget.SmartSwitchButton
-                            android:layout_gravity="center_vertical"
+                        <com.copy.jianshuapp.uilayer.widget.SmartSwitchButton
                             android:id="@id/switch_theme"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="20.0dip"
                             android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="20.0dip"
+                            />
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_history"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_history"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/history_record"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/icon_history"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/icon_history"/>
+                            android:drawableStart="@drawable/icon_history"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/history_record"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -494,85 +485,82 @@
                     android:layout_height="16.0dip"/>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:id="@id/ll_container_others"
-                    android:background="?common_bg_white_black"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="?common_bg_white_black"
                     android:divider="?shap_line"
-                    android:showDividers="middle"
-                    android:dividerPadding="14.0dip">
+                    android:dividerPadding="14.0dip"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
 
                     <RelativeLayout
                         android:id="@id/item_invitation"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_invitation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/share_jianshu"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/icon_share_app"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/icon_share_app"/>
+                            android:drawableStart="@drawable/icon_share_app"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/share_jianshu"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_feedback"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_feedback"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/yi_jian_fan_kui"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_feedback"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_feedback"/>
+                            android:drawableStart="@drawable/grzy_icon_feedback"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/yi_jian_fan_kui"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@id/item_rate_star"
-                        android:background="?press_selector"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/user_item_height"
-                        android:onClick="onMyClick">
+                        android:background="?press_selector">
 
                         <TextView
-                            android:textSize="16.0sp"
-                            android:textColor="?text_color_1"
-                            android:gravity="center_vertical"
                             android:id="@id/text_rate_star"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="14.0dip"
                             android:layout_marginRight="16.0dip"
-                            android:text="@string/rate_star_on_jianshu"
-                            android:singleLine="true"
                             android:drawableLeft="@drawable/grzy_icon_rate"
                             android:drawablePadding="10.0dip"
-                            android:layout_centerVertical="true"
-                            android:drawableStart="@drawable/grzy_icon_rate"/>
+                            android:drawableStart="@drawable/grzy_icon_rate"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/rate_star_on_jianshu"
+                            android:textColor="?text_color_1"
+                            android:textSize="16.0sp"/>
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -581,5 +569,5 @@
                     android:layout_height="16.0dip"/>
             </LinearLayout>
         </ScrollView>
-    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+    </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
 </LinearLayout>

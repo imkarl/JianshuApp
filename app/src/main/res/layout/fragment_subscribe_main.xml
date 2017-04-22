@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-              android:id="@id/title_bar_root"
-              android:background="?common_bg_white_black"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/title_bar_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black"
+    android:orientation="vertical">
 
     <View
         android:id="@id/view_status_height"
-        android:background="?view_status_bar_bg"
         android:layout_width="fill_parent"
-        android:layout_height="0.0dip"/>
+        android:layout_height="0.0dip"
+        android:background="?view_status_bar_bg"/>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="@dimen/titlebar_height">
 
         <LinearLayout
-            android:layout_gravity="center"
             android:id="@id/title_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
             android:layout_marginLeft="16.0dip"
-            android:layout_marginRight="7.0dip"
-            android:layout_centerVertical="true">
+            android:layout_marginRight="7.0dip">
 
             <TextView
-                android:textSize="16.0sp"
-                android:textColor="?color_2f_b1"
-                android:gravity="center"
-                android:layout_gravity="center"
                 android:id="@id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/guan_zhu"/>
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/guan_zhu"
+                android:textColor="?color_2f_b1"
+                android:textSize="16.0sp"/>
 
             <ImageView
-                android:layout_gravity="center_vertical"
                 android:id="@id/iv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10.0dip"
                 android:src="?icon_dropdown"/>
         </LinearLayout>
 
         <ImageView
             android:id="@id/add_subscribe"
-            android:padding="5.0dip"
-            android:visibility="visible"
-            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginRight="12.0dip"
-            android:src="?icon_add_people"
             android:layout_toLeftOf="@id/iv_search"
-            android:layout_centerVertical="true"/>
+            android:clickable="true"
+            android:padding="5.0dip"
+            android:src="?icon_add_people"
+            android:visibility="visible"/>
 
         <ImageView
             android:id="@id/iv_search"
-            android:padding="5.0dip"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16.0dip"
-            android:src="?icon_search"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.0dip"
+            android:padding="5.0dip"
+            android:src="?icon_search"
+            android:visibility="visible"/>
 
         <View
-            android:layout_gravity="bottom"
             android:id="@id/divider"
-            android:background="?listview_divider"
             android:layout_width="fill_parent"
             android:layout_height="0.39999998dip"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="?listview_divider"/>
     </RelativeLayout>
 
     <FrameLayout

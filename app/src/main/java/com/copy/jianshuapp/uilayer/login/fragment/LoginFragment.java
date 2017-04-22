@@ -90,11 +90,10 @@ public class LoginFragment extends BaseFragment
 
     private boolean mShowPassword;
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-        View rootView = inflater.inflate(R.layout.fragment_login, container, false);
-        ButterKnife.bind(this, rootView);
-        return rootView;
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_login);
     }
 
     @Override
