@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.copy.jianshuapp.uilayer.widget.UniversalDraweeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draweeview"
+    android:layout_width="100.0dip"
+    android:layout_height="40.0dip"
+    android:background="?common_bg_white_black"
+    app:roundedCornerRadius="4.0dip"
+    app:roundAsCircle="false"
+    />

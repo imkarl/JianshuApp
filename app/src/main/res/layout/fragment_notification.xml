@@ -1,78 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-              android:id="@id/root_view"
-              android:background="?bg_mine"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?bg_mine"
+    android:orientation="vertical">
 
     <View
         android:id="@id/view_status_height"
-        android:background="?view_status_bar_bg"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dip"/>
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:background="?view_status_bar_bg"/>
 
     <RelativeLayout
-        android:orientation="horizontal"
         android:id="@id/frame_toolbar"
-        android:background="?common_bg_white_black"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/titlebar_height">
+        android:layout_height="@dimen/titlebar_height"
+        android:background="?common_bg_white_black"
+        android:orientation="horizontal">
 
         <TextView
-            android:textSize="16.0sp"
-            android:textColor="?color_2f_b1"
-            android:gravity="center"
-            android:layout_gravity="center"
             android:id="@id/text_title_user"
-            android:background="?gray0"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/titlebar_height"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
             android:layout_marginLeft="16.0dip"
+            android:background="?gray0"
+            android:gravity="center"
             android:text="@string/tab_notification"
-            android:layout_centerVertical="true"/>
+            android:textColor="?color_2f_b1"
+            android:textSize="16.0sp"/>
 
         <ImageView
-            android:layout_gravity="center|right"
             android:id="@id/iv_notification_setting"
-            android:padding="5.0dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|right"
             android:layout_marginRight="12.0dip"
-            android:src="?icon_notification_setting"
             android:layout_toLeftOf="@id/iv_search"
-            android:layout_centerVertical="true"/>
+            android:padding="5.0dip"
+            android:src="?icon_notification_setting"/>
 
         <ImageView
             android:id="@id/iv_search"
-            android:padding="5.0dip"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16.0dip"
-            android:src="?icon_search"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.0dip"
+            android:padding="5.0dip"
+            android:src="?icon_search"
+            android:visibility="visible"/>
     </RelativeLayout>
 
     <View
         android:id="@id/topLine"
-        android:background="?listview_divider"
         android:layout_width="fill_parent"
-        android:layout_height="0.5dip"/>
+        android:layout_height="0.5dip"
+        android:background="?listview_divider"/>
 
     <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
         android:id="@id/refresh_view"
         android:layout_width="wrap_content"
         android:layout_height="392.0dip">
-
         <android.support.v7.widget.RecyclerView
-            android:scrollbarStyle="outsideOverlay"
-            android:id="@id/article_recycler"
-            android:background="?common_bg_white_black"
+            android:id="@id/recycler"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="?common_bg_white_black"
             android:divider="@null"
-            android:dividerHeight="0.0dip"/>
+            android:dividerHeight="0.0dip"
+            android:scrollbarStyle="outsideOverlay"
+            tools:listitem="@layout/notification_frag_normal_item"/>
     </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
+
 </LinearLayout>

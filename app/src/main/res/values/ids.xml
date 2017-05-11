@@ -3,6 +3,7 @@
     <item type="id" name="global_tag" />
     <item type="id" name="global_view_id" />
     <item type="id" name="all" />
+    <item type="id" name="id_itemview_helper" />
 
     <item type="id" name="action_bar_activity_content" />
     <item type="id" name="action_bar_spinner" />
@@ -26,40 +27,6 @@
     <item type="id" name="key_theme" />
     <item type="id" name="like" />
     <item type="id" name="ll_follow_id" />
-    <item type="id" name="menu_add" />
-    <item type="id" name="menu_add_collection" />
-    <item type="id" name="menu_block" />
-    <item type="id" name="menu_copy" />
-    <item type="id" name="menu_download" />
-    <item type="id" name="menu_edit" />
-    <item type="id" name="menu_forget_password" />
-    <item type="id" name="menu_generate_pic" />
-    <item type="id" name="menu_google_login" />
-    <item type="id" name="menu_just_load_collection" />
-    <item type="id" name="menu_just_load_notebook" />
-    <item type="id" name="menu_just_load_push" />
-    <item type="id" name="menu_just_load_user" />
-    <item type="id" name="menu_like" />
-    <item type="id" name="menu_load_all" />
-    <item type="id" name="menu_more" />
-    <item type="id" name="menu_new_notebook" />
-    <item type="id" name="menu_notebook_setting" />
-    <item type="id" name="menu_notificaton" />
-    <item type="id" name="menu_oversea_login" />
-    <item type="id" name="menu_read_original" />
-    <item type="id" name="menu_reply" />
-    <item type="id" name="menu_report" />
-    <item type="id" name="menu_report_user" />
-    <item type="id" name="menu_search" />
-    <item type="id" name="menu_set_push_disable" />
-    <item type="id" name="menu_set_push_enabled" />
-    <item type="id" name="menu_share" />
-    <item type="id" name="menu_short_cut" />
-    <item type="id" name="menu_submission" />
-    <item type="id" name="menu_submit" />
-    <item type="id" name="menu_un_favorite" />
-    <item type="id" name="menu_unblock" />
-    <item type="id" name="menu_write_message" />
     <item type="id" name="preview" />
     <item type="id" name="progressBar_id" />
     <item type="id" name="progress_circular" />
@@ -729,7 +696,6 @@
     <item type="id" name="tv_download">false</item>
     <item type="id" name="swipe_refresh_view">false</item>
     <item type="id" name="ll_search_mini">false</item>
-    <item type="id" name="the_bottom_line">false</item>
     <item type="id" name="relative_editor_exception">false</item>
     <item type="id" name="img_dismiss">false</item>
     <item type="id" name="ll_search_right">false</item>
@@ -780,7 +746,6 @@
     <item type="id" name="title_wrapper">false</item>
     <item type="id" name="iv_title">false</item>
     <item type="id" name="add_subscribe">false</item>
-    <item type="id" name="subscribe_content">false</item>
     <item type="id" name="timePicker">false</item>
     <item type="id" name="swipelayout_dynamic">false</item>
     <item type="id" name="recycler_timeline">false</item>
@@ -1175,11 +1140,8 @@
     <item type="id" name="text_submission_record">false</item>
     <item type="id" name="text_collection_audit_info">false</item>
     <item type="id" name="viewgroup_end">false</item>
-    <item type="id" name="txt_end">false</item>
-    <item type="id" name="enter_of_dynamic">false</item>
     <item type="id" name="img_icon_feed">false</item>
     <item type="id" name="label_dynamic">false</item>
-    <item type="id" name="img_feed_unread">false</item>
     <item type="id" name="frame_search">false</item>
     <item type="id" name="iv_title_bg">false</item>
     <item type="id" name="txt_left">false</item>
@@ -1195,10 +1157,6 @@
     <item type="id" name="web_article">false</item>
     <item type="id" name="tv_reward_count">false</item>
     <item type="id" name="list_content">false</item>
-    <item type="id" name="view_page_null_flag">false</item>
-    <item type="id" name="fl_banner">false</item>
-    <item type="id" name="viewpager_banner">false</item>
-    <item type="id" name="indicator_banner">false</item>
     <item type="id" name="card_recycler">false</item>
     <item type="id" name="iv_place_rl_banner">false</item>
     <item type="id" name="ll_title">false</item>

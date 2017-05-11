@@ -4,6 +4,7 @@ import com.copy.jianshuapp.AppConfig;
 import com.copy.jianshuapp.common.AppUtils;
 import com.copy.jianshuapp.common.ObjectUtils;
 import com.litesuits.orm.LiteOrm;
+import com.litesuits.orm.db.assit.QueryBuilder;
 
 import java.util.List;
 
@@ -30,6 +31,21 @@ abstract class BaseDao {
             return values.get(0);
         }
         return defValue;
+    }
+
+    static <T> long count(Class<T> clazz) {
+        long count = orm().queryCount(clazz);
+        if (count < 0) {
+            count = 0;
+        }
+        return count;
+    }
+    static <T> long count(QueryBuilder<T> query) {
+        long count = orm().queryCount(query);
+        if (count < 0) {
+            count = 0;
+        }
+        return count;
     }
 
     static boolean save(Object value) {

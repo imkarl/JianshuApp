@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal"
-              android:orientation="vertical"
-              android:id="@id/viewgroup_end"
-              android:background="?common_bg_white_black"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              xmlns:android="http://schemas.android.com/apk/res/android">
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/viewgroup_end"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?common_bg_white_black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,14 +14,14 @@
         android:src="@drawable/icon_discover_end"/>
 
     <TextView
-        android:textSize="14.0sp"
-        android:textColor="?text_b1_color"
-        android:textColorLink="#ff3e94c7"
-        android:gravity="center"
-        android:id="@id/txt_end"
-        android:paddingTop="20.0dip"
-        android:paddingBottom="30.0dip"
+        android:id="@+id/txt_end"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/to_discover_more_zuthor_and_collection"/>
+        android:gravity="center"
+        android:paddingBottom="30.0dip"
+        android:paddingTop="20.0dip"
+        android:text="@string/to_discover_more_zuthor_and_collection"
+        android:textColor="?text_b1_color"
+        android:textColorLink="#ff3e94c7"
+        android:textSize="14.0sp"/>
 </LinearLayout>

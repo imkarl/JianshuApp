@@ -59,13 +59,22 @@ public class ApiException extends Exception {
         if (ObjectUtils.isEmpty(errors)) {
             description = new StringBuilder(ErrorCode.UNKNOWN.getDescription());
         } else if (errors.size() == 1) {
-            description = new StringBuilder(errors.get(0).getCode().getDescription());
+            ErrorMsg error = errors.get(0);
+            String msg = error.getMessage();
+            if (ObjectUtils.isEmpty(msg)) {
+                if (error.getCode() != null) {
+                    msg = error.getCode().getDescription();
+                }
+            }
+            description = new StringBuilder(msg);
         } else {
             description = new StringBuilder("[");
             for (ErrorMsg error : errors) {
                 String msg = error.getMessage();
                 if (ObjectUtils.isEmpty(msg)) {
-                    msg = error.getCode().getDescription();
+                    if (error.getCode() != null) {
+                        msg = error.getCode().getDescription();
+                    }
                 }
                 description.append(msg).append(',');
             }

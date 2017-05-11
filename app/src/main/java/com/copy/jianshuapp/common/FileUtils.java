@@ -1,5 +1,7 @@
 package com.copy.jianshuapp.common;
 
+import android.net.Uri;
+
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,7 +14,8 @@ import java.io.OutputStream;
 /**
  * 文件操作相关
  * @version imkarl 2017-02
- */ 
+ * @version imkarl 2017-04 新增方法isLocalPath()\getAbsolutePath()
+ */
 public class FileUtils {
     private FileUtils() {}
 
@@ -190,6 +193,51 @@ public class FileUtils {
      */
     public static boolean exists(File file) {
         return file != null && file.exists();
+    }
+
+
+    /*
+     * 是否本地文件路径
+     */
+    public static boolean isLocalPath(String path) {
+        if (ObjectUtils.isEmpty(path)) {
+            return false;
+        }
+
+        path = path.toLowerCase();
+        if (path.startsWith("file://")) {
+            return true;
+        }
+        if (path.startsWith("/storage/")) {
+            return true;
+        }
+        if (path.startsWith("/mnt/")) {
+            return true;
+        }
+        if (path.startsWith("/sdcard/")) {
+            return true;
+        }
+        if (FileUtils.exists(new File(path))) {
+            return true;
+        }
+        return false;
+    }
+    /*
+     * 获取真实文件路径
+     */
+    public static String getAbsolutePath(String path) {
+        if (path == null) {
+            return null;
+        }
+
+        if (path.toLowerCase().startsWith("file://")) {
+            return Uri.parse(path).getPath();
+        }
+        if (FileUtils.exists(new File(path))) {
+            return new File(path).getAbsolutePath();
+        }
+
+        return path;
     }
 
 }

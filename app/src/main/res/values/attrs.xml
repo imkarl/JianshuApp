@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="Ex6_bg" format="color"/>
+    <attr name="CirclePageIndicator" format="reference"/>
     <attr name="PopupMenuStyle" format="reference"/>
     <attr name="PopupMenuWithoutAnimStyle" format="reference"/>
     <attr name="SwipeBackLayoutStyle" format="reference"/>

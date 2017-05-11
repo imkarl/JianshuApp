@@ -1,80 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:zhy="http://schemas.android.com/apk/res-auto">
-
-    <View
-        android:id="@id/view_page_null_flag"
-        android:background="?common_bg_white_black"
-        android:visibility="gone"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dip"/>
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <FrameLayout
-        android:id="@id/fl_banner"
-        android:layout_width="fill_parent"
+        android:id="@+id/fl_banner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <com.copy.jianshuapp.uilayer.widget.viewpager.LoopViewPager
+            android:id="@+id/viewpager_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_height="120dip"/>
 
-        <com.baiji.jianshu.widget.LoopViewpager.LoopViewPager
-            android:id="@id/viewpager_banner"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"/>
-
-        <com.viewpagerindicator.CirclePageIndicator
-            android:layout_gravity="bottom|center"
-            android:id="@id/indicator_banner"
-            android:layout_width="fill_parent"
+        <com.copy.jianshuapp.uilayer.widget.indicator.CirclePageIndicator
+            style="?CirclePageIndicator"
+            android:id="@+id/indicator_banner"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12.0dip"/>
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="12.0dip"
+            />
     </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@id/card_recycler"
-        android:visibility="gone"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
-        android:layout_marginTop="15.0dip"/>
+        android:layout_marginTop="15.0dip"
+        android:visibility="gone"/>
 
     <ImageView
-        android:id="@id/iv_place_rl_banner"
+        android:id="@+id/iv_place_card"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
         android:layout_marginTop="15.0dip"
         android:src="@drawable/placeholder_banner"/>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:id="@id/ll_title"
         android:layout_width="fill_parent"
         android:layout_height="20.0dip"
-        android:layout_marginTop="26.0dip">
+        android:layout_marginTop="26.0dip"
+        android:orientation="horizontal">
 
         <View
-            android:layout_gravity="center_vertical"
             android:id="@id/flag_left"
-            android:background="@color/theme_color"
             android:layout_width="2.0dip"
             android:layout_height="15.0dip"
-            android:layout_marginLeft="15.0dip"/>
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15.0dip"
+            android:background="@color/theme_color"/>
 
         <TextView
-            android:textSize="13.0sp"
-            android:textColor="@color/gray500"
-            android:gravity="center"
-            android:id="@id/tv_popular"
-            android:paddingLeft="7.0dip"
-            android:paddingRight="15.0dip"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="@string/hot_collection"/>
+            android:gravity="center"
+            android:paddingLeft="7.0dip"
+            android:paddingRight="15.0dip"
+            android:text="@string/hot_collection"
+            android:textColor="@color/gray500"
+            android:textSize="13.0sp"/>
 
         <View
-            android:visibility="invisible"
             android:layout_width="0.0dip"
             android:layout_height="1.0dip"
-            android:layout_weight="1.0"/>
+            android:layout_weight="1.0"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@id/iv_title"
@@ -83,35 +77,81 @@
             android:src="@drawable/icon_search_change"/>
 
         <TextView
-            android:textSize="13.0sp"
-            android:textColor="@color/gray500"
-            android:gravity="center"
             android:id="@id/tv_title_contribute"
-            android:paddingLeft="4.0dip"
-            android:paddingRight="20.0dip"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="@string/change_other"/>
+            android:gravity="center"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="20.0dip"
+            android:text="@string/change_other"
+            android:textColor="@color/gray500"
+            android:textSize="13.0sp"/>
     </LinearLayout>
 
     <ImageView
-        android:id="@id/iv_place_collection"
-        android:background="@drawable/placeholder_collections"
-        android:visibility="visible"
+        android:id="@+id/iv_place_tag"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
         android:layout_marginTop="20.0dip"
-        android:layout_marginRight="15.0dip"/>
+        android:background="@drawable/placeholder_collections"
+        android:visibility="visible"/>
 
-    <com.baiji.jianshu.view.flowlayout.TagFlowLayout
-        android:id="@id/tag_flow_layout"
-        android:visibility="gone"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tag_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="110dip"
         android:layout_marginLeft="10.0dip"
-        android:layout_marginTop="20.0dip"
         android:layout_marginRight="10.0dip"
-        android:layout_marginBottom="-20.0dip"
-        zhy:max_select="-1"/>
+        android:layout_marginTop="20.0dip"
+        android:visibility="gone"
+        tools:listitem="@layout/textview2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="2.0dip"
+            android:layout_height="15.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15.0dip"
+            android:background="@color/theme_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="7.0dip"
+            android:paddingRight="15.0dip"
+            android:text="@string/title_hot"
+            android:textColor="@color/gray500"
+            android:textSize="13.0sp"/>
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="1.0"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/icon_discover_custom"
+            android:drawablePadding="7.0dip"
+            android:gravity="center"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="20.0dip"
+            android:text="@string/title_contribute"
+            android:textColor="@color/gray500"
+            android:textSize="13.0sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+    </LinearLayout>
 </LinearLayout>

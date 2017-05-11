@@ -11,71 +11,29 @@
         <item name="android:windowBackground">@android:color/background_light</item>
         <item name="android:windowIsTranslucent">false</item>
     </style>
-
-
-
     <style name="CustomCirclePageIndicator">
-        <item name="centered">true</item>
-        <item name="strokeWidth">2.0dip</item>
-        <item name="fillColor">#ff888888</item>
-        <item name="radius">10.0dip</item>
-        <item name="strokeColor">#ff000000</item>
+        <item name="rci_selectColor">@color/white</item>
+        <item name="rci_strokeColor">@color/white</item>
+        <item name="rci_strokeWidth">1dip</item>
+        <item name="rci_unselectColor">@color/transparent</item>
+        <item name="rci_width">8dip</item>
+        <item name="rci_height">8dip</item>
+        <item name="rci_cornerRadius">4dip</item>
+        <item name="rci_gap">6dip</item>
     </style>
-    <style name="CustomLinePageIndicator">
-        <item name="selectedColor">#ff880000</item>
-        <item name="strokeWidth">4.0dip</item>
-        <item name="unselectedColor">#ff888888</item>
-        <item name="lineWidth">30.0dip</item>
+    <style name="CustomCirclePageIndicator.Dark">
+        <item name="rci_selectColor">@color/white</item>
+        <item name="rci_strokeColor">@color/white</item>
+        <item name="rci_strokeWidth">1dip</item>
+        <item name="rci_unselectColor">@color/transparent</item>
+        <item name="rci_width">8dip</item>
+        <item name="rci_height">8dip</item>
+        <item name="rci_cornerRadius">4dip</item>
+        <item name="rci_gap">6dip</item>
     </style>
-    <style name="CustomTabPageIndicator" parent="@style/Widget.TabPageIndicator">
-        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
-        <item name="android:textSize">16.0sp</item>
-        <item name="android:textColor">@drawable/selector_color_theme_gray</item>
-        <item name="android:textColorHighlight">@color/theme_color</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">?viewpager_indicator_bg</item>
-        <item name="android:paddingLeft">8.0dip</item>
-        <item name="android:paddingTop">12.0dip</item>
-        <item name="android:paddingRight">8.0dip</item>
-        <item name="android:paddingBottom">12.0dip</item>
-        <item name="android:fadingEdge">horizontal</item>
-        <item name="android:fadingEdgeLength">8.0dip</item>
-        <item name="android:showDividers">middle</item>
-        <item name="android:dividerPadding">4.0dip</item>
-    </style>
-    <style name="CustomTabPageIndicator.Text" parent="@android:style/TextAppearance.Medium">
-        <item name="android:typeface">monospace</item>
-    </style>
-    <style name="CustomTitlePageIndicator">
-        <item name="android:textColor">#aa000000</item>
-        <item name="android:background">#18ff0000</item>
-        <item name="selectedColor">#ff000000</item>
-        <item name="footerColor">#ffaa2222</item>
-        <item name="footerLineHeight">1.0dip</item>
-        <item name="footerIndicatorStyle">underline</item>
-        <item name="footerIndicatorHeight">3.0dip</item>
-        <item name="selectedBold">true</item>
-    </style>
-    <style name="CustomUnderlinePageIndicator">
-        <item name="android:background">#ffcccccc</item>
-        <item name="selectedColor">#ffcc0000</item>
-        <item name="fadeDelay">1000</item>
-        <item name="fadeLength">1000</item>
-    </style>
-    <style name="StyledIndicators" parent="@style/Base.V7.Theme.AppCompat.Light">
-        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
-        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
-        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
-        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
-        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
-    </style>
-    <style name="StyledIndicators.Dark" parent="@style/Base.V7.Theme.AppCompat">
-        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
-        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
-        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
-        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
-        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
-    </style>
+
+
+
     <style name="DropdownPopupWindow" parent="@android:style/Widget.ListPopupWindow">
         <item name="android:popupBackground">@drawable/dropdown_popup_background</item>
     </style>

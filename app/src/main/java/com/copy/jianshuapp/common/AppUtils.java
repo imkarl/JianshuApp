@@ -3,6 +3,7 @@ package com.copy.jianshuapp.common;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Looper;
 
 import com.copy.jianshuapp.JSApplication;
 import com.copy.jianshuapp.modellayer.local.db.AccountDao;
@@ -59,6 +60,13 @@ public class AppUtils {
         ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
         return ni != null && ni.isConnected();
+    }
+
+    /**
+     * 当前线程是否为主线程
+     */
+    public static boolean isMainThread() {
+        return Looper.myLooper() == Looper.getMainLooper();
     }
 
 }

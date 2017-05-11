@@ -41,7 +41,7 @@
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:id="@id/menu_share"
+        android:id="@+id/menu_share"
         android:paddingLeft="10.0dip"
         android:layout_width="fill_parent"
         android:layout_height="50.0dip">
@@ -69,7 +69,7 @@
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:id="@id/menu_edit"
+        android:id="@+id/menu_edit"
         android:paddingLeft="10.0dip"
         android:layout_width="fill_parent"
         android:layout_height="50.0dip">
@@ -182,7 +182,7 @@
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:id="@id/menu_submission"
+        android:id="@+id/menu_submission"
         android:paddingLeft="10.0dip"
         android:layout_width="fill_parent"
         android:layout_height="50.0dip">
@@ -239,7 +239,7 @@
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:id="@id/menu_report"
+        android:id="@+id/menu_report"
         android:paddingLeft="10.0dip"
         android:layout_width="fill_parent"
         android:layout_height="50.0dip">

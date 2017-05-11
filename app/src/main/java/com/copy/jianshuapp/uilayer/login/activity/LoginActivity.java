@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.copy.jianshuapp.R;
-import com.copy.jianshuapp.common.AppUtils;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
 import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
 import com.copy.jianshuapp.uilayer.login.fragment.LoginFragment;
 import com.copy.jianshuapp.uilayer.login.fragment.RegisterFragment;
+import com.copy.jianshuapp.utils.pair.KeyValuePair;
 
 /**
  * 用户登录
@@ -21,15 +21,11 @@ public class LoginActivity extends BaseActivity {
     private static final int TYPE_LOGIN = 1;
     private static final int TYPE_REGISTER = 2;
 
-    public static Intent launchLogin() {
-        Intent intent = new Intent(AppUtils.getContext(), LoginActivity.class);
-        intent.putExtra(EXTRA_TYPE, TYPE_LOGIN);
-        return intent;
+    public static void launchLogin() {
+        startActivity(LoginActivity.class, new KeyValuePair<>(EXTRA_TYPE, TYPE_LOGIN));
     }
-    public static Intent launchRegister() {
-        Intent intent = new Intent(AppUtils.getContext(), LoginActivity.class);
-        intent.putExtra(EXTRA_TYPE, TYPE_REGISTER);
-        return intent;
+    public static void launchRegister() {
+        startActivity(LoginActivity.class, new KeyValuePair<>(EXTRA_TYPE, TYPE_REGISTER));
     }
 
     private int mLoginType;
@@ -55,6 +51,11 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
+    public boolean isSupportSwipeBack() {
+        return false;
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(EXTRA_TYPE, this.mLoginType);
@@ -62,7 +63,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(MainActivity.launch());
+        MainActivity.launch();
         super.onBackPressed();
     }
 

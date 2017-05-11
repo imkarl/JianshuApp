@@ -1,16 +1,10 @@
 package com.copy.jianshuapp.exception;
 
-import com.copy.jianshuapp.modellayer.model.NoBody;
-import com.copy.jianshuapp.modellayer.remote.JSResponse;
-import com.copy.jianshuapp.modellayer.remote.RemoteManager;
 import com.google.gson.JsonElement;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 
 /**
  * JSON解析异常
- * @version imkarl 2016-08
+ * @version imkarl 2017-05
  */
 public class JsonParserException extends Exception {
 
@@ -30,21 +24,7 @@ public class JsonParserException extends Exception {
 
     @Override
     public String getDescription() {
-        String description;
-
-        // 获取响应结果
-        NoBody response = null;
-        try {
-            response = getResponse(new TypeToken<NoBody>() {}.getType());
-        } catch (Throwable ignored) { }
-
-        if (response != null) {
-            description = response.getErrorDescription();
-        } else {
-            description = getMessage();
-        }
-
-        return description;
+        return "JSON解析异常";
     }
 
     @Override
@@ -52,11 +32,8 @@ public class JsonParserException extends Exception {
         return super.toString() + "\n\tjson: " + json;
     }
 
-    public JsonElement getJson() {
+    public JsonElement json() {
         return json;
-    }
-    public <T extends JSResponse> T getResponse(Type type) {
-        return RemoteManager.getInstance().gson().fromJson(json, type);
     }
 
 }

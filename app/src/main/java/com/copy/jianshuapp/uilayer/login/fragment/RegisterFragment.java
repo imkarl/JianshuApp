@@ -164,7 +164,15 @@ public class RegisterFragment extends BaseFragment implements View.OnFocusChange
         });
 
         // 跳转到登录
-        mBtnLogin.setOnClickListener(v -> ((LoginActivity)getActivity()).showLoginFragment());
+        RxView.clicks(mBtnLogin)
+                .throttleFirst(500, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(it -> ((LoginActivity)getActivity()).showLoginFragment());
+        // 跳转到主界面
+        RxView.clicks(mTvGoMainpage)
+                .throttleFirst(500, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(it -> getActivity().onBackPressed());
 
         // 注册按钮
         RxView.clicks(mBtnRegister1)

@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-              android:id="@id/view_root"
-              android:background="?press_selector"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/view_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?press_selector"
+    android:orientation="vertical">
 
     <View
         android:id="@id/top_line"
-        android:background="?listview_divider"
         android:layout_width="fill_parent"
-        android:layout_height="0.39999998dip"/>
+        android:layout_height="0.39999998dip"
+        android:background="?listview_divider"/>
 
     <TextView
-        android:textColor="?gray500"
-        android:gravity="center_vertical"
         android:id="@id/note_book_root"
-        android:paddingLeft="15.0dip"
-        android:paddingRight="15.0dip"
         android:layout_width="fill_parent"
         android:layout_height="44.0dip"
+        android:drawableRight="@drawable/gywm_icon_tiaozhuan"
+        android:gravity="center_vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
         android:text="@string/associated_notebook"
-        android:drawableRight="@drawable/gywm_icon_tiaozhuan"/>
+        android:textColor="?gray500"/>
 </LinearLayout>

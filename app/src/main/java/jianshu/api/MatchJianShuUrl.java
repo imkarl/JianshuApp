@@ -1,6 +1,5 @@
 package jianshu.api;
 
-import android.content.Context;
 import android.net.Uri;
 
 import com.copy.jianshuapp.common.LogUtils;
@@ -10,12 +9,9 @@ import com.copy.jianshuapp.common.ObjectUtils;
  * @version JianShu 2017-03
  */
 public class MatchJianShuUrl {
-    public static boolean matchUrl(String url, Context context) {
-        return matchUrl(url, context, null);
-    }
 
-    public static boolean matchUrl(String url, Context context, String from) {
-        LogUtils.d("matchUrl : url = " + url);
+    public static boolean isUrl(String url) {
+        LogUtils.d("isUrl : url = " + url);
         if (ObjectUtils.isEmpty(url)) {
             return false;
         }
@@ -32,12 +28,12 @@ public class MatchJianShuUrl {
         String path = uri.getPath();
         LogUtils.d("scheme = " + scheme + " host = " + host + " path = " + path + " auth = " + uri.getAuthority());
         if ("jianshu".equalsIgnoreCase(scheme)) {
-            return matchUrl(host, path, context, from);
+            return isUrl(host, path);
         }
-        return isHttp(host, path, context, from);
+        return isHttp(host, path);
     }
 
-    private static boolean matchUrl(String host, String path, Context context, String from) {
+    private static boolean isUrl(String host, String path) {
         if (ObjectUtils.isEmpty(host) || ObjectUtils.isEmpty(path)) {
             return false;
         }
@@ -85,7 +81,7 @@ public class MatchJianShuUrl {
 //        }
     }
 
-    private static boolean isHttp(String host, String path, Context context, String from) {
+    private static boolean isHttp(String host, String path) {
 
         // FIXME: 17/3/10 待恢复
         return true;

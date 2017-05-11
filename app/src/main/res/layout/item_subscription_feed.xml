@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@id/enter_of_dynamic"
-                android:layout_width="fill_parent"
-                android:layout_height="72.0dip"
-                android:background="?press_selector">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/subscribe_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?press_selector">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@id/img_icon_feed"
-        android:layout_width="40.0dip"
-        android:layout_height="40.0dip"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="16.0dip"
-        android:src="@drawable/icon_friend_circle"
-        app:riv_border_width="0.0dip"
-        app:riv_oval="true"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="72.0dip">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@id/img_icon_feed"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16.0dip"
+            android:src="@drawable/icon_friend_circle"
+            app:riv_border_width="0.0dip"
+            app:riv_oval="true"/>
 
-    <TextView
-        android:id="@id/label_dynamic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="16.0dip"
-        android:layout_toRightOf="@id/img_icon_feed"
-        android:gravity="center_vertical"
-        android:singleLine="true"
-        android:text="@string/jian_you_dong_tai"
-        android:textColor="?color_2f_b1"
-        android:textSize="16.0sp"/>
+        <TextView
+            android:id="@id/label_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16.0dip"
+            android:layout_toRightOf="@id/img_icon_feed"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/jian_you_dong_tai"
+            android:textColor="?color_2f_b1"
+            android:textSize="16.0sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="20.0dip"
-        android:background="@drawable/shape_oval_16_frame_theme"
-        android:gravity="center"
-        android:paddingLeft="4.0dip"
-        android:paddingRight="4.0dip"
-        android:text="NEW!"
-        android:textColor="#ffffffff"
-        android:textSize="12.0sp"
-        android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:background="@drawable/shape_oval_16_frame_theme"
+            android:gravity="center"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:text="NEW!"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
 
-    <ImageView
-        android:id="@id/img_feed_unread"
-        android:layout_width="8.0dip"
-        android:layout_height="8.0dip"
-        android:layout_alignTop="@id/label_dynamic"
-        android:layout_marginLeft="4.0dip"
-        android:layout_toRightOf="@id/label_dynamic"
-        android:src="?tips_bg"
-        android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/img_feed_unread"
+            android:layout_width="8.0dip"
+            android:layout_height="8.0dip"
+            android:layout_alignTop="@id/label_dynamic"
+            android:layout_marginLeft="4.0dip"
+            android:layout_toRightOf="@id/label_dynamic"
+            android:src="?tips_bg"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+    </RelativeLayout>
 
     <View
-        android:id="@id/line"
+        android:id="@id/item_divider"
         android:layout_width="fill_parent"
         android:layout_height="0.39999998dip"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
         android:background="?listview_divider"/>
-</RelativeLayout>
+
+</FrameLayout>

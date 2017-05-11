@@ -2,9 +2,7 @@ package com.copy.jianshuapp.uilayer;
 
 import android.os.Bundle;
 
-import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.AppUtils;
-import com.copy.jianshuapp.common.statusbar.StatusBarCompat;
 import com.copy.jianshuapp.modellayer.local.SettingsUtils;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
 import com.copy.jianshuapp.uilayer.guide.GuideActivity;
@@ -24,7 +22,6 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusBarCompat.setColorRes(this, R.color.white);
 
         Observable.timer(500, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -39,19 +36,24 @@ public class SplashActivity extends BaseActivity {
                             // 判断是否有登录或注册成功过
                             if (SettingsUtils.getBoolean(SettingsUtils.HAS_LOGIN)
                                     || SettingsUtils.getBoolean(SettingsUtils.HAS_REGIST)) {
-                                startActivity(LoginActivity.launchLogin());
+                                LoginActivity.launchLogin();
                             } else {
-                                startActivity(LoginActivity.launchRegister());
+                                LoginActivity.launchRegister();
                             }
                         }
                     } else {
                         // 引导页
                         SettingsUtils.put(SettingsUtils.HAS_SHOW_GUIDE, true);
-                        startActivity(GuideActivity.class);
+                        GuideActivity.launch();
                     }
 
                     super.finish();
                 });
+    }
+
+    @Override
+    public boolean isSupportSwipeBack() {
+        return false;
     }
 
 }

@@ -1,82 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/item_root"
-                android:background="?press_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/sort_item_height"
-                xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/item_root"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/sort_item_height"
+    android:background="?press_selector">
 
     <ImageView
         android:id="@id/image_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="14.0dip"
-        android:layout_centerVertical="true"/>
+        tools:src="@drawable/image_talk"
+        />
 
     <LinearLayout
-        android:gravity="center_vertical"
-        android:orientation="vertical"
         android:id="@id/l_other"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="14.0dip"
         android:layout_toRightOf="@id/image_left"
-        android:layout_centerVertical="true">
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <TextView
-            android:textSize="16.0sp"
-            android:textColor="?text_color_1"
-            android:gravity="center_vertical"
             android:id="@id/txt_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginRight="16.0dip"
-            android:text=""
-            android:singleLine="true"
             android:drawablePadding="10.0dip"
-            android:layout_centerVertical="true"/>
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="?text_color_1"
+            android:textSize="16.0sp"
+            tools:text="文本内容"/>
 
         <TextView
-            android:textSize="12.0sp"
-            android:textColor="@color/gray"
             android:id="@id/txt_subhead"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginRight="100.0dip"
-            android:singleLine="true"
             android:layout_toRightOf="@id/other_stub"
-            android:layout_centerVertical="true"/>
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="12.0sp"
+            android:visibility="gone"
+            tools:text="文本内容"
+            tools:visibility="visible"/>
     </LinearLayout>
 
     <ImageView
         android:id="@id/image_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20.0dip"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:layout_margin="20.0dip"
+        tools:src="@drawable/icon_arrow_open"/>
 
     <TextView
-        android:textSize="8.0sp"
-        android:textColor="@color/white"
-        android:gravity="center"
         android:id="@id/txt_unread_count"
-        android:background="@drawable/shap_oval"
-        android:visibility="gone"
         android:layout_width="16.0dip"
         android:layout_height="16.0dip"
-        android:layout_marginRight="20.0dip"
-        android:singleLine="true"
-        android:maxLength="3"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/shap_oval"
+        android:gravity="center"
+        android:maxLength="3"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="8.0sp"
+        android:visibility="gone"
+        tools:text="999"
+        tools:visibility="visible"/>
 
     <View
         android:id="@id/bottom_line"
-        android:background="?listview_divider"
         android:layout_width="fill_parent"
         android:layout_height="0.39999998dip"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="14.0dip"
         android:layout_marginRight="14.0dip"
-        android:layout_alignParentBottom="true"/>
+        android:background="?listview_divider"/>
+
 </RelativeLayout>

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@id/menu_more"
+        android:id="@+id/menu_more"
         android:icon="@drawable/zw_icon_more"
         android:title="@string/load_more"
         app:showAsAction="always"/>

@@ -1,6 +1,5 @@
 package com.copy.jianshuapp.modellayer.model;
 
-import com.copy.jianshuapp.modellayer.remote.JSResponse;
 import com.google.gson.annotations.SerializedName;
 import com.litesuits.orm.db.annotation.Column;
 import com.litesuits.orm.db.annotation.PrimaryKey;
@@ -14,7 +13,7 @@ import java.util.List;
  * @version imkarl 2017-04
  */
 @Table("t_account")
-public class Account extends JSResponse {
+public class Account {
 
     @PrimaryKey(AssignType.BY_MYSELF)
     @Column("id")
@@ -80,7 +79,6 @@ public class Account extends JSResponse {
                 ", is_newly_registered=" + is_newly_registered +
                 ", accesses=" + accesses +
                 ", public_snses=" + public_snses +
-                ", error=" + getErrors() +
                 '}';
     }
 

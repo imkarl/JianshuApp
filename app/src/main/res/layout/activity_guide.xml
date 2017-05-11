@@ -14,14 +14,17 @@
         android:layout_weight="1"
         />
 
-    <com.viewpagerindicator.CirclePageIndicator
+    <com.copy.jianshuapp.uilayer.widget.indicator.CirclePageIndicator
         android:id="@id/indicator"
-        android:layout_width="wrap_content"
+        style="?CirclePageIndicator"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingLeft="10.0dip"
         android:paddingRight="10.0dip"
-        app:fillColor="#ffe78170"/>
+        app:rci_selectColor="#ffe78170"
+        app:rci_strokeColor="@color/grey300"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"

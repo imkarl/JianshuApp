@@ -110,7 +110,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/tab_dynamic"
+        android:id="@+id/tab_notification"
         android:layout_width="0.0dip"
         android:layout_height="fill_parent"
         android:layout_weight="1.0"

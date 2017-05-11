@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/frame_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?common_bg_white_black">
+
+    <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
+        android:id="@id/swipe_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:listitem="@layout/layout_banner"/>
+    </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:id="@id/view_status_height"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:background="?view_status_bar_bg_lollipop"/>
+
+        <LinearLayout
+            android:id="@id/ll_search_mini"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:background="?common_bg_white_black"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:background="@color/grey100"/>
+
+        <View
+            android:id="@+id/the_bottom_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.20000005dip"
+            android:background="?listview_divider"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/ll_search_right"
+        android:layout_width="114dip"
+        android:layout_height="30dip"
+        android:layout_gravity="end"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="3.0dip"
+        android:background="@drawable/shape_search_mini"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"/>
+
+        <TextView
+            android:id="@id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="6.0dip"
+            android:gravity="center_vertical"
+            android:maxEms="2"
+            android:maxLines="1"
+            android:text="@string/hint_search_home"
+            android:textColor="@color/gray400"
+            android:textSize="14.0sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/relative_editor_exception"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_top_bar"
+        android:background="@color/theme_color_half2"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="11.0dip"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableLeft="@drawable/img_write_crash"
+            android:drawablePadding="10.0dip"
+            android:text="@string/prompt_editor_exception"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@id/img_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11.0dip"
+            android:clickable="true"
+            android:padding="10.0dip"
+            android:src="@drawable/button_close_white"/>
+    </LinearLayout>
+</FrameLayout>

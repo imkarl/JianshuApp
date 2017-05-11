@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@id/title_bar_root"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -32,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="@string/guan_zhu"
+                android:text="@string/all_follow"
                 android:textColor="?color_2f_b1"
                 android:textSize="16.0sp"/>
 
@@ -77,8 +78,15 @@
             android:background="?listview_divider"/>
     </RelativeLayout>
 
-    <FrameLayout
-        android:id="@id/subscribe_content"
+    <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
+        android:id="@+id/srl_content"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
+        android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_following_pushing"
+            />
+    </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
 </LinearLayout>

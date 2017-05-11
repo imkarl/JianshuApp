@@ -1,6 +1,6 @@
 package com.copy.jianshuapp.modellayer.model;
 
-import com.copy.jianshuapp.modellayer.remote.JSResponse;
+import com.copy.jianshuapp.modellayer.enums.SubscriptionType;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  * 包含所有的订阅列表
  * @version imkarl 2017-04
  */
-public class SubscriptionListEntity extends JSResponse {
+public class SubscriptionListEntity {
     @SerializedName("total_unread_count")
     private int totalUnreadCount;
     @SerializedName("enable_subscription_push")
@@ -62,18 +62,36 @@ public class SubscriptionListEntity extends JSResponse {
     }
 
     public static class Subscription {
+        @SerializedName("id")
         private int id;
+        @SerializedName("source_identity")
         private String source_identity;
         @SerializedName("last_updated_at")
         private int lastUpdatedTime;
+        @SerializedName("name")
         private String name;
         @SerializedName("latest_note_title")
         private String newNoteTitle;
+        @SerializedName("image")
         private String image;
         @SerializedName("unread_count")
         private int unreadCount;
         @SerializedName("enable_push")
         private boolean enablePush;
+
+        public SubscriptionType getSubscriptionType() {
+            SubscriptionType type = null;
+            if (source_identity.contains("collection")) {
+                type = SubscriptionType.collection;
+            } else if (source_identity.contains("notebook")) {
+                type = SubscriptionType.notebook;
+            } else if (source_identity.contains("user")) {
+                type = SubscriptionType.user;
+            } else if (source_identity.contains("push")) {
+                type = SubscriptionType.push;
+            }
+            return type;
+        }
 
         @Override
         public String toString() {

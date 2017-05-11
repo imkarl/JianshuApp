@@ -35,7 +35,7 @@ public class DeviceInfo {
         if (TextUtils.isEmpty(uniqueId)) {
             synchronized (DeviceInfo.class) {
                 if (TextUtils.isEmpty(uniqueId)) {
-                    String uuid = SettingsUtils.getString(SettingsUtils.GUID);
+                    String uuid = SettingsUtils.getString(SettingsUtils.UNIQUE_ID);
                     if (TextUtils.isEmpty(uuid)) {
                         uuid = getDeviceId();
                     }
@@ -51,7 +51,7 @@ public class DeviceInfo {
                     uniqueId = uuid;
 
                     if (!TextUtils.isEmpty(uuid)) {
-                        SettingsUtils.put(SettingsUtils.GUID, uuid);
+                        SettingsUtils.put(SettingsUtils.UNIQUE_ID, uuid);
                     }
                 }
             }

@@ -2,10 +2,9 @@ package com.copy.jianshuapp.modellayer.remote;
 
 import com.copy.jianshuapp.JSApi;
 import com.copy.jianshuapp.common.FileManager;
-import com.copy.jianshuapp.common.FileUtils;
 import com.copy.jianshuapp.common.VersionChannel;
-import com.copy.jianshuapp.modellayer.remote.interceptors.HeaderInterceptor;
 import com.copy.jianshuapp.modellayer.remote.interceptors.LoggingInterceptor;
+import com.copy.jianshuapp.modellayer.remote.interceptors.UnifiedParameterInterceptor;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.CustomCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.CustomGsonConverterFactory;
 
 /**
@@ -50,7 +49,7 @@ public class RemoteManager {
                 .connectTimeout(HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
                 .writeTimeout(HTTP_WRITE_TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(HTTP_READ_TIMEOUT, TimeUnit.SECONDS)
-                .addInterceptor(new HeaderInterceptor());
+                .addInterceptor(new UnifiedParameterInterceptor());
         if (!VersionChannel.isStable()) {
             httpClientBuilder.addInterceptor(new LoggingInterceptor());
             httpClientBuilder.hostnameVerifier((hostname, session) -> true);
@@ -72,7 +71,7 @@ public class RemoteManager {
                 .baseUrl(API_HOST_URL)
                 .client(httpClient)
                 .addConverterFactory(CustomGsonConverterFactory.create(gson))
-                .addCallAdapterFactory(CustomCallAdapterFactory.create());
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create());
         retrofit = retrofitBuilder.build();
 
         // TODO 支持缓存功能

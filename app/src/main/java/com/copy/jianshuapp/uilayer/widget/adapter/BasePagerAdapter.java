@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.copy.jianshuapp.common.AppUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,24 +28,15 @@ public class BasePagerAdapter extends PagerAdapter {
         this.views = Arrays.asList(views);
     }
 
-    public BasePagerAdapter(LayoutInflater inflater, @LayoutRes int... views) {
+    public BasePagerAdapter(Context context, @LayoutRes Integer... layoutIds) {
+        this(context, Arrays.asList(layoutIds));
+    }
+    public BasePagerAdapter(Context context, List<Integer> layoutIds) {
         this.views = new ArrayList<>();
-        for (int layoutId : views) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        for (int layoutId : layoutIds) {
             this.views.add(inflater.inflate(layoutId, null));
         }
-    }
-    public BasePagerAdapter(LayoutInflater inflater, List<Integer> views) {
-        this.views = new ArrayList<>();
-        for (int layoutId : views) {
-            this.views.add(inflater.inflate(layoutId, null));
-        }
-    }
-
-    public BasePagerAdapter(Context context, @LayoutRes int... views) {
-        this(LayoutInflater.from(context), views);
-    }
-    public BasePagerAdapter(Context context, List<Integer> views) {
-        this(LayoutInflater.from(context), views);
     }
 
     @Override

@@ -28,6 +28,8 @@ public class BaseFragment extends RxFragment {
 
     private View mRootView;
 
+    private FragmentManagerHelper mFragmentManagerHelper = new FragmentManagerHelper(this);
+
     @Deprecated
     @Override
     public void onAttach(Activity activity) {
@@ -36,6 +38,10 @@ public class BaseFragment extends RxFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+    }
+
+    public Context getContext() {
+        return this.getActivity();
     }
 
     @Nullable
@@ -74,6 +80,14 @@ public class BaseFragment extends RxFragment {
 
     public View findViewById(@IdRes int viewId) {
         return mRootView.findViewById(viewId);
+    }
+
+
+    public FragmentManagerHelper getFragmentHelper() {
+        return mFragmentManagerHelper;
+    }
+    public FragmentTransactionHelper beginTransaction() {
+        return new FragmentTransactionHelper(mFragmentManagerHelper);
     }
 
 }

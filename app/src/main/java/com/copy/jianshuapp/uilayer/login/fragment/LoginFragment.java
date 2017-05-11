@@ -3,9 +3,7 @@ package com.copy.jianshuapp.uilayer.login.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.InputType;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,7 +22,6 @@ import com.copy.jianshuapp.uilayer.base.BaseFragment;
 import com.copy.jianshuapp.uilayer.login.activity.LoginActivity;
 import com.copy.jianshuapp.uilayer.widget.dialog.Alerts;
 import com.copy.jianshuapp.utils.CheckFormatUtils;
-import com.copy.jianshuapp.utils.ToastUtils;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.makeramen.roundedimageview.RoundedImageView;
 
@@ -133,7 +130,15 @@ public class LoginFragment extends BaseFragment
         });
 
         // 跳转到注册
-        mBtnRegister.setOnClickListener(v -> ((LoginActivity)getActivity()).showRegisterFragment());
+        RxView.clicks(mBtnRegister)
+                .throttleFirst(500, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(it -> ((LoginActivity)getActivity()).showRegisterFragment());
+        // 跳转到主界面
+        RxView.clicks(mTvGoMainpage)
+                .throttleFirst(500, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(it -> getActivity().onBackPressed());
 
         // 登录
         RxView.clicks(mBtnLogin)

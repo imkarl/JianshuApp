@@ -4,8 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-
-    <com.baiji.jianshu.widget.JSSwipeRefreshLayout
+    <com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout
         android:id="@id/refresh_submit_notes"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -17,5 +16,5 @@
             android:divider="?listview_divider"
             android:dividerHeight="0.39999998dip"
             android:listSelector="?press_selector"/>
-    </com.baiji.jianshu.widget.JSSwipeRefreshLayout>
+    </com.copy.jianshuapp.uilayer.widget.JSSwipeRefreshLayout>
 </LinearLayout>

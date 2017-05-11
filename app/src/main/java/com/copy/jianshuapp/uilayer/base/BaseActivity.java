@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.copy.jianshuapp.R;
+import com.copy.jianshuapp.common.ActivityLifcycleManager;
+import com.copy.jianshuapp.common.BundleUtils;
 import com.copy.jianshuapp.common.statusbar.StatusBarCompat;
 import com.copy.jianshuapp.common.statusbar.StatusBarStyle;
 import com.copy.jianshuapp.modellayer.local.SettingsUtils;
@@ -23,7 +25,7 @@ import com.copy.jianshuapp.utils.pair.KeyValuePair;
  * @author alafighting 2016-01-19
  * @author imkarl 2017-03
  */
-public class BaseActivity extends RxLifecycleActivity {
+public class BaseActivity extends SwipebackActivity {
 
     private FragmentManagerHelper mFragmentManagerHelper = new FragmentManagerHelper(this);
 
@@ -41,14 +43,12 @@ public class BaseActivity extends RxLifecycleActivity {
      * @param params Intent传参
      */
     @SafeVarargs
-    public final void startActivity(Class<? extends Activity> targetActivity, KeyValuePair<String, String>... params) {
-        Intent intent = new Intent(this, targetActivity);
-        if (params != null && params.length > 0) {
-            for (KeyValuePair<String, String> pair : params) {
-                intent.putExtra(pair.getKey(), pair.getValue());
-            }
-        }
-        this.startActivity(intent);
+    public static void startActivity(Class<? extends Activity> targetActivity, KeyValuePair<String, ?>... params) {
+        Context context = ActivityLifcycleManager.get().current();
+        Intent intent = new Intent(context, targetActivity);
+        Bundle bundle = BundleUtils.toBundle(params);
+        intent.putExtras(bundle);
+        context.startActivity(intent);
     }
 
     @SuppressWarnings("unchecked")

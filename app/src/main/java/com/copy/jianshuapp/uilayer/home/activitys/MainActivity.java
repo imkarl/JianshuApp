@@ -12,14 +12,13 @@ import android.widget.TextView;
 
 import com.copy.jianshuapp.R;
 import com.copy.jianshuapp.common.AppUtils;
-import com.copy.jianshuapp.common.LogUtils;
-import com.copy.jianshuapp.modellayer.model.Account;
-import com.copy.jianshuapp.modellayer.repository.SubscriptionRepository;
 import com.copy.jianshuapp.uilayer.base.BaseActivity;
-import com.copy.jianshuapp.uilayer.home.fragments.DiscoverFragment;
+import com.copy.jianshuapp.uilayer.editor.EditorActivity;
+import com.copy.jianshuapp.uilayer.home.fragments.MeFragment;
 import com.copy.jianshuapp.uilayer.home.fragments.NotificationFragment;
 import com.copy.jianshuapp.uilayer.home.fragments.SubscriptionFragment;
-import com.copy.jianshuapp.uilayer.home.fragments.MeFragment;
+import com.copy.jianshuapp.uilayer.home.fragments.TrendFragment;
+import com.copy.jianshuapp.uilayer.login.activity.LoginActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,9 +29,8 @@ import butterknife.ButterKnife;
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    public static Intent launch() {
-        Intent intent = new Intent(AppUtils.getContext(), MainActivity.class);
-        return intent;
+    public static void launch() {
+        startActivity(MainActivity.class);
     }
 
     @Bind(R.id.container)
@@ -86,44 +84,60 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         hideAllFragment();
 
-        // 显示
-        showNavigations(AppUtils.getLoginAccount());
-
-        SubscriptionRepository.list().subscribe(it -> {
-            LogUtils.e(it);
-        }, err -> {
-            LogUtils.e(err);
-        });
-        LogUtils.e("account=" + AppUtils.getLoginAccount());
-
+        // 显示导航栏
+        showNavigations();
     }
 
-    public void showNavigations(Account account) {
-        if (account == null) {
-            this.mNavigationBarMain.setVisibility(View.GONE);
-            this.mNavigationBarSign.setVisibility(View.VISIBLE);
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
 
-            this.mNavigationBarSign.findViewById(R.id.tab_login).setOnClickListener(this);
-            this.mNavigationBarSign.findViewById(R.id.tab_register).setOnClickListener(this);
+        // 显示导航栏
+        showNavigations();
+    }
 
-            showFragment(DiscoverFragment.class);
-        } else {
+    @Override
+    public boolean isSupportSwipeBack() {
+        return false;
+    }
+
+    public void showNavigations() {
+        if (AppUtils.isLogin()) {
             this.mNavigationBarMain.setVisibility(View.VISIBLE);
             this.mNavigationBarSign.setVisibility(View.GONE);
 
             this.mNavigationBarMain.findViewById(R.id.tab_main_page).setOnClickListener(this);
             this.mNavigationBarMain.findViewById(R.id.tab_discover).setOnClickListener(this);
             this.mNavigationBarMain.findViewById(R.id.tab_writting).setOnClickListener(this);
-            this.mNavigationBarMain.findViewById(R.id.tab_dynamic).setOnClickListener(this);
+            this.mNavigationBarMain.findViewById(R.id.tab_notification).setOnClickListener(this);
             this.mNavigationBarMain.findViewById(R.id.tab_more).setOnClickListener(this);
 
             switchTab(this.mNavigationBarMain.findViewById(R.id.tab_main_page));
+        } else {
+            this.mNavigationBarMain.setVisibility(View.GONE);
+            this.mNavigationBarSign.setVisibility(View.VISIBLE);
+
+            this.mNavigationBarSign.findViewById(R.id.tab_login).setOnClickListener(this);
+            this.mNavigationBarSign.findViewById(R.id.tab_register).setOnClickListener(this);
+
+            showFragment(TrendFragment.class);
         }
     }
 
     @Override
     public void onClick(View view) {
-        switchTab(view);
+        switch (view.getId()) {
+            case R.id.tab_login:
+                LoginActivity.launchLogin();
+                break;
+            case R.id.tab_register:
+                LoginActivity.launchRegister();
+                break;
+
+            default:
+                switchTab(view);
+                break;
+        }
     }
 
     public void switchTab(View view) {
@@ -139,7 +153,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 setSelected(view);
                 mCurrentTab = id;
 
-                showFragment(DiscoverFragment.class);
+                showFragment(TrendFragment.class);
                 break;
             case R.id.tab_main_page:
                 setSelected(view);
@@ -149,12 +163,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.tab_writting:
                 setSelected(view);
-//                gotoEditor();
+                EditorActivity.launch();
                 final View lastView = findViewById(mCurrentTab);
                 mCurrentTab = id;
                 switchTab(lastView);
                 break;
-            case R.id.tab_dynamic:
+            case R.id.tab_notification:
                 setSelected(view);
                 mCurrentTab = id;
 
@@ -180,7 +194,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         getFragmentHelper()
                 .beginTransaction()
                 .hide(SubscriptionFragment.class)
-                .hide(DiscoverFragment.class)
+                .hide(TrendFragment.class)
                 .hide(NotificationFragment.class)
                 .hide(MeFragment.class)
                 .commit();

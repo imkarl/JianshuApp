@@ -79,10 +79,10 @@ dependencies {
     compile 'com.github.ImKarl:UrlBuilder:0.2'
 
     // image loader
-    compile 'com.facebook.fresco:fresco:1.0.0'
-    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.0.0'
-    compile 'com.facebook.fresco:animated-webp:1.0.0'
-    compile 'com.facebook.fresco:animated-gif:1.0.0'
+    compile 'com.facebook.fresco:fresco:1.3.0'
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.3.0'
+    compile 'com.facebook.fresco:animated-webp:1.3.0'
+    compile 'com.facebook.fresco:animated-gif:1.3.0'
 
     // weak handler
     compile 'com.badoo.mobile:android-weak-handler:1.1'
@@ -91,9 +91,12 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
 
     // custom views
-    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0@aar'
     compile 'com.owater.library:CircleTextViewlibrary:0.8.3'
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
 
     // image view
     compile 'com.github.chrisbanes:PhotoView:1.3.1'
@@ -102,17 +105,30 @@ dependencies {
     // webview
     compile 'cn.pedant.safewebviewbridge:library:1.4'
 
+    // recycler view
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.1.1'
+    compile 'com.github.nukc:LoadMoreWrapper:v1.6'
+    compile 'com.github.mcxtzhang:ZLayoutManager:V1.1.0'
+
+    // drawable
+    compile 'com.github.Hitomis:CrazyShadow:v1.0.1'
+
     // emoji
-    compile 'com.vanniktech:emoji-ios:0.4.0'
-    //compile 'com.vanniktech:emoji-one:0.4.0'
+    //compile 'com.vanniktech:emoji-ios:0.4.0'
+    compile 'com.vanniktech:emoji-one:0.4.0'
 
     // loading
     compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    compile 'com.github.ImKarl:WaitView:1.0'
 
     // dialog
-    compile 'com.github.imkarl.material-dialogs:core:v0.9.4.2_1'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    compile 'com.labo.kaji:relativepopupwindow:0.3.1'
 
     // common
     compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
+
+    // swipe back
+    compile 'cn.bingoogolapple:bga-swipebacklayout:1.0.8@aar'
 
 }

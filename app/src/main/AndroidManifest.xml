@@ -33,7 +33,8 @@
         android:icon="@mipmap/jianshu_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/theme_day">
+        android:theme="@style/theme_day"
+        android:networkSecurityConfig="@xml/network_security_config">
         <activity
             android:name=".uilayer.SplashActivity"
             android:screenOrientation="portrait"
@@ -47,24 +48,10 @@
         <activity
             android:name=".uilayer.guide.GuideActivity"
             android:screenOrientation="portrait"
-            />
-        <activity
-            android:name=".uilayer.home.activitys.MainActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/theme_day_opaque"
             />
         <activity
-            android:name=".uilayer.login.activity.LoginActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity
-            android:name=".uilayer.browser.BrowserActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-
-
-        <activity
-            android:name="com.jianshu.ui.main.MainActivity"
+            android:name=".uilayer.home.activitys.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -73,7 +60,6 @@
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-
                 <action android:name="android.intent.action.VIEW"/>
                 <data
                     android:host="homepage"
@@ -81,7 +67,67 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jianshu.ui.editor.EditorActivity"
+            android:name=".uilayer.login.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_day_opaque"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".uilayer.browser.BrowserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".uilayer.friend.circle.FriendCircleActivity"
+            android:label="@string/jian_you_dong_tai"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".uilayer.notebook.NotebookActivity"
+            android:label="@string/wen_ji"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:host="notebooks"
+                    android:scheme="jianshuapp"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uilayer.subject.CollectionActivity"
+            android:label="@string/zhuan_ti"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:host="collections"
+                    android:scheme="jianshuapp"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uilayer.user.UserPushingDetailActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uilayer.subscribe.add.AddSubscribeActivity"
+            android:label="@string/tian_jia_guan_zhu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".uilayer.trend.ArticleListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".uilayer.editor.EditorActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -91,6 +137,80 @@
                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".uilayer.user.UserCenterActivity"
+            android:label="@string/tab_user_center"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_day"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:host="users"
+                    android:scheme="jianshuapp"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uilayer.article.detail.ArticleDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:host="notes"
+                    android:scheme="jianshuapp"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uilayer.search.SearchActivity"
+            android:label="@string/sou_suo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity
+            android:name=".uilayer.recomend.SpecialRecommendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".uilayer.notify.NotifyDetailActivity"
+            android:label="@string/tong_zhi"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:host="notifications"
+                    android:scheme="jianshuapp"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uilayer.chat.ChatListActivity"
+            android:label="@string/jian_xin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".uilayer.social.SubmissionRequestActivity"/>
+        <activity
+            android:name=".uilayer.settings.SettingNotificationActivity"
+            android:label="@string/tui_song_tong_zhi"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+
+
         <activity
             android:name="com.jianshu.ui.editor.EditorActivityV19"
             android:label="@string/app_name"
@@ -123,25 +243,6 @@
             android:screenOrientation="locked"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
-            android:name="com.jianshu.activity.NotifyDetailActivity"
-            android:label="@string/tong_zhi"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="notifications"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.jianshu.activity.ChatListActivity"
-            android:label="@string/jian_xin"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name="com.jianshu.activity.ChatMessagesActivity"
             android:label="@string/dui_hua"
             android:screenOrientation="portrait"
@@ -173,70 +274,9 @@
             android:label="@string/all_follow"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.jianshu.ui.specialsubject.CollectionActivity"
-            android:label="@string/zhuan_ti"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="collections"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="c"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.jianshu.collection.CollectionCoEditorsListActivity"
             android:label="@string/edit_list"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.jianshu.search.views.SearchActivity"
-            android:label="@string/sou_suo"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateVisible"/>
-        <activity
-            android:name="com.jianshu.activity.UserCenterActivity"
-            android:label="@string/tab_user_center"
-            android:screenOrientation="portrait"
-            android:theme="@style/theme_day"
-            android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="users"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="u"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.jianshu.activity.FollowingActivity"
             android:label="@string/guan_zhu"
@@ -277,49 +317,12 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateVisible"/>
         <activity
-            android:name="com.jianshu.settings.SettingNotificationActivity"
-            android:label="@string/tui_song_tong_zhi"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity
             android:name="com.jianshu.activity.PushingSettingActivity"
             android:label="@string/follow_pushing_setting"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.jianshu.activity.UserPushingDetailActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.jianshu.activity.PushingSettingDetail"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.jianshu.notebook.NotebookActivity"
-            android:label="@string/wen_ji"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="notebooks"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="nb"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.jianshu.activity.SocialActivity"
             android:label="@string/she_jiao_zhan_hao"
@@ -376,11 +379,6 @@
             android:label="@string/about_tab_wetchat_account"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity
-            android:name="com.jianshu.subscribe.friend_circle.views.FriendCircleActivity"
-            android:label="@string/jian_you_dong_tai"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
         <activity
             android:name="com.jianshu.activity.EditNoteBookActivity"
             android:label="@string/eidt_note"
@@ -485,10 +483,6 @@
             android:label="@string/input_code_to_complete"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.jianshu.subscribe.add_subscribe.views.AddSubscribeActivity"
-            android:label="@string/tian_jia_guan_zhu"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name="com.jianshu.activity.SubmitToHomepageActivity"
             android:label="@string/submit_to_homepage"
             android:screenOrientation="portrait"/>
@@ -525,10 +519,6 @@
             android:windowSoftInputMode="adjustResize|stateVisible"/>
         <activity android:name="com.jianshu.auth.AuthShell"/>
         <activity android:name="com.jianshu.social.view.SubmissionDetailActivity"/>
-        <activity
-            android:name="com.jianshu.ui.discovery.views.ArticleListActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.jianshu.social.view.SubmissionRequestActivity"/>
 
         <receiver
             android:name="com.jianshu.receiver.SetAlarmManagerReceiver"
@@ -538,27 +528,6 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name="com.jianshu.ui.articledetail.ArticleDetailActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:hardwareAccelerated="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-            <intent-filter android:autoVerify="true">
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-                <data
-                    android:host="notes"
-                    android:scheme="jianshuapp"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.jianshu.ui.specialrecommend.SpecialRecommendActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name="com.jianshu.ui.main.CheckSumErrorActivity"
             android:screenOrientation="portrait"

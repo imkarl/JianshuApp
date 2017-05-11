@@ -18,6 +18,7 @@
     </style>
 
     <style name="theme_day" parent="@style/AppTheme">
+        <item name="CirclePageIndicator">@style/CustomCirclePageIndicator</item>
         <item name="PopupMenuStyle">@style/LightPopupMenuStyle</item>
         <item name="PopupMenuWithoutAnimStyle">@style/LightPopupMenuWithoutAnimStyle</item>
         <item name="attr_home_img_readmore">@drawable/home_img_readmore</item>
@@ -219,6 +220,7 @@
         <item name="gray900">@color/gray900</item>
     </style>
     <style name="theme_night" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="CirclePageIndicator">@style/CustomCirclePageIndicator.Dark</item>
         <item name="PopupMenuStyle">@style/DarkPopupMenuStyle</item>
         <item name="PopupMenuWithoutAnimStyle">@style/DarkPopupMenuWithoutAnimStyle</item>
         <item name="attr_home_img_readmore">@drawable/home_img_readmore_dark</item>

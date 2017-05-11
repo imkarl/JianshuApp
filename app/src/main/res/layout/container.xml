@@ -4,4 +4,6 @@
     android:id="@id/frame_root"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="?common_bg_light"/>
+    android:background="?common_bg_light"
+    android:fitsSystemWindows="true"
+    />

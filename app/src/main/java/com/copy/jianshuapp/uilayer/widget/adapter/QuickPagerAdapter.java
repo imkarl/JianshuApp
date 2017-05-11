@@ -20,7 +20,7 @@ import java.util.List;
  * @version imkarl 2017-03
  */
 public abstract class QuickPagerAdapter<T> extends PagerAdapter {
-    @IdRes private static final int TAG_VIEW_HOLDER = R.id.global_tag;
+    @IdRes private static final int TAG_VIEW_HOLDER = R.id.id_itemview_helper;
 
     private LinkedList<View> recycledViews = new LinkedList<>();
     private Context mContext;
@@ -111,6 +111,6 @@ public abstract class QuickPagerAdapter<T> extends PagerAdapter {
         return mContext;
     }
 
-    protected abstract void convert(ItemViewHelper helper, T data);
+    protected abstract void convert(ItemViewHelper helper, T entity);
 
 }

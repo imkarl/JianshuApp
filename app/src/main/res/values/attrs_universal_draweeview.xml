@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<declare-styleable name="UniversalDraweeView">
+
+        &lt;!&ndash; Fade duration in milliseconds. &ndash;&gt;
+        <attr name="fadeDuration" format="integer"/>
+
+        &lt;!&ndash; Aspect ratio (width / height) of the view, not necessarily of the images. &ndash;&gt;
+        <attr name="viewAspectRatio" format="float"/>
+
+        &lt;!&ndash; Image branches -
+        Scale-type values must match those in GenericDraweeHierarchyInflater.getScaleTypeFromXml.
+        (GenericDraweeHierarchyInflater.java).
+        For drawables that should not be scaled, such as those with the android:tileMode
+        attribute set, use the value 'none'. &ndash;&gt;
+
+        &lt;!&ndash; A drawable or color to be be used as a placeholder. &ndash;&gt;
+        <attr name="placeholderImage" format="reference"/>
+        &lt;!&ndash; Scale type of the placeholder image. Ignored if placeholderImage is not specified. &ndash;&gt;
+        &lt;!&ndash;<attr name="placeholderImageScaleType">&ndash;&gt;
+            &lt;!&ndash;<enum name="none" value="-1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitXY" value="0" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitStart" value="1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitCenter" value="2" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitEnd" value="3" />&ndash;&gt;
+            &lt;!&ndash;<enum name="center" value="4" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerInside" value="5" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerCrop" value="6" />&ndash;&gt;
+            &lt;!&ndash;<enum name="focusCrop" value="7" />&ndash;&gt;
+        &lt;!&ndash;</attr>&ndash;&gt;
+
+        &lt;!&ndash; A drawable to be be used as a retry image. &ndash;&gt;
+        <attr name="retryImage" format="reference"/>
+        &lt;!&ndash; Scale type of the retry image. Ignored if retryImage is not specified. &ndash;&gt;
+        &lt;!&ndash;<attr name="retryImageScaleType">&ndash;&gt;
+            &lt;!&ndash;<enum name="none" value="-1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitXY" value="0" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitStart" value="1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitCenter" value="2" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitEnd" value="3" />&ndash;&gt;
+            &lt;!&ndash;<enum name="center" value="4" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerInside" value="5" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerCrop" value="6" />&ndash;&gt;
+            &lt;!&ndash;<enum name="focusCrop" value="7" />&ndash;&gt;
+        &lt;!&ndash;</attr>&ndash;&gt;
+
+        &lt;!&ndash; A drawable to be be used as a failure image. &ndash;&gt;
+        <attr name="failureImage" format="reference"/>
+        &lt;!&ndash; Scale type of the failure image. Ignored if failureImage is not specified. &ndash;&gt;
+        &lt;!&ndash;<attr name="failureImageScaleType">&ndash;&gt;
+            &lt;!&ndash;<enum name="none" value="-1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitXY" value="0" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitStart" value="1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitCenter" value="2" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitEnd" value="3" />&ndash;&gt;
+            &lt;!&ndash;<enum name="center" value="4" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerInside" value="5" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerCrop" value="6" />&ndash;&gt;
+            &lt;!&ndash;<enum name="focusCrop" value="7" />&ndash;&gt;
+        &lt;!&ndash;</attr>&ndash;&gt;
+
+        &lt;!&ndash; A drawable to be be used as a progress bar. &ndash;&gt;
+        <attr name="progressBarImage" format="reference"/>
+        &lt;!&ndash; Scale type of the progress bar. Ignored if progressBarImage is not specified. &ndash;&gt;
+        &lt;!&ndash;<attr name="progressBarImageScaleType">&ndash;&gt;
+            &lt;!&ndash;<enum name="none" value="-1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitXY" value="0" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitStart" value="1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitCenter" value="2" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitEnd" value="3" />&ndash;&gt;
+            &lt;!&ndash;<enum name="center" value="4" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerInside" value="5" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerCrop" value="6" />&ndash;&gt;
+            &lt;!&ndash;<enum name="focusCrop" value="7" />&ndash;&gt;
+        &lt;!&ndash;</attr>&ndash;&gt;
+        &lt;!&ndash; Progress bar Auto Rotate interval in milliseconds &ndash;&gt;
+        <attr name="progressBarAutoRotateInterval" format="integer"/>
+
+        &lt;!&ndash; Scale type of the actual image. &ndash;&gt;
+        &lt;!&ndash;<attr name="actualImageScaleType">&ndash;&gt;
+            &lt;!&ndash;<enum name="none" value="-1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitXY" value="0" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitStart" value="1" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitCenter" value="2" />&ndash;&gt;
+            &lt;!&ndash;<enum name="fitEnd" value="3" />&ndash;&gt;
+            &lt;!&ndash;<enum name="center" value="4" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerInside" value="5" />&ndash;&gt;
+            &lt;!&ndash;<enum name="centerCrop" value="6" />&ndash;&gt;
+            &lt;!&ndash;<enum name="focusCrop" value="7" />&ndash;&gt;
+        &lt;!&ndash;</attr>&ndash;&gt;
+
+        &lt;!&ndash; A drawable or color to be used as a background. &ndash;&gt;
+        <attr name="backgroundImage" format="reference"/>
+
+        &lt;!&ndash; A drawable or color to be used as an overlay. &ndash;&gt;
+        <attr name="overlayImage" format="reference"/>
+
+        &lt;!&ndash; A drawable or color to be used as a pressed-state-overlay &ndash;&gt;
+        <attr name="pressedStateOverlayImage" format="reference"/>
+
+        &lt;!&ndash; Rounding params -
+        Declares attributes for rounding shape, mode and border. &ndash;&gt;
+
+        &lt;!&ndash; Round as circle. &ndash;&gt;
+        <attr name="roundAsCircle" format="boolean"/>
+        &lt;!&ndash; Rounded corner radius. Ignored if roundAsCircle is used. &ndash;&gt;
+        <attr name="roundedCornerRadius" format="dimension"/>
+        &lt;!&ndash; Round the top-left corner. Ignored if roundAsCircle is used. &ndash;&gt;
+        <attr name="roundTopLeft" format="boolean"/>
+        &lt;!&ndash; Round the top-right corner. Ignored if roundAsCircle is used. &ndash;&gt;
+        <attr name="roundTopRight" format="boolean"/>
+        &lt;!&ndash; Round the bottom-right corner. Ignored if roundAsCircle is used. &ndash;&gt;
+        <attr name="roundBottomRight" format="boolean"/>
+        &lt;!&ndash; Round the bottom-left corner. Ignored if roundAsCircle is used. &ndash;&gt;
+        <attr name="roundBottomLeft" format="boolean"/>
+        &lt;!&ndash; Round by overlying color. &ndash;&gt;
+        <attr name="roundWithOverlayColor" format="color"/>
+        &lt;!&ndash; Rounding border width&ndash;&gt;
+        <attr name="roundingBorderWidth" format="dimension"/>
+        &lt;!&ndash; Rounding border color &ndash;&gt;
+        <attr name="roundingBorderColor" format="color"/>
+        &lt;!&ndash; Rounding border padding &ndash;&gt;
+        <attr name="roundingBorderPadding" format="dimension" />
+
+        &lt;!&ndash; An image uri . &ndash;&gt;
+        <attr name="actualImageUri" format="string"/>
+        &lt;!&ndash; An image reference &ndash;&gt;
+        <attr name="actualImageResource" format="reference"/>
+
+    </declare-styleable>-->
+</resources>

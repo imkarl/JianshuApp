@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 /**
  * Java对象的常用处理
  * @version imkarl 2016-08
+ * @version imkarl 2017-04 修正isEmpty()的错误
  */
 public final class ObjectUtils {
     private ObjectUtils() {}
@@ -29,7 +30,7 @@ public final class ObjectUtils {
     }
 
     public static boolean isEmpty(CharSequence str) {
-        return TextUtils.isEmpty(str) && !Pattern.matches("\\s", str);
+        return TextUtils.isEmpty(str) || Pattern.matches("\\s", str);
     }
 
     public static boolean isEmpty(Bundle bundle) {

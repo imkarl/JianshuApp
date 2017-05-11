@@ -1,98 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/subscribe_root"
-             android:background="?press_selector"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/subscribe_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?press_selector">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="72.0dip">
+        android:layout_height="72.0dip"
+        android:orientation="horizontal">
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_gravity="center_vertical"
+        <com.copy.jianshuapp.uilayer.widget.UniversalDraweeView
             android:id="@id/avatar"
             android:layout_width="40.0dip"
             android:layout_height="40.0dip"
-            android:layout_marginLeft="16.0dip"
-            android:scaleType="centerCrop"
-            app:riv_border_width="0.30000007dip"
-            app:riv_border_color="?gray300"
-            app:riv_oval="true"/>
-
-        <ImageView
             android:layout_gravity="center_vertical"
-            android:id="@id/avatar_gif"
-            android:visibility="gone"
-            android:layout_width="40.0dip"
-            android:layout_height="40.0dip"
             android:layout_marginLeft="16.0dip"
-            android:scaleType="centerCrop"/>
+            app:roundAsCircle="true"
+            app:roundingBorderWidth="0.3dip"
+            app:roundingBorderColor="?gray300"
+            tools:background="@color/grey300"
+            />
 
         <LinearLayout
-            android:gravity="center_vertical"
-            android:layout_gravity="center_vertical"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="16.0dip"
-            android:layout_marginRight="16.0dip">
+            android:layout_marginRight="16.0dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="16.0sp"
-                    android:textColor="?color_2f_b1"
-                    android:ellipsize="end"
-                    android:layout_gravity="center_vertical"
                     android:id="@id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="text"
-                    android:maxLines="1"/>
-
-                <com.baiji.jianshu.widget.CircleTextView
-                    android:textSize="8.0sp"
                     android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?color_2f_b1"
+                    android:textSize="16.0sp"
+                    tools:text="描述文本"
+                    />
+
+                <com.owater.library.CircleTextView
                     android:id="@id/tv_notify"
-                    android:visibility="gone"
                     android:layout_width="9.0dip"
                     android:layout_height="9.0dip"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
-                    app:ct_backgroundColor="@color/picton_blue"/>
+                    android:textSize="8.0sp"
+                    app:ct_backgroundColor="@color/picton_blue"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    />
 
                 <TextView
-                    android:textSize="12.0sp"
-                    android:textColor="?color_b1_71"
-                    android:layout_gravity="center_vertical"
                     android:id="@id/tv_unread"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
-                    android:text="sdsdf"/>
+                    android:textColor="?color_b1_71"
+                    android:textSize="12.0sp"
+                    tools:text="描述文本"
+                    />
             </LinearLayout>
 
             <TextView
-                android:textSize="12.0sp"
-                android:textColor="?color_b1_71"
-                android:ellipsize="end"
                 android:id="@id/tv_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="6.0dip"
-                android:singleLine="true"/>
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="?color_b1_71"
+                android:textSize="12.0sp"
+                tools:text="描述文本"
+                />
         </LinearLayout>
     </LinearLayout>
 
     <View
-        android:layout_gravity="bottom"
         android:id="@id/item_divider"
-        android:background="?listview_divider"
         android:layout_width="fill_parent"
-        android:layout_height="0.39999998dip"/>
+        android:layout_height="0.39999998dip"
+        android:layout_gravity="bottom"
+        android:background="?listview_divider"/>
 </FrameLayout>

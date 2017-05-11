@@ -14,29 +14,17 @@ import com.copy.jianshuapp.R;
  */
 @Deprecated
 public class JSSwipeRefreshLayout extends SwipeRefreshLayout {
-    private static final int DELAY_TIME = 300;
     private View targetView;
+    private boolean mMeasured = false;
+    private boolean mPreMeasureRefreshing = false;
 
     public JSSwipeRefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
-
     public JSSwipeRefreshLayout(Context context) {
         super(context);
         init();
-    }
-
-    public void show() {
-        if (isVisible(this)) {
-            setRefreshing(true);
-        } else {
-            postDelayed(() -> setRefreshing(true), DELAY_TIME);
-        }
-    }
-
-    public void hide() {
-        postDelayed(() -> setRefreshing(false), DELAY_TIME);
     }
 
     public void switchTheme() {
@@ -62,8 +50,22 @@ public class JSSwipeRefreshLayout extends SwipeRefreshLayout {
         setProgressBackgroundColorSchemeResource(typedValue.resourceId);
     }
 
-    private static boolean isVisible(View v) {
-        return v != null && v.getMeasuredHeight() > 0 && v.getMeasuredWidth() > 0;
+    @Override
+    public void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        if (!mMeasured) {
+            mMeasured = true;
+            setRefreshing(mPreMeasureRefreshing);
+        }
+    }
+
+    @Override
+    public void setRefreshing(final boolean refreshing) {
+        mPreMeasureRefreshing = refreshing;
+        if (mMeasured) {
+            super.setRefreshing(mPreMeasureRefreshing);
+        }
     }
 
 }

@@ -17,6 +17,10 @@ import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 
+/**
+ * JSON反序列失败时，能返回JsonParserException，以便获取原始JSON
+ * @version imkarl 2017-05
+ */
 public final class CustomGsonConverterFactory extends Converter.Factory {
     public static CustomGsonConverterFactory create() {
         return create(new Gson());
@@ -48,28 +52,6 @@ public final class CustomGsonConverterFactory extends Converter.Factory {
         TypeAdapter<?> adapter = gson.getAdapter(TypeToken.get(type));
         return new GsonRequestBodyConverter<>(gson, adapter);
     }
-
-    //    @Override
-//    public Converter<?, String> stringConverter(Type type, Annotation[] annotations, Retrofit retrofit) {
-//        LogUtils.e(type+"   "+ Arrays.toString(annotations));
-//        // TODO 兼容enum的注解转换
-//        if (type instanceof Class && ((Class<?>)type).isEnum()) {
-//            return (Converter<Enum, String>) value -> {
-//                String name = value.name();
-//                try {
-//                    Field field = value.getClass().getField(name);
-//                    SerializedName annotation = field.getAnnotation(SerializedName.class);
-//                    if (annotation != null) {
-//                        name = annotation.value();
-//                    }
-//                } catch (NoSuchFieldException ignored) {
-//                }
-//                LogUtils.e(value+"   "+name);
-//                return name;
-//            };
-//        }
-//        return super.stringConverter(type, annotations, retrofit);
-//    }
 
     private static final class GsonResponseBodyConverter<T>
             implements Converter<ResponseBody, T> {

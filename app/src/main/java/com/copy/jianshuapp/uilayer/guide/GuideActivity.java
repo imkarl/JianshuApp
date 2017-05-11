@@ -13,7 +13,7 @@ import com.copy.jianshuapp.uilayer.home.activitys.MainActivity;
 import com.copy.jianshuapp.uilayer.login.activity.LoginActivity;
 import com.copy.jianshuapp.uilayer.widget.FixViewPager;
 import com.copy.jianshuapp.uilayer.widget.adapter.BasePagerAdapter;
-import com.viewpagerindicator.CirclePageIndicator;
+import com.copy.jianshuapp.uilayer.widget.indicator.CirclePageIndicator;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,6 +23,10 @@ import butterknife.ButterKnife;
  * @version imkarl 2017-03
  */
 public class GuideActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
+
+    public static void launch() {
+        startActivity(GuideActivity.class);
+    }
 
     @Bind(R.id.viewPager)
     FixViewPager mViewPager;
@@ -40,6 +44,11 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
         ButterKnife.bind(this);
 
         initView();
+    }
+
+    @Override
+    public boolean isSupportSwipeBack() {
+        return false;
     }
 
     private void initView() {
@@ -67,7 +76,7 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
         if (AppUtils.isLogin()) {
             startActivity(MainActivity.class);
         } else {
-            startActivity(LoginActivity.launchRegister());
+            LoginActivity.launchRegister();
         }
 
         super.finish();

@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/search_root"
-             android:layout_width="fill_parent"
-             android:layout_height="46.0dip"
-             xmlns:android="http://schemas.android.com/apk/res/android">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/search_root"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip">
 
     <FrameLayout
-        android:layout_gravity="center"
         android:id="@id/frame_search"
-        android:background="?shape_rect_fc_2f"
-        android:visibility="visible"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginLeft="18.0dip"
-        android:layout_marginRight="18.0dip">
+        android:layout_marginRight="18.0dip"
+        android:background="?shape_rect_fc_2f"
+        android:visibility="visible">
 
         <TextView
-            android:textSize="14.0sp"
-            android:textColor="?color_b1_71"
-            android:gravity="center"
-            android:layout_gravity="center"
             android:id="@id/text_search"
-            android:padding="7.0dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/search_following_obj"
+            android:layout_gravity="center"
             android:drawableLeft="?search_bg"
-            android:drawablePadding="8.0dip"/>
+            android:drawablePadding="8.0dip"
+            android:gravity="center"
+            android:padding="7.0dip"
+            android:text="@string/search_following_obj"
+            android:textColor="?color_b1_71"
+            android:textSize="14.0sp"/>
     </FrameLayout>
 
     <View
-        android:layout_gravity="bottom"
         android:id="@id/line2"
-        android:background="?listview_divider"
         android:layout_width="fill_parent"
         android:layout_height="0.39999998dip"
-        android:layout_marginTop="9.0dip"/>
+        android:layout_gravity="bottom"
+        android:layout_marginTop="9.0dip"
+        android:background="?listview_divider"/>
+
 </FrameLayout>

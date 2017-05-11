@@ -2,6 +2,14 @@
 <resources>
     <string name="app_name">简书(仿)</string>
 
+    <!-- 关注-菜单-分类 -->
+    <string name="all_follow">全部关注</string>
+    <string name="just_author">只看作者</string>
+    <string name="just_load_collection">只看专题</string>
+    <string name="just_load_notebook">只看文集</string>
+    <string name="just_load_push">只看推送更新</string>
+    <string name="just_load_user">只看用户</string>
+
     <string name="app_info">应用信息</string>
     <string name="abort_editing">放弃编辑</string>
     <string name="about_tab_sinaweibo">新浪微博</string>
@@ -31,7 +39,6 @@
     <string name="add_to_desktop">添加到桌面</string>
     <string name="after_change_write_mode">切换后仅对新建文章生效，此前创建的文章将保持原有编辑器模式</string>
     <string name="alipay">支付宝</string>
-    <string name="all_follow">全部关注</string>
     <string name="all_managers">全部</string>
     <string name="all_pending_submission">全部未处理请求</string>
     <string name="am">上午</string>
@@ -347,11 +354,6 @@
     <string name="ju_jue_tou_gao">拒绝投稿</string>
     <string name="jump_market_to_download">去应用市场下载</string>
     <string name="jump_to_browser_download">跳转到浏览器下载</string>
-    <string name="just_author">只看作者</string>
-    <string name="just_load_collection">只看专题</string>
-    <string name="just_load_notebook">只看文集</string>
-    <string name="just_load_push">只看推送更新</string>
-    <string name="just_load_user">只看用户</string>
     <string name="kai_shi_chuang_zuo">开始创作</string>
     <string name="label">标签</string>
     <string name="label_to_add_is_redundant">您要添加的标签已存在</string>
@@ -816,8 +818,6 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="search_menu_title">Search</string>
-    <string name="status_bar_notification_info_overflow">999+</string>
     <string name="accessibility_content_view">Web View</string>
     <string name="accessibility_date_picker_month">Month</string>
     <string name="accessibility_date_picker_week">Week</string>
@@ -923,7 +923,6 @@
     <string name="authorize_error">授权失败</string>
     <string name="authorize_success">授权成功</string>
     <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="character_counter_pattern">%1$d / %2$d</string>
     <item type="string" name="cpb_default_rotation_speed">1.0</item>
     <item type="string" name="cpb_default_sweep_speed">1.0</item>
     <string name="cpu_arch_mismatch_message">Unfortunately this application was not created for %1$s based devices, please take a moment to notify the developer about it. Thanks.</string>
@@ -951,7 +950,6 @@
     <string name="google_api_key">AIzaSyBOmNpzGt1Yw2O2FMzpAJvcZ0rSSCbS7OE</string>
     <string name="google_app_id">1:230941166180:android:5ceb2e1e8aa41b62</string>
     <string name="google_crash_reporting_api_key">AIzaSyBOmNpzGt1Yw2O2FMzpAJvcZ0rSSCbS7OE</string>
-    <string name="goto_store_button_label">Go to Google Play Store</string>
     <string name="http_auth_log_in">Log In</string>
     <string name="http_auth_password">Password</string>
     <string name="http_auth_title">Authentication Required</string>
