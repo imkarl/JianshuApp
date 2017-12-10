@@ -3,6 +3,12 @@ package com.copy.jianshuapp.modellayer.remote;
 import com.copy.jianshuapp.JSApi;
 import com.copy.jianshuapp.common.FileManager;
 import com.copy.jianshuapp.common.VersionChannel;
+import com.copy.jianshuapp.modellayer.remote.api.SubscriptionApi;
+import com.copy.jianshuapp.modellayer.remote.api.TrendApi;
+import com.copy.jianshuapp.modellayer.remote.api.UserApi;
+import com.copy.jianshuapp.modellayer.remote.api.mock.MockSubscriptionApi;
+import com.copy.jianshuapp.modellayer.remote.api.mock.MockTrendApi;
+import com.copy.jianshuapp.modellayer.remote.api.mock.MockUserApi;
 import com.copy.jianshuapp.modellayer.remote.interceptors.LoggingInterceptor;
 import com.copy.jianshuapp.modellayer.remote.interceptors.UnifiedParameterInterceptor;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
@@ -10,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Cache;
@@ -79,7 +87,18 @@ public class RemoteManager {
 //        CacheUtils.init(DataLayer.getContext(), getKakaCacheDir());
     }
 
+    private Map<Class, Object> mockApi = new HashMap<Class, Object>() {
+        {
+            put(UserApi.class, new MockUserApi());
+            put(TrendApi.class, new MockTrendApi());
+            put(SubscriptionApi.class, new MockSubscriptionApi());
+        }
+    };
     public <T> T createApi(Class<T> apiClass) {
+        if (mockApi.containsKey(apiClass)) {
+            return (T) mockApi.get(apiClass);
+        }
+
         return retrofit.create(apiClass);
     }
 

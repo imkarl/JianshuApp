@@ -6,8 +6,8 @@ ext {
     min_sdk_version = 17
     target_sdk_version = 24
 
-    app_version_code = 1
-    app_version_name = "0.1.0"
+    app_version_code = 2
+    app_version_name = "0.1.1"
 
     //support版本
     support_version = "25.3.1"
